@@ -1,0 +1,36 @@
+# ============================================
+# AIOX Workspace — .gitignore
+# Estratégia: ignorar TUDO, incluir só o que é AIOX
+# ============================================
+
+# Ignorar tudo na raiz (Windows system32 + lixo)
+/*
+
+# ─── Incluir arquivos e pastas AIOX ───
+!.gitignore
+!CLAUDE.md
+!.claude/
+!.synapse/
+!.aios/
+!.codex/
+
+# ─── Excluir dentro das pastas incluídas ───
+
+# .claude — settings tem caminhos e permissões específicos da máquina
+.claude/settings.local.json
+
+# .aios — arquivos grandes e backups não sobem
+.aios/drive-downloads/
+.aios/backup/
+.aios/tmp/
+
+# .synapse — sessões e métricas são locais/voláteis
+.synapse/sessions/
+.synapse/metrics/
+
+# Variáveis de ambiente — nunca no git
+.env
+.env.*
+
+# Framework (já está no npm e no github da Synkra)
+.aios-core/

@@ -1,0 +1,9 @@
+Comunicação sempre em Português brasileiro.
+Gabriel não sabe programar — toda implementação deve ser explicada em linguagem simples, sem jargões técnicos.
+Sempre encerrar atividades com resumo informal usando analogias do dia a dia.
+Nunca criar arquivos novos quando editar um existente resolve o problema.
+Sempre apresentar opções antes de implementar qualquer coisa.
+Task First Principle: mapear o processo antes de automatizar.
+Usar Gemini CLI para escrita pesada — não gastar tokens Claude desnecessariamente.
+Antes de criar qualquer coisa nova, verificar se já existe algo similar no projeto.
+Aprovação dada = executar até completar. Nunca perguntar "quer que eu continue?" após aprovação.
