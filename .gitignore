@@ -13,6 +13,9 @@
 !.synapse/
 !.aios/
 !.codex/
+!knowledge-base/
+!materiais/
+!memory/
 
 # ─── Excluir dentro das pastas incluídas ───
 
