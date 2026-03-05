@@ -3,7 +3,7 @@
 # Estratégia: ignorar TUDO, incluir só o que é AIOX
 # ============================================
 
-# Ignorar tudo na raiz (Windows system32 + lixo)
+# Ignorar tudo na raiz
 /*
 
 # ─── Incluir arquivos e pastas AIOX ───
@@ -16,13 +16,17 @@
 !knowledge-base/
 !materiais/
 !memory/
+!docs/
+!.ai/
+!squads/
+!outputs/
 
 # ─── Excluir dentro das pastas incluídas ───
 
-# .claude — settings tem caminhos e permissões específicos da máquina
+# .claude — settings.local tem caminhos/permissões específicos da máquina
 .claude/settings.local.json
 
-# .aios — arquivos grandes e backups não sobem
+# .aios — arquivos grandes e backups
 .aios/drive-downloads/
 .aios/backup/
 .aios/tmp/
@@ -34,32 +38,28 @@
 # Variáveis de ambiente — nunca no git
 .env
 .env.*
+.env.local
+.env.*.local
 
 # Framework (já está no npm e no github da Synkra)
 .aios-core/
 
-# Environment & Secrets (AIOS)
-.env.local
-.env.*.local
-*.key
-*.pem
-
-# Dependencies (AIOS)
+# Dependencies
 node_modules/
-node_modules
 
-# Build & Logs (AIOS)
+# Build & Logs
 dist/
 build/
 *.log
 logs/
 
-# IDE & OS (AIOS)
+# IDE & OS
 .DS_Store
 Thumbs.db
 .idea/
 *.swp
+*.key
+*.pem
 
-# AIOS Local (AIOS)
-.aios-core/local/
+# AIOS Local
 .aios/install-log.txt

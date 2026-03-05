@@ -1,3 +1,35 @@
 {
-  "language": "english"
+  "language": "pt-BR",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/synapse-engine.cjs"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/journey-log.cjs"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/precompact-session-digest.cjs"
+          }
+        ]
+      }
+    ]
+  }
 }
