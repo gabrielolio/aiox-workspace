@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KING — Apresentação para Vítor</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #070707;
+    --surface: #121212;
+    --surface2: #1a1a1a;
+    --border: #242424;
+    --text: #f0f0f0;
+    --text-dim: #777;
+    --text-mid: #aaa;
+    --gold: #C4A14A;
+    --gold-dim: rgba(196, 161, 74, 0.12);
+    --gold-line: rgba(196, 161, 74, 0.4);
+    --green: #16a34a;
+    --green-dim: rgba(22, 163, 74, 0.12);
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --blue-dim: rgba(59, 130, 246, 0.12);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slide {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 80px;
+    position: relative;
+    animation: fadeIn 0.35s ease;
+  }
+  .slide.active { display: flex; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* nav */
+  .nav {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+  }
+  .nav button {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .nav button:hover { background: var(--border); color: var(--text); }
+  .nav .counter { font-size: 12px; color: var(--text-dim); min-width: 50px; text-align: center; }
+
+  /* progress bar */
+  .progress {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--border);
+    z-index: 100;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+
+  /* tags */
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .tag-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid var(--gold-line); }
+  .tag-green { background: var(--green-dim); color: var(--green); border: 1px solid rgba(22,163,74,0.3); }
+  .tag-blue { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(59,130,246,0.3); }
+
+  /* typography */
+  .eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 600; }
+  h1 { font-size: clamp(40px, 5vw, 64px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
+  h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+  h3 { font-size: clamp(18px, 2vw, 24px); font-weight: 700; }
+  .subtitle { font-size: clamp(16px, 1.8vw, 20px); color: var(--text-mid); line-height: 1.6; margin-top: 16px; max-width: 640px; }
+  .lead { font-size: clamp(20px, 2.2vw, 28px); line-height: 1.4; font-weight: 500; }
+
+  /* layout helpers */
+  .center { text-align: center; align-items: center; }
+  .left { text-align: left; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; }
+  .row { display: flex; flex-direction: row; gap: 24px; }
+  .w50 { width: 50%; }
+  .w100 { width: 100%; }
+
+  /* cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+  .card-row { display: flex; gap: 20px; width: 100%; }
+  .card-row .card { flex: 1; }
+
+  /* chat bubble */
+  .chat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    width: 100%;
+    max-width: 680px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .msg-you { color: var(--text-dim); margin-bottom: 10px; }
+  .msg-you::before { content: "Você: "; color: var(--text-dim); font-weight: 600; }
+  .msg-king { color: var(--text); margin-top: 10px; }
+  .msg-king::before { content: "KING: "; color: var(--gold); font-weight: 600; }
+  .msg-note { font-size: 11px; color: var(--text-dim); margin-top: 12px; font-style: italic; }
+
+  /* before/after */
+  .ba { display: flex; gap: 0; width: 100%; max-width: 700px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+  .ba-col { flex: 1; padding: 24px 28px; }
+  .ba-before { background: rgba(239,68,68,0.06); border-right: 1px solid var(--border); }
+  .ba-after { background: rgba(22,163,74,0.06); }
+  .ba-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .ba-before .ba-label { color: var(--red); }
+  .ba-after .ba-label { color: var(--green); }
+  .ba-item { font-size: 15px; line-height: 1.6; color: var(--text-mid); }
+  .ba-item + .ba-item { margin-top: 8px; }
+
+  /* list */
+  .list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .list li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; line-height: 1.5; }
+  .list li::before { content: "→"; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* roadmap */
+  .roadmap { width: 100%; display: flex; flex-direction: column; gap: 0; }
+  .rm-item { display: flex; align-items: center; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .rm-item:last-child { border-bottom: none; }
+  .rm-status { width: 80px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; flex-shrink: 0; }
+  .rm-live { color: var(--green); }
+  .rm-soon { color: var(--gold); }
+  .rm-future { color: var(--text-dim); }
+  .rm-name { font-weight: 600; font-size: 16px; flex: 1; }
+  .rm-desc { font-size: 13px; color: var(--text-dim); flex: 2; }
+
+  /* pain points */
+  .pain { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 680px; }
+  .pain-item { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; }
+  .pain-icon { font-size: 22px; flex-shrink: 0; }
+  .pain-text { font-size: 16px; line-height: 1.4; }
+  .pain-time { margin-left: auto; font-size: 13px; color: var(--text-dim); flex-shrink: 0; font-weight: 600; }
+
+  /* big number */
+  .big-num { font-size: clamp(56px, 8vw, 100px); font-weight: 900; color: var(--gold); letter-spacing: -0.04em; line-height: 1; }
+  .big-label { font-size: 14px; color: var(--text-dim); margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  /* agents grid */
+  .agents { display: flex; gap: 20px; width: 100%; max-width: 900px; }
+  .agent-card {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .agent-card.live::after {
+    content: "AO VIVO";
+    position: absolute; top: 14px; right: 14px;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+    background: var(--green-dim); color: var(--green);
+    border: 1px solid rgba(22,163,74,0.3);
+    padding: 3px 8px; border-radius: 100px;
+  }
+  .agent-card.soon::after {
+    content: "EM BREVE";
+    position: absolute; top: 14px; right: 14px;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+    background: var(--gold-dim); color: var(--gold);
+    border: 1px solid var(--gold-line);
+    padding: 3px 8px; border-radius: 100px;
+  }
+  .agent-icon { font-size: 26px; }
+  .agent-name { font-size: 16px; font-weight: 700; }
+  .agent-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+  /* step */
+  .steps { display: flex; flex-direction: column; gap: 0; width: 100%; max-width: 680px; }
+  .step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; }
+  .step-num { font-size: 11px; font-weight: 700; color: var(--gold); width: 20px; flex-shrink: 0; padding-top: 2px; }
+  .step-content { flex: 1; }
+  .step-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .step-desc { font-size: 14px; color: var(--text-mid); line-height: 1.5; }
+  .step-who { font-size: 11px; color: var(--text-dim); margin-top: 6px; font-style: italic; }
+
+  /* divider */
+  .divider { width: 48px; height: 2px; background: var(--gold); margin: 20px 0; border-radius: 100px; }
+
+  /* logo mark */
+  .logo-mark { font-size: clamp(80px, 14vw, 140px); font-weight: 900; letter-spacing: -0.05em; color: var(--gold); line-height: 1; }
+  .logo-sub { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-top: 8px; }
+
+  /* week */
+  .week { display: flex; gap: 0; width: 100%; max-width: 800px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+  .week-day { flex: 1; padding: 20px 16px; text-align: center; border-right: 1px solid var(--border); }
+  .week-day:last-child { border-right: none; }
+  .week-day-name { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 10px; }
+  .week-brand { font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 8px; }
+  .week-porsche { background: rgba(196,161,74,0.12); color: var(--gold); border: 1px solid var(--gold-line); }
+  .week-gwm { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(59,130,246,0.3); }
+  .week-off { color: var(--text-dim); font-size: 12px; }
+
+  /* next step cards */
+  .next-cards { display: flex; gap: 20px; width: 100%; max-width: 800px; }
+  .next-card { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .next-card-num { font-size: 36px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 12px; }
+  .next-card-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .next-card-desc { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- SLIDE 1: TÍTULO -->
+<div class="slide center active" id="slide-1">
+  <div class="eyebrow">Bamaq · Porsche · GWM · Campo Grande</div>
+  <div class="logo-mark">KING</div>
+  <div class="logo-sub">Knowledge-Integrated Navigator & Generator</div>
+  <div class="subtitle" style="margin-top: 24px; text-align: center;">
+    Seu assistente de conteúdo automotivo no WhatsApp.<br>
+    Construído para o seu fluxo, nas suas marcas.
+  </div>
+</div>
+
+<!-- SLIDE 2: O PROBLEMA REAL -->
+<div class="slide left" id="slide-2">
+  <div class="eyebrow">A realidade do seu dia</div>
+  <h2>Você faz trabalho<br>de 3 pessoas sozinho.</h2>
+  <div style="margin-top: 32px;">
+    <div class="pain">
+      <div class="pain-item">
+        <div class="pain-icon">🎬</div>
+        <div class="pain-text">Legenda no CapCut — transcreve tudo na mão, vídeo por vídeo</div>
+        <div class="pain-time">~30 min/vídeo</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">📄</div>
+        <div class="pain-text">Abre 3 PDFs de guideline no meio da edição pra checar uma regra</div>
+        <div class="pain-time">~7 min/consulta</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">🗂️</div>
+        <div class="pain-text">Arquivos espalhados: galeria, downloads, Drive sem estrutura, WhatsApp</div>
+        <div class="pain-time">sempre</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">📅</div>
+        <div class="pain-text">Sem rotina definida — produz conforme aparece, semana acaba sem saber o que fez</div>
+        <div class="pain-time">toda semana</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: QUANTO TEMPO VOCÊ PERDE -->
+<div class="slide center" id="slide-3">
+  <div class="eyebrow">Conta rápida</div>
+  <div style="display: flex; gap: 60px; align-items: center;">
+    <div style="text-align: center;">
+      <div class="big-num">8h</div>
+      <div class="big-label">por mês só em legendas</div>
+      <div style="font-size: 13px; color: var(--text-dim); margin-top: 8px;">(4 vídeos/semana × 30 min)</div>
+    </div>
+    <div style="color: var(--text-dim); font-size: 40px; font-weight: 200;">→</div>
+    <div style="text-align: center;">
+      <div class="big-num" style="color: var(--green);">45min</div>
+      <div class="big-label">com o KING</div>
+      <div style="font-size: 13px; color: var(--text-dim); margin-top: 8px;">(só o tempo de revisar)</div>
+    </div>
+  </div>
+  <div style="margin-top: 40px; padding: 20px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; text-align: center;">
+    <div style="font-size: 18px; font-weight: 600;">7 horas devolvidas por mês</div>
+    <div style="font-size: 14px; color: var(--text-dim); margin-top: 6px;">Para criar mais, atender mais clientes, ou simplesmente descansar.</div>
+  </div>
+</div>
+
+<!-- SLIDE 4: O QUE É O KING -->
+<div class="slide center" id="slide-4">
+  <div class="eyebrow">O que é o KING</div>
+  <h2>Sua equipe de especialistas<br>no WhatsApp.</h2>
+  <div class="subtitle">Não é um app. Não tem curva de aprendizado.<br>Você manda mensagem igual faz com qualquer pessoa.</div>
+  <div style="margin-top: 36px;">
+    <div class="agents">
+      <div class="agent-card live">
+        <div class="agent-icon">🎬</div>
+        <div class="agent-name">Legendador</div>
+        <div class="agent-desc">Transcreve e formata legenda em 60 segundos. No estilo certo de cada marca.</div>
+      </div>
+      <div class="agent-card live">
+        <div class="agent-icon">🛡️</div>
+        <div class="agent-name">Guardião</div>
+        <div class="agent-desc">Responde qualquer dúvida de guideline em 1 segundo. Porsche e GWM.</div>
+      </div>
+      <div class="agent-card live">
+        <div class="agent-icon">📅</div>
+        <div class="agent-name">Briefer</div>
+        <div class="agent-desc">3 mensagens automáticas por semana. Planeja, acompanha, fecha.</div>
+      </div>
+      <div class="agent-card soon">
+        <div class="agent-icon">💡</div>
+        <div class="agent-name">Muse</div>
+        <div class="agent-desc">Gerador de ideias criativas por marca, formato e semana.</div>
+      </div>
+      <div class="agent-card soon">
+        <div class="agent-icon">📂</div>
+        <div class="agent-name">Organizador</div>
+        <div class="agent-desc">Salva e organiza tudo no Drive automaticamente enquanto você trabalha.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: LEGENDADOR EM AÇÃO -->
+<div class="slide center" id="slide-5">
+  <div class="eyebrow">Agente 1 — Legendador</div>
+  <h2>30 minutos → 60 segundos.</h2>
+  <div style="margin-top: 28px;">
+    <div class="chat">
+      <div class="msg-you">🎥 [envia vídeo do test drive Tank 300]</div>
+      <div class="msg-king" style="margin-top: 16px;">
+        Recebi! Identificando marca... <strong style="color: var(--blue);">GWM</strong> ✓<br>
+        Processando transcrição... ✓<br><br>
+        <strong>📄 VERSÃO BRUTA</strong><br>
+        "O Tank 300 tem tração 4x4 real, com reduzida e bloqueio de diferencial traseiro de série."<br><br>
+        <strong>💬 VERSÃO WHATSAPP</strong><br>
+        <em>*Tank 300 — Tração 4x4 Real*<br>
+        Reduzida + bloqueio de dif traseiro de série.<br>
+        Tudo incluso. 🔒 — Link na bio ⬆️</em><br><br>
+        <strong>🎬 ARQUIVO CAPCUT</strong><br>
+        legenda_tank300_20260307.ass — já no estilo GWM Bold, pronto pra arrastar
+      </div>
+      <div class="msg-note">Tempo real: ~60 segundos · Você só arrasta o arquivo no CapCut</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: GUARDIÃO EM AÇÃO -->
+<div class="slide center" id="slide-6">
+  <div class="eyebrow">Agente 2 — Guardião</div>
+  <h2>PDFs fechados.<br>Fluxo não quebra.</h2>
+  <div style="margin-top: 28px;">
+    <div class="chat">
+      <div class="msg-you">posso usar fundo pill de cor na legenda do Porsche?</div>
+      <div class="msg-king" style="margin-top: 16px;">
+        Não. Porsche Brasil 2026 não aceita fundo pill colorido.<br><br>
+        ✅ Permitido: fundo preto semi-transparente (rgba 0,0,0,0.7)<br>
+        ✅ Fonte: Jost SemiBold ou Porsche Next — branco #FFFFFF<br>
+        ✅ Máximo 42 caracteres por linha<br><br>
+        ⚠️ <strong>Sem stroke/contorno na fonte</strong> — regra crítica<br><br>
+        Para GWM, fundo pill colorido é permitido. Em qual você está trabalhando?
+      </div>
+      <div class="msg-note">Tempo real: &lt;1 segundo · Fonte: guidelines oficiais Porsche Brasil 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: BRIEFER — A SEMANA -->
+<div class="slide center" id="slide-7">
+  <div class="eyebrow">Agente 3 — Briefer</div>
+  <h2>Sua semana organizada<br>sem você organizar.</h2>
+  <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+    <div class="week">
+      <div class="week-day">
+        <div class="week-day-name">Seg</div>
+        <div class="week-brand week-porsche">Porsche</div>
+      </div>
+      <div class="week-day">
+        <div class="week-day-name">Ter</div>
+        <div class="week-brand week-gwm">GWM</div>
+      </div>
+      <div class="week-day">
+        <div class="week-day-name">Qua</div>
+        <div class="week-brand week-porsche">Porsche</div>
+      </div>
+      <div class="week-day">
+        <div class="week-day-name">Qui</div>
+        <div class="week-brand week-gwm">GWM</div>
+      </div>
+      <div class="week-day">
+        <div class="week-day-name">Sex</div>
+        <div class="week-brand week-porsche">Porsche</div>
+      </div>
+      <div class="week-day">
+        <div class="week-day-name">Sáb</div>
+        <div class="week-off">folga</div>
+      </div>
+      <div class="week-day" style="border-right:none">
+        <div class="week-day-name">Dom</div>
+        <div class="week-off">folga</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; width: 100%; max-width: 800px;">
+      <div class="card" style="flex:1; font-size: 13px;">
+        <div style="font-weight: 700; color: var(--gold); margin-bottom: 8px;">Segunda, 8h</div>
+        <div style="color: var(--text-mid); line-height: 1.6;">"Semana 11 — Bamaq<br>Porsche: 3 posts · GWM: 2 posts<br>Por qual você começa?"</div>
+      </div>
+      <div class="card" style="flex:1; font-size: 13px;">
+        <div style="font-weight: 700; color: var(--gold); margin-bottom: 8px;">Quarta, 17h</div>
+        <div style="color: var(--text-mid); line-height: 1.6;">"Feitos: 1 de 5.<br>O que está travando?"</div>
+      </div>
+      <div class="card" style="flex:1; font-size: 13px;">
+        <div style="font-weight: 700; color: var(--gold); margin-bottom: 8px;">Sexta, 17h</div>
+        <div style="color: var(--text-mid); line-height: 1.6;">"Semana encerrada: 3 de 5.<br>Tank 300 fica pra semana que vem?"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: O QUE JÁ TÁ PRONTO -->
+<div class="slide left" id="slide-8">
+  <div class="eyebrow">Status do sistema</div>
+  <h2>O que está pronto<br>vs o que vem.</h2>
+  <div style="margin-top: 32px;">
+    <div class="roadmap">
+      <div class="rm-item">
+        <div class="rm-status rm-live">✅ Pronto</div>
+        <div class="rm-name">Legendador</div>
+        <div class="rm-desc">Transcrição + 3 formatos de legenda por marca (Porsche e GWM)</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-status rm-live">✅ Pronto</div>
+        <div class="rm-name">Guardião</div>
+        <div class="rm-desc">Guidelines Porsche + GWM carregados — responde qualquer dúvida</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-status rm-live">✅ Pronto</div>
+        <div class="rm-name">Briefer</div>
+        <div class="rm-desc">Calendário seg/qua/sex (Porsche) + ter/qui (GWM) configurado</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-status rm-soon">🔜 Abril</div>
+        <div class="rm-name">Muse</div>
+        <div class="rm-desc">Ideias criativas por semana, marca e formato</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-status rm-soon">🔜 Abril</div>
+        <div class="rm-name">Organizador</div>
+        <div class="rm-desc">Drive automático: Porsche/ e GWM/ com subpastas por mês</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: O FLUXO COMPLETO DA CRIATIVIDADE -->
+<div class="slide left" id="slide-9">
+  <div class="eyebrow">Como vai funcionar na prática</div>
+  <h2>Seu fluxo de criação<br>com o KING.</h2>
+  <div style="margin-top: 28px;">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-title">Segunda cedo — KING já planejou a semana por você</div>
+          <div class="step-desc">Você acorda com a mensagem: "Semana 11. Porsche: seg/qua/sex. GWM: ter/qui. Por onde começa?"</div>
+          <div class="step-who">Você: responde qual conteúdo começa. KING: registra.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-title">Você filma o test drive / recebe o vídeo</div>
+          <div class="step-desc">Sem mudança. Isso ainda é você — o talento criativo não muda.</div>
+          <div class="step-who">Você: grava, filma, captura o momento.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-title">Manda o vídeo no WhatsApp do KING</div>
+          <div class="step-desc">Em 60 segundos você recebe: versão bruta, versão WhatsApp, arquivo .ass para o CapCut no estilo da marca certa.</div>
+          <div class="step-who">KING: faz tudo. Você: arrasta no CapCut.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <div class="step-title">Qualquer dúvida — pergunta pro Guardião</div>
+          <div class="step-desc">Sem abrir PDF. "Posso usar essa fonte no Porsche?" → resposta em 1 segundo com a regra exata.</div>
+          <div class="step-who">Você: pergunta. KING: responde da fonte oficial.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <div class="step-title">Sexta — KING fecha a semana e já agenda a próxima</div>
+          <div class="step-desc">O que ficou pendente vai automaticamente para segunda que vem. Você aprova ou ajusta com uma mensagem.</div>
+          <div class="step-who">KING: sugere. Você: confirma ou muda.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: PRÓXIMOS PASSOS -->
+<div class="slide center" id="slide-10">
+  <div class="eyebrow">Próximos passos</div>
+  <h2>Começa semana que vem.</h2>
+  <div style="margin-top: 32px;">
+    <div class="next-cards">
+      <div class="next-card">
+        <div class="next-card-num">01</div>
+        <div class="next-card-title">Você me manda as guidelines</div>
+        <div class="next-card-desc">PDFs da Porsche e GWM que você tem. Eu carrego no Guardião. 30 minutos de trabalho meu.</div>
+      </div>
+      <div class="next-card">
+        <div class="next-card-num">02</div>
+        <div class="next-card-title">Eu subo o número de WhatsApp</div>
+        <div class="next-card-desc">Um número dedicado pro KING. Você adiciona nos seus contatos e já começa a usar.</div>
+      </div>
+      <div class="next-card">
+        <div class="next-card-num">03</div>
+        <div class="next-card-title">30 minutos de onboarding</div>
+        <div class="next-card-desc">Uma conversa só. Eu mostro como usa, você testa ao vivo com um vídeo real. Pronto.</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 32px; padding: 20px 32px; background: var(--gold-dim); border: 1px solid var(--gold-line); border-radius: 16px; text-align: center; max-width: 600px;">
+    <div style="font-size: 16px; font-weight: 600; color: var(--gold);">Período beta — acesso gratuito para você</div>
+    <div style="font-size: 14px; color: var(--text-mid); margin-top: 6px;">Como parceiro fundador, você usa sem custo enquanto refinamos juntos.</div>
+  </div>
+</div>
+
+<!-- SLIDE 11: ENCERRAMENTO -->
+<div class="slide center" id="slide-11">
+  <div class="logo-mark" style="font-size: 80px;">KING</div>
+  <div style="margin-top: 24px; font-size: 22px; font-weight: 600; color: var(--text-mid);">Mais criação. Menos processo.</div>
+  <div class="divider" style="margin: 28px auto;"></div>
+  <div style="font-size: 15px; color: var(--text-dim);">Construído para o Grupo Bamaq · Porsche + GWM · Campo Grande, MS</div>
+  <div style="margin-top: 8px; font-size: 13px; color: var(--text-dim);">Desenvolvido por Gabriel — Março 2026</div>
+</div>
+
+<!-- NAVEGAÇÃO -->
+<div class="nav">
+  <button onclick="prev()">← Anterior</button>
+  <span class="counter" id="counter">1 / 11</span>
+  <button onclick="next()">Próximo →</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function update() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    document.getElementById('counter').textContent = `${current + 1} / ${slides.length}`;
+    document.getElementById('progressFill').style.width = `${((current + 1) / slides.length) * 100}%`;
+  }
+
+  function next() { if (current < slides.length - 1) { current++; update(); } }
+  function prev() { if (current > 0) { current--; update(); } }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+  });
+
+  update();
+</script>
+</body>
+</html>
