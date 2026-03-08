@@ -1,0 +1,96 @@
+# Template: Novo Cliente
+# Instrucao: Duplique este arquivo e preencha para cada novo cliente
+# Nomenclatura: knowledge-base/clients/{nome-do-cliente}.yaml
+# Atualizado: 2026-03-03 (sincronizado com fialho-motors.yaml)
+
+client:
+  name: ""
+  instagram: ""
+  whatsapp: ""
+  location:
+    city: ""
+    state: ""
+    address: ""
+
+  contacts:
+    - name: ""
+      nickname: ""
+      role: ""
+      whatsapp: ""
+      communication_style: ""
+      notes: ""
+
+  brand:
+    logo_source: ""
+    logo_versions: []
+    # Exemplo:
+    #   - type: "principal"
+    #     description: "Logo completa com texto"
+    #   - type: "icone"
+    #     description: "Icone sozinho para marca d'agua"
+
+    colors:
+      primary: ""       # cor principal (fundo)
+      secondary: ""     # cor destaque (titulos)
+      accent: ""        # cor de acento (detalhes)
+      background: ""    # fundo profundo
+      text: ""          # cor do texto corpo
+      texture: ""       # textura ou padrao de fundo (ex: "couro", "metalico")
+
+    typography:
+      title: ""
+      subtitle: ""
+      body: ""
+      cta: ""           # call to action
+
+    tone_of_voice:
+      style: ""         # ex: "Profissional mas acessivel"
+      keywords: []      # palavras que definem a marca
+      avoid: []         # o que nunca fazer
+
+  specialization:
+    primary: ""         # ex: "Seminovos multimarcas"
+    focus_brand: ""     # ex: "GWM"
+    models_in_demand: []
+    # Exemplo:
+    #   - model: "Nome do modelo"
+    #     demand: "Alta | Media | Baixa"
+    #     notes: ""
+    services: []
+
+  channels:
+    instagram:
+      handle: ""
+      status: ""            # ativo | inativo | novo
+      target_frequency: ""  # ex: "3 posts/semana"
+      formats: []           # ["feed", "story", "reel"]
+      content_types: []     # ex: ["foto tratada", "institucional", "bastidores", "walk-around"]
+    whatsapp_groups: []
+    # Exemplo:
+    #   - name: "Nome do Grupo"
+    #     members: 0
+    #     admin: ""
+    #     rules: []
+    #     frequency: ""
+    #     format: ""        # ex: "Imagem + mensagem com link wa.me"
+
+  relationship_with_vitor:
+    start_date: ""
+    current_model: ""       # avulso | mensal | parceria
+    target_model: ""
+    emotional_bond: ""      # baixo | medio | alto
+    bond_details: []        # evidencias do vinculo
+    pending_requests: []    # pedidos ainda nao atendidos
+    pricing_history: []
+    # Exemplo:
+    #   - date: "2026-03-02"
+    #     service: "descricao do servico"
+    #     charged: 0
+    #     market_value_estimate: ""
+
+  deliverables_history: []
+  # Exemplo:
+  #   - date: "2026-03-02"
+  #     items: ["descricao do que foi entregue"]
+  #     time_spent: ""
+  #     tools_used: []

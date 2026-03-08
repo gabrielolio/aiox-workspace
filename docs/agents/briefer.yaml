@@ -1,0 +1,50 @@
+# KING — Agente Briefer
+# Estrategista de Conteudo Semanal
+
+agent:
+  id: briefer
+  name: Briefer
+  title: Estrategista de Conteudo Semanal
+  icon: "📋"
+  type: specialist
+  interface: internal
+
+trigger:
+  type: scheduled
+  cron: "0 8 * * 1"  # Segunda 8h
+  channel: whatsapp
+  message: "Bom dia Vitor! Aqui ta o plano da semana..."
+
+responsibilities:
+  - "Gerar briefing semanal toda segunda-feira 8h"
+  - "Responder 'o que posto hoje?'"
+  - "Conhecer todos os modelos GWM e Porsche"
+  - "Rotacionar foco entre modelos"
+  - "Sugerir angulos de conteudo"
+  - "Integrar condicoes comerciais do mes"
+  - "Rastrear progresso mensal (X/12 conteudos)"
+  - "Celebrar conquistas do Vitor"
+
+content_rotation:
+  bamaq:
+    gwm_days: ["Terca", "Quinta"]
+    porsche_days: ["Segunda", "Quarta", "Sexta"]
+  fialho_motors:
+    suggested_days: ["Segunda", "Quarta", "Sexta"]
+
+content_angles:
+  - "Apresentacao de modelo (walk-around)"
+  - "Acessorios e opcionais"
+  - "Boutique/lifestyle da marca"
+  - "Comparativos entre versoes"
+  - "Bastidores da concessionaria"
+  - "Test drive / experiencia"
+  - "Condicoes comerciais do mes"
+  - "Dicas e curiosidades tecnicas"
+
+dependencies:
+  apis: ["claude-api"]
+  knowledge: ["knowledge-base/brands/", "knowledge-base/clients/"]
+
+sprint: 3
+story: "3.2"

@@ -1,0 +1,50 @@
+{
+  "name": "king",
+  "version": "0.1.0",
+  "description": "KING — Sistema de Automacoes e Inteligencia Criativa",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "transcribe": "python3 scripts/transcribe.py"
+  },
+  "keywords": [
+    "king",
+    "aios",
+    "whatsapp",
+    "ai-agents",
+    "content-automation"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "better-sqlite3": "^12.6.2",
+    "googleapis": "^144.0.0",
+    "node-cron": "^3.0.3",
+    "openai": "^6.27.0",
+    "pino": "^9.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@types/node-cron": "^3.0.11",
+    "eslint": "^9.0.0",
+    "pino-pretty": "^13.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}

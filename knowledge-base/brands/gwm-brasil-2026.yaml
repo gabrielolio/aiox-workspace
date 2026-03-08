@@ -1,0 +1,204 @@
+# Base de Conhecimento: GWM Brasil 2026
+# Criado: 2026-03-03
+# Fonte: Dossie panorama-projeto-diretor.md + pesquisa de mercado
+# Uso: Compartilhado entre Bamaq e Fialho Motors
+# Agentes: Briefer, Muse, Guardiao
+
+brand:
+  name: "GWM - Great Wall Motors"
+  origin: "China"
+  brazil_hq: "Sao Paulo"
+  market: "Brasil"
+
+  market_data:
+    vehicles_sold_2025: 42785
+    growth_vs_target: "+22%"
+    concessionarias: 130
+    new_models_2026: 12
+    notable: "Primeira marca no Brasil a fazer comercial 100% com IA"
+    digital:
+      ecommerce: true
+      app: true
+      sales_outside_hours: "23%"
+
+  content_guidelines:
+    freedom_level: "ALTA"
+    strictness: "BAIXA"
+    tone: "Moderno, tecnologico, acessivel, jovem"
+    restrictions:
+      - "Logo GWM visivel (inicio ou final)"
+      - "Nao comparar diretamente com concorrentes por nome"
+    permissions:
+      - "Criatividade em formatos (reels, POV, lifestyle)"
+      - "Humor e informalidade permitidos"
+      - "Conteudo UGC (user generated) incentivado"
+
+  subtitle_typography:
+    # Specs para legendas automaticas (Whisper) em videos Reels/Stories
+    # Fonte oficial: GWM Sans (GRATUITA — desenvolvida com Monotype + Akira Kobayashi)
+    # Download: gwm.com.cn/gwmsans/fontdownload.html
+    # Alternativas por modelo abaixo. Referencia: knowledge-base/brands/brand-guidelines-reference.md
+    fonte_oficial: "GWM Sans"        # CORRIGIDO: Manrope nao e fonte oficial GWM
+    fonte_download: "gwm.com.cn/gwmsans/fontdownload.html"
+    cores_confirmadas:
+      corporativo_azul: "#003087"    # CONFIRMADO — logo GWM
+      branco: "#FFFFFF"
+    cores_incertas:
+      haval_vermelho: "~#CC0000"     # INCERTO — hex nao publicado oficialmente
+      tank_chrome: "sem hex oficial" # INCERTO — extrair de SVG no Brandfetch
+
+    # Tank 300 — bold, aventura, off-road, neo-retro
+    tank_300:
+      fonte_alternativa: "Barlow Condensed" # CONFIRMADO como alternativa coerente
+      peso: "700"                    # Bold — CONFIRMADO pelo carater do veiculo
+      caixa: "UPPERCASE"             # ALL CAPS — CONFIRMADO para Tank
+      letter_spacing: "0.08em"
+      line_height: "1.3"
+      cor_texto: "#FFFFFF"
+      sombra: "rgba(0,0,0,0.75) blur 6px offset 0 2px"
+      destaque_palavras_chave: null  # REMOVIDO: #D4A843 nao e cor oficial GWM
+      contorno: "1px solid rgba(0,0,0,0.4)"  # Outline fino aceitavel para Tank — INFERIDO
+      posicao_vertical: "inferior"
+      margem_inferior: "10%"
+      alinhamento_horizontal: "esquerda"
+      margem_esquerda: "6%"
+      tamanho_relativo: "5%"
+      max_chars_por_linha: 36
+
+    # Haval H6 / H6 GT — urbano, familia, tecnologico
+    haval_h6:
+      fonte_alternativa: "Plus Jakarta Sans" # CORRIGIDO: mais coerente que Manrope para Haval urbano
+      peso: "500"                    # Medium — INFERIDO
+      caixa: "Sentence case"         # INFERIDO — coerente com tom familiar/acessivel
+      letter_spacing: "0.03em"
+      line_height: "1.45"
+      cor_texto: "#FFFFFF"
+      sombra: "rgba(0,0,0,0.55) blur 4px offset 0 1px"
+      contorno: "none"               # Outline nao recomendado para Haval
+      posicao_vertical: "inferior"
+      margem_inferior: "8%"
+      alinhamento_horizontal: "centro"
+      margem_lateral: "5%"
+      tamanho_relativo: "4.2%"
+      max_chars_por_linha: 44
+
+    regras_criticas:
+      - "Logo GWM (azul #003087) nunca sobre area de legenda"
+      - "Baixar GWM Sans em gwm.com.cn/gwmsans — e gratuita e oficial"
+      - "Tank 300: bold + uppercase e a assinatura — nao suavizar"
+      - "Haval H6: sentence case — mais acessivel, tom familiar/urbano"
+      - "Cores hex Haval/Tank nao sao publicadas oficialmente — extrair de SVG no Brandfetch"
+      - "NAO usar #D4A843 como cor GWM — nao e cor oficial da marca"
+      - "Fundo pill/capsula aceitavel para GWM (nao usar em Porsche)"
+      - "Animacao: slide-up 150ms aceitavel — mais dinamico que Porsche"
+      - "Whisper erra nomes — revisar sempre: Haval, Havaleiros, GWM, Tank, Poer, etc."
+
+  models:
+    current:
+      - name: "Haval H6"
+        segment: "SUV medio"
+        price_range: "R$170-210k"
+        engine: "1.5 turbo / 2.0 turbo"
+        differentials:
+          - "Melhor custo-beneficio do segmento"
+          - "Tecnologia embarcada superior"
+          - "Espaco interno generoso"
+        content_angles:
+          - "Walk-around completo"
+          - "Tecnologia (tela, assistente, cameras)"
+          - "Comparativo com Tucson/Compass"
+          - "Espaco interno (familia)"
+          - "Acessorios e personalizacao"
+        best_performing_format: "Reel walk-around"
+        posting_day: "Terca e Quinta (na Bamaq)"
+
+      - name: "Haval H6 GT"
+        segment: "SUV coupe"
+        differentials:
+          - "Design esportivo"
+          - "Performance acima do H6 padrao"
+          - "Visual coupe (teto inclinado)"
+        content_angles:
+          - "Design esportivo (angulos dinamicos)"
+          - "Lifestyle urbano"
+          - "Performance (aceleracao, curvas)"
+
+      - name: "Tank 300"
+        segment: "SUV off-road"
+        differentials:
+          - "Off-road real (nao so visual)"
+          - "Design retro-moderno"
+          - "Exclusividade (forte identidade)"
+        content_angles:
+          - "Off-road (trilha, lama, pedra)"
+          - "Acessorios (snorkel, protetor, rack)"
+          - "Lifestyle aventura"
+          - "Comunidade Havaleiros"
+          - "Interior retro-moderno"
+        community: "Havaleiros (grupos WhatsApp ativos)"
+
+      - name: "Poer P30"
+        segment: "Picape media"
+        differentials:
+          - "Versatilidade (trabalho + lazer)"
+          - "Cacamba generosa"
+          - "Tecnologia superior a concorrentes"
+        content_angles:
+          - "Utilidade no dia a dia"
+          - "Capacidade de carga"
+          - "Tecnologia vs Hilux/S10"
+          - "Acessorios de cacamba"
+
+      - name: "Ora 03"
+        segment: "Hatch eletrico"
+        differentials:
+          - "100% eletrico"
+          - "Design compacto bonito"
+          - "Preco acessivel pra EV"
+        content_angles:
+          - "Sustentabilidade"
+          - "Custo por km (eletrico vs gasolina)"
+          - "Design urbano"
+          - "Tecnologia (carregamento, autonomia)"
+
+    launching_2026:
+      - name: "Tank 300 HEV"
+        type: "Hibrido"
+        expected: "S1 2026"
+
+      - name: "Tank 500"
+        type: "SUV off-road grande"
+        expected: "2026"
+
+      - name: "Tank 700"
+        type: "SUV off-road premium"
+        expected: "2026"
+
+      - name: "Poer P500 PHEV"
+        type: "Picape hibrida plug-in"
+        expected: "2026"
+
+      - name: "Haval H6 Facelift Flex"
+        type: "SUV medio (flex!)"
+        expected: "2026"
+        notes: "Primeiro GWM flex no Brasil — grande apelo"
+
+      - name: "Haval H9"
+        type: "SUV grande 7 lugares"
+        expected: "2026"
+
+      - name: "Wey G9 Max"
+        type: "SUV premium"
+        expected: "2026"
+
+      - name: "Ora 05"
+        type: "Hatch eletrico medio"
+        expected: "2026"
+
+  content_calendar:
+    bamaq:
+      gwm_days: ["Terca", "Quinta"]
+      porsche_days: ["Segunda", "Quarta", "Sexta"]
+    fialho_motors:
+      suggested: ["Segunda", "Quarta", "Sexta"]
+      notes: "Nao conflita com calendario Bamaq do Vitor"

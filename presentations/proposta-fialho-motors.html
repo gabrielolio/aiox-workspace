@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta — Fialho Motors</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --green-deep: #0d1f17;
+    --green-dark: #1B3A2D;
+    --green-mid: #2d5e48;
+    --gold: #C4A14A;
+    --gold-light: #d4b96a;
+    --gold-dim: rgba(196, 161, 74, 0.12);
+    --gold-dim2: rgba(196, 161, 74, 0.06);
+    --red: #CC1B1B;
+    --black: #0A0A0A;
+    --white: #FFFFFF;
+    --white-dim: rgba(255, 255, 255, 0.7);
+    --white-dim2: rgba(255, 255, 255, 0.45);
+    --surface: rgba(255, 255, 255, 0.04);
+    --border: rgba(196, 161, 74, 0.2);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--green-deep);
+    color: var(--white);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slide {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 80px;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+    background: linear-gradient(165deg, var(--green-deep) 0%, var(--green-dark) 50%, var(--black) 100%);
+  }
+
+  .slide.active { display: flex; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Textura sutil */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(196, 161, 74, 0.015) 2px,
+      rgba(196, 161, 74, 0.015) 4px
+    );
+    pointer-events: none;
+  }
+
+  .slide-content {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--white-dim2);
+    margin-bottom: 12px;
+  }
+
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--white-dim);
+  }
+
+  .gold { color: var(--gold); }
+  .white { color: var(--white); }
+  .red { color: var(--red); }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--white-dim);
+    font-weight: 300;
+    max-width: 600px;
+  }
+
+  .big-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .gold-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 20px 0;
+  }
+
+  .gold-line-center {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 20px auto;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+  }
+
+  .card-highlight {
+    background: var(--gold-dim);
+    border-color: rgba(196, 161, 74, 0.35);
+  }
+
+  .card-premium {
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-dim2));
+    border-color: var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-premium::after {
+    content: 'RECOMENDADO';
+    position: absolute;
+    top: 16px;
+    right: -30px;
+    background: var(--gold);
+    color: var(--green-deep);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 40px;
+    transform: rotate(45deg);
+  }
+
+  .card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .card p { font-size: 0.95rem; }
+
+  ul { list-style: none; }
+  ul li { padding: 5px 0; padding-left: 20px; position: relative; font-size: 1rem; }
+  ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 9px;
+  }
+
+  .check-list li::before { content: '✓'; font-size: 0.9rem; top: 6px; font-weight: 700; }
+
+  /* Logo placeholder */
+  .logo {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--red);
+    background: rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+  }
+
+  .logo-small {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--red);
+    background: rgba(0,0,0,0.3);
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(255,255,255,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transition: width 0.5s ease;
+  }
+
+  .nav {
+    position: fixed;
+    bottom: 28px;
+    right: 36px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+
+  .nav button {
+    background: rgba(196, 161, 74, 0.1);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.25s;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .nav button:hover {
+    background: rgba(196, 161, 74, 0.2);
+    border-color: var(--gold);
+  }
+
+  .slide-counter {
+    position: fixed;
+    bottom: 33px;
+    left: 36px;
+    font-size: 0.75rem;
+    color: var(--white-dim2);
+    letter-spacing: 0.1em;
+    z-index: 100;
+  }
+
+  .watermark {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    color: var(--white-dim2);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 100;
+  }
+
+  .compare-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(196, 161, 74, 0.1);
+  }
+
+  .compare-label {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--white-dim);
+  }
+
+  .compare-basic, .compare-full {
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .icon-check { color: var(--gold); }
+  .icon-x { color: var(--white-dim2); }
+
+  .cta-box {
+    background: linear-gradient(135deg, rgba(196, 161, 74, 0.15), rgba(196, 161, 74, 0.05));
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .whatsapp-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: transform 0.2s;
+  }
+
+  .whatsapp-btn:hover { transform: scale(1.03); }
+
+  @media (max-width: 768px) {
+    .slide { padding: 30px 24px; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.6rem; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .big-number { font-size: 3rem; }
+    .subtitle { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+<div class="watermark">Fialho Motors — Proposta Comercial</div>
+
+<!-- SLIDE 1: CAPA -->
+<div class="slide active" id="s1">
+  <div class="slide-content" style="text-align: center;">
+    <div class="logo" style="margin: 0 auto 24px;">F</div>
+    <h1>Fialho Motors</h1>
+    <div class="gold-line-center"></div>
+    <p class="subtitle" style="margin: 0 auto; text-align: center;">
+      Proposta de Gestão de Conteúdo<br>& Identidade Digital
+    </p>
+    <p style="margin-top: 30px; font-size: 0.85rem; color: var(--white-dim2);">Março 2026 — Campo Grande, MS</p>
+  </div>
+</div>
+
+<!-- SLIDE 2: QUEM SOMOS -->
+<div class="slide" id="s2">
+  <div class="slide-content">
+    <h3>Sobre nós</h3>
+    <h2>Conteúdo que vende carros</h2>
+    <div class="gold-line"></div>
+    <p class="subtitle">Somos especialistas em criação de conteúdo para o setor automotivo, com foco em marcas que valorizam qualidade e atendimento personalizado.</p>
+    <div class="grid-3" style="margin-top: 36px;">
+      <div class="card">
+        <h4 class="gold">Identidade Visual</h4>
+        <p>Criação e padronização de marca para presença digital consistente e profissional.</p>
+      </div>
+      <div class="card">
+        <h4 class="gold">Conteúdo Recorrente</h4>
+        <p>Posts, stories, reels e materiais para WhatsApp com frequência e qualidade garantidas.</p>
+      </div>
+      <div class="card">
+        <h4 class="gold">Especialidade GWM</h4>
+        <p>Conhecimento profundo da linha GWM — Haval, Tank, Poer — e do público entusiasta.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: O QUE JÁ FIZEMOS -->
+<div class="slide" id="s3">
+  <div class="slide-content">
+    <h3>O que já entregamos</h3>
+    <h2>Resultados que falam por si</h2>
+    <div class="gold-line"></div>
+    <div class="grid-2" style="margin-top: 24px;">
+      <div>
+        <ul class="check-list">
+          <li>Identidade visual completa da Fialho Motors</li>
+          <li>Logo redesenhada com padrão premium</li>
+          <li>Versão horizontal com @fialhomotorscg</li>
+          <li>Marca d'água para fotos de veículos</li>
+          <li>7+ variações de flyer para grupos WhatsApp</li>
+          <li>Fotos tratadas profissionalmente (Poer P30)</li>
+          <li>Copy institucional com link de contato</li>
+        </ul>
+      </div>
+      <div class="card card-highlight" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-size: 0.85rem; color: var(--white-dim2); margin-bottom: 8px;">VALOR DE MERCADO DO PACOTE ENTREGUE</p>
+        <div class="big-number">R$ 3.500+</div>
+        <p style="margin-top: 12px; font-size: 0.9rem;">Identidade visual + peças gráficas + tratamento fotográfico</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: COMO FUNCIONA -->
+<div class="slide" id="s4">
+  <div class="slide-content">
+    <h3>Como funciona</h3>
+    <h2>Seu marketing rodando toda semana</h2>
+    <div class="gold-line"></div>
+    <div class="grid-2" style="margin-top: 20px;">
+      <div class="card" style="text-align: center;">
+        <p style="font-size: 2.5rem; margin-bottom: 8px;">📅</p>
+        <h4>Calendário Mensal</h4>
+        <p>Você recebe no início do mês o planejamento completo: o que vai ser postado, quando e em qual formato.</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <p style="font-size: 2.5rem; margin-bottom: 8px;">📸</p>
+        <h4>Conteúdo Profissional</h4>
+        <p>Fotos tratadas, flyers padronizados, vídeos editados — tudo seguindo a identidade da Fialho Motors.</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <p style="font-size: 2.5rem; margin-bottom: 8px;">📱</p>
+        <h4>Grupos de WhatsApp</h4>
+        <p>Peças prontas para grupos como Havaleiros — com copy, link e formato aprovado pelos admins.</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <p style="font-size: 2.5rem; margin-bottom: 8px;">📊</p>
+        <h4>Consistência</h4>
+        <p>Presença digital contínua gera confiança. 3 posts por semana, toda semana, sem falhas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: PLANO BÁSICO -->
+<div class="slide" id="s5">
+  <div class="slide-content">
+    <h3>Plano</h3>
+    <h2>Gestão Essencial</h2>
+    <div class="gold-line"></div>
+    <div class="grid-2">
+      <div>
+        <div class="big-number" style="margin-bottom: 4px;">R$ 800</div>
+        <p style="color: var(--white-dim2); font-size: 1rem; margin-bottom: 24px;">/mês</p>
+        <ul>
+          <li><strong class="white">12 posts por mês</strong> — 3 por semana</li>
+          <li><strong class="white">Feed:</strong> foto tratada do veículo + copy</li>
+          <li><strong class="white">Stories:</strong> bastidores, dia a dia da loja</li>
+          <li><strong class="white">Reels:</strong> vídeos curtos de 15-30 segundos</li>
+          <li><strong class="white">Identidade visual</strong> padronizada em tudo</li>
+          <li><strong class="white">Calendário mensal</strong> de conteúdo</li>
+          <li><strong class="white">1 flyer/mês</strong> para grupos de WhatsApp</li>
+        </ul>
+      </div>
+      <div class="card card-highlight" style="display: flex; flex-direction: column; justify-content: center;">
+        <h4 class="gold">Ideal para quem:</h4>
+        <p style="margin-top: 12px;">Quer sair do "sem presença digital" para uma presença profissional e consistente, com investimento acessível.</p>
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+          <p style="font-size: 0.85rem; color: var(--white-dim2);">Equivalente a</p>
+          <p style="font-size: 1.1rem; color: var(--white);"><strong>R$ 26/dia</strong> de marketing profissional</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: PLANO COMPLETO -->
+<div class="slide" id="s6">
+  <div class="slide-content">
+    <h3>Plano</h3>
+    <h2>Gestão Completa</h2>
+    <div class="gold-line"></div>
+    <div class="grid-2">
+      <div>
+        <div class="big-number" style="margin-bottom: 4px;">R$ 1.500</div>
+        <p style="color: var(--white-dim2); font-size: 1rem; margin-bottom: 24px;">/mês</p>
+        <ul>
+          <li><strong class="white">Tudo do Essencial</strong> incluído</li>
+          <li><strong class="white">2 captações de drone/mês</strong> — fachada + veículos</li>
+          <li><strong class="white">1 vídeo interativo/mês</strong> — apresentação ou test drive</li>
+          <li><strong class="white">Stories 5x/semana</strong> — presença diária</li>
+          <li><strong class="white">Flyers ilimitados</strong> para grupos</li>
+          <li><strong class="white">Relatório mensal</strong> de performance</li>
+          <li><strong class="white">Kit WhatsApp</strong> — 5 peças rotativas/mês</li>
+        </ul>
+      </div>
+      <div class="card card-premium" style="display: flex; flex-direction: column; justify-content: center;">
+        <h4 class="gold">O pacote completo:</h4>
+        <p style="margin-top: 12px;">Presença digital total com vídeo aéreo, conteúdo diário e material dedicado para captação via WhatsApp.</p>
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+          <p style="font-size: 0.85rem; color: var(--white-dim2);">Equivalente a</p>
+          <p style="font-size: 1.1rem; color: var(--white);"><strong>R$ 50/dia</strong> de marketing completo</p>
+        </div>
+        <div style="margin-top: 16px;">
+          <p style="font-size: 0.8rem; color: var(--gold);">Uma venda a mais por mês já paga o investimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: COMPARATIVO -->
+<div class="slide" id="s7">
+  <div class="slide-content">
+    <h3>Comparativo</h3>
+    <h2>O que cada plano inclui</h2>
+    <div class="gold-line"></div>
+    <div style="margin-top: 20px;">
+      <div class="compare-row" style="border-bottom: 1px solid var(--border);">
+        <div class="compare-label" style="color: var(--white-dim2); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">Serviço</div>
+        <div class="compare-basic" style="color: var(--white-dim2); font-size: 0.8rem;">Essencial</div>
+        <div class="compare-full" style="color: var(--gold); font-size: 0.8rem;">Completo</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Posts no feed (foto + copy)</div>
+        <div class="compare-basic"><span class="icon-check">12/mês</span></div>
+        <div class="compare-full"><span class="icon-check">12/mês</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Stories semanais</div>
+        <div class="compare-basic"><span class="icon-check">3/sem</span></div>
+        <div class="compare-full"><span class="icon-check">5/sem</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Reels (vídeo curto)</div>
+        <div class="compare-basic"><span class="icon-check">4/mês</span></div>
+        <div class="compare-full"><span class="icon-check">4/mês</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Calendário mensal</div>
+        <div class="compare-basic"><span class="icon-check">✓</span></div>
+        <div class="compare-full"><span class="icon-check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Flyer para grupos WhatsApp</div>
+        <div class="compare-basic"><span class="icon-check">1/mês</span></div>
+        <div class="compare-full"><span class="icon-check">Ilimitado</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Captação com drone</div>
+        <div class="compare-basic"><span class="icon-x">—</span></div>
+        <div class="compare-full"><span class="icon-check">2/mês</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Vídeo interativo (apresentação)</div>
+        <div class="compare-basic"><span class="icon-x">—</span></div>
+        <div class="compare-full"><span class="icon-check">1/mês</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Kit de conteúdo WhatsApp</div>
+        <div class="compare-basic"><span class="icon-x">—</span></div>
+        <div class="compare-full"><span class="icon-check">5 peças</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Relatório de performance</div>
+        <div class="compare-basic"><span class="icon-x">—</span></div>
+        <div class="compare-full"><span class="icon-check">Mensal</span></div>
+      </div>
+      <div class="compare-row" style="border-bottom: none;">
+        <div class="compare-label" style="color: var(--white); font-weight: 600;">Investimento</div>
+        <div class="compare-basic" style="font-size: 1.1rem;"><span class="gold">R$ 800</span></div>
+        <div class="compare-full" style="font-size: 1.1rem;"><span class="gold">R$ 1.500</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: EXEMPLO CALENDÁRIO -->
+<div class="slide" id="s8">
+  <div class="slide-content">
+    <h3>Na prática</h3>
+    <h2>Como fica uma semana típica</h2>
+    <div class="gold-line"></div>
+    <div class="grid-3" style="margin-top: 20px;">
+      <div class="card" style="border-left: 3px solid var(--gold);">
+        <p style="font-size: 0.75rem; color: var(--white-dim2); text-transform: uppercase; letter-spacing: 0.1em;">Segunda-feira</p>
+        <h4 style="margin-top: 8px;">Post no Feed</h4>
+        <p style="font-size: 0.9rem;">Foto profissional do Haval H6 em estoque. Copy com diferenciais + link WhatsApp.</p>
+        <p style="font-size: 0.8rem; color: var(--gold); margin-top: 8px;">📐 1080×1350</p>
+      </div>
+      <div class="card" style="border-left: 3px solid var(--gold);">
+        <p style="font-size: 0.75rem; color: var(--white-dim2); text-transform: uppercase; letter-spacing: 0.1em;">Quarta-feira</p>
+        <h4 style="margin-top: 8px;">Story</h4>
+        <p style="font-size: 0.9rem;">Bastidores da loja — movimento do dia, veículo novo chegando, equipe trabalhando.</p>
+        <p style="font-size: 0.8rem; color: var(--gold); margin-top: 8px;">📱 1080×1920</p>
+      </div>
+      <div class="card" style="border-left: 3px solid var(--gold);">
+        <p style="font-size: 0.75rem; color: var(--white-dim2); text-transform: uppercase; letter-spacing: 0.1em;">Sexta-feira</p>
+        <h4 style="margin-top: 8px;">Reel</h4>
+        <p style="font-size: 0.9rem;">Walk-around do Tank 300 — exterior, interior, destaques. 15-30 segundos com música.</p>
+        <p style="font-size: 0.8rem; color: var(--gold); margin-top: 8px;">🎬 1080×1920, 15-30s</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 20px; text-align: center;">
+      <p style="font-size: 0.95rem;">Isso <strong class="gold">toda semana</strong>, <strong class="gold">todo mês</strong>. Sem você precisar pensar no que postar. Só aprovar e publicar.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: POR QUE AGORA -->
+<div class="slide" id="s9">
+  <div class="slide-content" style="text-align: center;">
+    <h3>Oportunidade</h3>
+    <h1 style="font-size: 2.8rem;">2026 é o ano da<br><span style="color: var(--white);">GWM no Brasil</span></h1>
+    <div class="gold-line-center"></div>
+    <div class="grid-3" style="max-width: 800px; margin: 30px auto;">
+      <div class="card" style="text-align: center;">
+        <div class="big-number" style="font-size: 2.5rem;">12</div>
+        <p style="font-size: 0.85rem;">novos modelos<br>sendo lançados</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <div class="big-number" style="font-size: 2.5rem;">130</div>
+        <p style="font-size: 0.85rem;">concessionárias<br>em todo o Brasil</p>
+      </div>
+      <div class="card" style="text-align: center;">
+        <div class="big-number" style="font-size: 2.5rem;">+22%</div>
+        <p style="font-size: 0.85rem;">crescimento<br>acima da meta em 2025</p>
+      </div>
+    </div>
+    <p style="max-width: 600px; margin: 20px auto; font-size: 1.05rem;">
+      Cada modelo novo é conteúdo novo. Cada lançamento é oportunidade de post. Quem estiver <strong class="gold">posicionado digitalmente agora</strong> vai colher os frutos o ano inteiro.
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="slide" id="s10">
+  <div class="slide-content" style="text-align: center;">
+    <div class="logo" style="margin: 0 auto 24px;">F</div>
+    <h1 style="font-size: 2.8rem;">Vamos começar?</h1>
+    <div class="gold-line-center"></div>
+    <p class="subtitle" style="margin: 0 auto 30px; text-align: center;">
+      Escolha o plano que faz mais sentido para a Fialho Motors hoje.<br>
+      A gente cuida do conteúdo. Você cuida dos clientes.
+    </p>
+    <div class="grid-2" style="max-width: 600px; margin: 0 auto 30px;">
+      <div class="card" style="text-align: center;">
+        <p style="font-size: 0.8rem; color: var(--white-dim2); text-transform: uppercase;">Essencial</p>
+        <div class="big-number" style="font-size: 2.5rem;">R$ 800</div>
+        <p style="font-size: 0.85rem;">/mês</p>
+      </div>
+      <div class="card card-highlight" style="text-align: center;">
+        <p style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase;">Completo</p>
+        <div class="big-number" style="font-size: 2.5rem;">R$ 1.500</div>
+        <p style="font-size: 0.85rem;">/mês</p>
+      </div>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--white-dim2); margin-top: 30px;">
+      Fialho Motors — Atendimento personalizado com presença digital profissional.
+    </p>
+  </div>
+</div>
+
+<div class="slide-counter"><span id="current">1</span> / <span id="total"></span></div>
+
+<div class="nav">
+  <button onclick="prev()">← Anterior</button>
+  <button onclick="next()">Próximo →</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  document.getElementById('total').textContent = slides.length;
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = Math.max(0, Math.min(n, slides.length - 1));
+    slides[currentSlide].classList.add('active');
+    document.getElementById('current').textContent = currentSlide + 1;
+    document.getElementById('progress').style.width = ((currentSlide + 1) / slides.length * 100) + '%';
+  }
+
+  function next() { showSlide(currentSlide + 1); }
+  function prev() { showSlide(currentSlide - 1); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+  document.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+name: king-quality-guard
+version: "2.0.0"
+description: "Squad de qualidade autonomo para o KING System. Valida ACs, codigo TypeScript, arquitetura, seguranca e observabilidade — sem interromper o processo criativo."
+domain: quality-assurance
+project: king-system
+author: gabriel-olio
+created: "2026-03-06"
+updated: "2026-03-06"
+
+# Filosofia do squad
+philosophy: |
+  Voce implementa. A gente confere. Sem perguntas no meio.
+  Chame *check [story-id] quando terminar qualquer implementacao
+  e receba um laudo completo em portugues simples.
+
+# Repertorio de conhecimento senior
+knowledge_sources:
+  - "Martin Fowler (ThoughtWorks) — Evolutionary Architecture, Code Smells, Refactoring"
+  - "goldbergyoni/nodebestpractices (100k+ stars) — Node.js component structure, 3-layer architecture"
+  - "Microsoft Engineering Playbook — TypeScript strict mode, AAA tests, ESLint enforcement"
+  - "Google DORA Research 2024-2025 — 5 delivery metrics, AI impact on stability"
+  - "Tao of Node (Alex Kondov) — Node.js architecture patterns"
+  - "OWASP Top 10 — adapted for Node.js + SQLite + WhatsApp context"
+
+lead_agent: sentinel
+
+agents:
+  - id: sentinel
+    file: agents/sentinel.md
+    role: "Orquestrador — coordena todos os checks e entrega o relatorio final"
+  - id: story-auditor
+    file: agents/story-auditor.md
+    role: "Especialista em Acceptance Criteria — verifica o codigo contra a story"
+  - id: architect-reviewer
+    file: agents/architect-reviewer.md
+    role: "Analista de arquitetura senior — Fowler + DORA + Node best practices"
+
+tasks:
+  # Fluxo principal
+  - id: run-quality-check
+    file: tasks/run-quality-check.md
+    trigger: "*check"
+    description: "Ponto de entrada: executa TODOS os checks e gera relatorio"
+  - id: generate-report
+    file: tasks/generate-report.md
+    trigger: internal
+    description: "Consolida resultados e formata relatorio final com score"
+
+  # Checks funcionais
+  - id: check-story-criteria
+    file: tasks/check-story-criteria.md
+    trigger: "*audit"
+    description: "Verifica cada Acceptance Criteria da story contra o codigo"
+  - id: check-typescript
+    file: tasks/check-typescript.md
+    trigger: internal
+    description: "Roda typecheck + lint + verificacoes adicionais de qualidade TS"
+  - id: check-integration
+    file: tasks/check-integration.md
+    trigger: internal
+    description: "Verifica pontos de integracao entre modulos (router, index.ts, imports)"
+
+  # Checks de qualidade senior (novo em v2.0)
+  - id: check-architecture
+    file: tasks/check-architecture.md
+    trigger: internal
+    description: "Analise arquitetural: estrutura, code smells, SOLID, coupling (Fowler)"
+  - id: check-security
+    file: tasks/check-security.md
+    trigger: internal
+    description: "Seguranca basica: hardcoded secrets, SQL injection, path traversal, npm audit"
+  - id: check-observability
+    file: tasks/check-observability.md
+    trigger: internal
+    description: "Logging, traceabilidade, error handling, DORA snapshot"
+
+checklists:
+  - id: story-dod
+    file: checklists/story-dod.md
+    description: "Definition of Done para stories do KING System"
+
+data:
+  - id: senior-dev-knowledge-base
+    file: data/senior-dev-knowledge-base.md
+    description: "Repertorio: Fowler, goldbergyoni, Microsoft Playbook, DORA, OWASP"
+
+config:
+  language: "pt-BR"
+  report_style: "plain"        # Sem jargao tecnico
+  interruption_mode: "none"    # Nunca interrompe no meio — so reporta no final
+  story_path: "docs/stories/"
+  src_path: "src/"
+  check_order:
+    - check-story-criteria     # 1. ACs primeiro — funcionalidade
+    - check-typescript         # 2. Codigo — erros de tipos
+    - check-integration        # 3. Conexoes — modulos integrados?
+    - check-architecture       # 4. Saude arquitetural — Fowler
+    - check-security           # 5. Seguranca — OWASP basico
+    - check-observability      # 6. Visibilidade — logs, traces, DORA
+
+quick_commands:
+  - "*check [story-id]    → Quality check completo (todos os 6 checks)"
+  - "*check-all           → Roda para todas as stories nao concluidas"
+  - "*audit [story-id]    → So Acceptance Criteria (sem checks tecnicos)"
+  - "*review-architecture → Analise arquitetural isolada (architect-reviewer)"
+  - "*status              → Historico de checks desta sessao"

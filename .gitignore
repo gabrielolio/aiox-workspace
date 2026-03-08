@@ -9,13 +9,30 @@
 # ─── Incluir arquivos e pastas AIOX ───
 !.gitignore
 !CLAUDE.md
+!README.md
+!package.json
+!package-lock.json
+!eslint.config.js
+!tsconfig.json
+!vitest.config.ts
+!.env.example
 !.claude/
 !.synapse/
 !.aios/
 !.codex/
+!.cursor/
+!.gemini/
+!.antigravity/
+!.github/
 !knowledge-base/
 !materiais/
 !memory/
+!docs/
+!squads/
+!src/
+!projects/
+!presentations/
+!scripts/
 
 # ─── Excluir dentro das pastas incluídas ───
 
@@ -31,9 +48,17 @@
 .synapse/sessions/
 .synapse/metrics/
 
+# node_modules — nunca no git
+node_modules/
+
+# Build outputs
+dist/
+build/
+
 # Variáveis de ambiente — nunca no git
 .env
 .env.*
+!.env.example
 
 # Framework (já está no npm e no github da Synkra)
 .aios-core/

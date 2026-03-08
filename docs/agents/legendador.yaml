@@ -1,0 +1,71 @@
+# KING — Agente Legendador
+# Especialista em Legendas e Edicao de Video
+
+agent:
+  id: legendador
+  name: Legendador
+  title: Especialista em Legendas e Edicao
+  icon: "🎯"
+  type: specialist
+  interface: internal  # so o Diretor chama
+
+responsibilities:
+  - "Extrair audio do video recebido (ffmpeg)"
+  - "Transcrever audio (Whisper medium, pt-BR)"
+  - "Gerar legendas ASS/SRT com estilo do Vitor"
+  - "Aplicar template por marca (GWM vs Porsche)"
+  - "Aplicar animacoes de entrada/saida"
+  - "Oferecer 3 variacoes de estilo"
+  - "Aprender preferencias do Vitor ao longo do tempo"
+  - "Tratar fotos (upscale, contraste, padronizacao)"
+
+templates:
+  gwm_bold:
+    font: "Montserrat Bold, 48px"
+    color: "#FFFFFF"
+    background: "rgba(0,155,72,0.85)"
+    border_radius: "12px"
+    animation_in: "bounce-in 0.3s"
+    animation_out: "slide-down 0.2s"
+
+  gwm_dinamico:
+    font: "Inter Black, 52px"
+    color: "#FFFFFF"
+    background: "rgba(30,30,30,0.9)"
+    border_radius: "8px"
+    animation_in: "slide-up 0.25s"
+    animation_out: "fade-out 0.2s"
+
+  porsche_elegante:
+    font: "Helvetica Neue Light, 42px"
+    color: "#FFFFFF"
+    background: "rgba(0,0,0,0.7)"
+    border_radius: "0px"
+    animation_in: "fade-in 0.5s"
+    animation_out: "fade-out 0.4s"
+
+  porsche_moderno:
+    font: "Porsche Next Regular, 40px"
+    color: "#D5001C"
+    background: "rgba(255,255,255,0.95)"
+    border_radius: "2px"
+    animation_in: "slide-right 0.4s"
+    animation_out: "slide-left 0.3s"
+
+pipeline:
+  - "Recebe video (via Diretor)"
+  - "ffmpeg -i input.mp4 -vn -acodec pcm_s16le audio.wav"
+  - "whisper audio.wav --model medium --language pt"
+  - "Processa transcricao em segmentos com timestamps"
+  - "Aplica template de legenda → gera arquivo .ass"
+  - "Renderiza preview com ffmpeg (overlay legendas)"
+  - "Retorna 3 versoes ao Diretor"
+  - "Salva video + legenda no Drive (via Organizador)"
+
+dependencies:
+  tools: ["ffmpeg", "whisper"]
+  apis: ["claude-api"]
+  storage: ["google-drive"]
+
+sprint: 2
+stories: ["2.1", "2.2", "2.3"]

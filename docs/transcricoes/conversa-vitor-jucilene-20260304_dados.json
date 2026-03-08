@@ -1,0 +1,3789 @@
+{
+  "meta": {
+    "gerado_em": "2026-03-04T00:51:40.784195",
+    "versao": "1.0.0",
+    "motor": "KING / Whisper"
+  },
+  "audio": {
+    "arquivo": "conversa-vitor-jucilene-20260304.mp4",
+    "caminho_completo": "/home/user/claudio-core/docs/transcricoes/conversa-vitor-jucilene-20260304.mp4",
+    "duracao_segundos": 1048.38,
+    "duracao_formatada": "0:17:28",
+    "canais": 1,
+    "taxa_amostragem": 48000,
+    "bits_por_amostra": 16,
+    "tamanho_bytes": 9164341,
+    "formato": "MP4",
+    "hash_md5": "02e6eac84362a76e7dc87d626e0b3887"
+  },
+  "contexto": {
+    "total_interlocutores": 1,
+    "interlocutores": {
+      "Interlocutor A": {
+        "total_falas": 464,
+        "total_palavras": 3149,
+        "tempo_total_fala": 1002.1,
+        "percentual_palavras": 100.0,
+        "media_palavras_por_fala": 6.8
+      }
+    },
+    "total_falas": 464,
+    "total_palavras": 3149,
+    "duracao_audio": "0:17:28",
+    "idioma_detectado": "Outro/Indefinido",
+    "palavras_chave": [
+      "você",
+      "pra",
+      "não",
+      "então",
+      "carro",
+      "fazer",
+      "gente",
+      "vou",
+      "coisa",
+      "cliente",
+      "sei",
+      "alvaro",
+      "tipo",
+      "alguma",
+      "sabe"
+    ],
+    "top_frequencias": {
+      "você": 79,
+      "pra": 56,
+      "não": 48,
+      "então": 40,
+      "carro": 28,
+      "fazer": 26,
+      "gente": 24,
+      "vou": 24,
+      "coisa": 22,
+      "cliente": 20,
+      "sei": 16,
+      "alvaro": 16,
+      "tipo": 12,
+      "alguma": 12,
+      "sabe": 11,
+      "mil": 11,
+      "entendeu": 11,
+      "também": 11,
+      "preciso": 10,
+      "veículo": 10
+    }
+  },
+  "falas": [
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Preciso saber das suas necessidades, o que está sendo mais recorrente, o que dá pra hoje, o que hoje é a sua dor?",
+      "inicio": 0.0,
+      "fim": 12.0,
+      "inicio_fmt": "0:00:00",
+      "fim_fmt": "0:00:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, eu acho o seguinte, eu acho que a gente tem que... Porque assim, no Instagram eu vejo que é tudo muito igual.",
+      "inicio": 12.0,
+      "fim": 19.0,
+      "inicio_fmt": "0:00:12",
+      "fim_fmt": "0:00:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, eu postei um carro que entrou, aí eu postei um carro que saiu.",
+      "inicio": 19.0,
+      "fim": 22.0,
+      "inicio_fmt": "0:00:19",
+      "fim_fmt": "0:00:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí eu queria algo diferente, onde passasse a informação e ao mesmo tempo o cliente que estiver interessado interagir.",
+      "inicio": 22.0,
+      "fim": 31.0,
+      "inicio_fmt": "0:00:22",
+      "fim_fmt": "0:00:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sabe, tipo assim, ó. Ah, caraca, esse carro saiu pra mim. Puta, 20 mil km?",
+      "inicio": 31.0,
+      "fim": 36.0,
+      "inicio_fmt": "0:00:31",
+      "fim_fmt": "0:00:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele entrar em alguma coisa, saber informações do carro e o carro passar essa informação. E não só aí.",
+      "inicio": 36.0,
+      "fim": 42.0,
+      "inicio_fmt": "0:00:36",
+      "fim_fmt": "0:00:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vi uma, eu acho que aqui ó, sabe essa garagem que tem do lado do Thiago ali? Um pouquinho mais showroom, eu acho.",
+      "inicio": 42.0,
+      "fim": 48.0,
+      "inicio_fmt": "0:00:42",
+      "fim_fmt": "0:00:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sabe a showroom?",
+      "inicio": 48.0,
+      "fim": 50.0,
+      "inicio_fmt": "0:00:48",
+      "fim_fmt": "0:00:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A showroom, lá no showroom, sei lá.",
+      "inicio": 50.0,
+      "fim": 52.0,
+      "inicio_fmt": "0:00:50",
+      "fim_fmt": "0:00:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele state um Instagram onde passa a informação e coloca... E aí você clica...",
+      "inicio": 52.0,
+      "fim": 61.0,
+      "inicio_fmt": "0:00:52",
+      "fim_fmt": "0:01:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Criativo.",
+      "inicio": 61.0,
+      "fim": 62.0,
+      "inicio_fmt": "0:01:01",
+      "fim_fmt": "0:01:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, você clica e ele vai passando as imagens do carro e as informações do carro.",
+      "inicio": 62.0,
+      "fim": 66.0,
+      "inicio_fmt": "0:01:02",
+      "fim_fmt": "0:01:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, não sabe o Instagram.",
+      "inicio": 66.0,
+      "fim": 68.0,
+      "inicio_fmt": "0:01:06",
+      "fim_fmt": "0:01:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entendeu?",
+      "inicio": 68.0,
+      "fim": 69.0,
+      "inicio_fmt": "0:01:08",
+      "fim_fmt": "0:01:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É como uma lei de page.",
+      "inicio": 69.0,
+      "fim": 71.0,
+      "inicio_fmt": "0:01:09",
+      "fim_fmt": "0:01:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu não sei o que isso significa, mas assim ó, é tipo assim, eu me interessei por um carro deles que eu achei, um Jeep 2222 com 24 mil km.",
+      "inicio": 71.0,
+      "fim": 79.0,
+      "inicio_fmt": "0:01:11",
+      "fim_fmt": "0:01:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que eu fiz clica aí em cima, apareceu um motor e foi uma salgada.",
+      "inicio": 79.0,
+      "fim": 82.0,
+      "inicio_fmt": "0:01:19",
+      "fim_fmt": "0:01:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu achei incrível, eu falei, caramba, que massa.",
+      "inicio": 82.0,
+      "fim": 85.0,
+      "inicio_fmt": "0:01:22",
+      "fim_fmt": "0:01:25"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu queria alguma coisa assim, sabe?",
+      "inicio": 85.0,
+      "fim": 87.0,
+      "inicio_fmt": "0:01:25",
+      "fim_fmt": "0:01:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que legal.",
+      "inicio": 87.0,
+      "fim": 88.0,
+      "inicio_fmt": "0:01:27",
+      "fim_fmt": "0:01:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso seria muito legal. Querido, muito obrigado, parabéns.",
+      "inicio": 88.0,
+      "fim": 90.0,
+      "inicio_fmt": "0:01:28",
+      "fim_fmt": "0:01:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Obrigado, prazer em conhecer.",
+      "inicio": 90.0,
+      "fim": 92.0,
+      "inicio_fmt": "0:01:30",
+      "fim_fmt": "0:01:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu te dei um oizinho, se você precisar, um só que lá comigo, tá bem?",
+      "inicio": 92.0,
+      "fim": 94.0,
+      "inicio_fmt": "0:01:32",
+      "fim_fmt": "0:01:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Maravilha.",
+      "inicio": 94.0,
+      "fim": 95.0,
+      "inicio_fmt": "0:01:34",
+      "fim_fmt": "0:01:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então tá bom, obrigado, viu?",
+      "inicio": 95.0,
+      "fim": 96.0,
+      "inicio_fmt": "0:01:35",
+      "fim_fmt": "0:01:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tudo de bom.",
+      "inicio": 96.0,
+      "fim": 97.0,
+      "inicio_fmt": "0:01:36",
+      "fim_fmt": "0:01:37"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Parabéns, viu?",
+      "inicio": 97.0,
+      "fim": 98.0,
+      "inicio_fmt": "0:01:37",
+      "fim_fmt": "0:01:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, eu vou pegar essa pra você.",
+      "inicio": 98.0,
+      "fim": 99.0,
+      "inicio_fmt": "0:01:38",
+      "fim_fmt": "0:01:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá bom, meu amor, obrigado, tá?",
+      "inicio": 100.0,
+      "fim": 102.0,
+      "inicio_fmt": "0:01:40",
+      "fim_fmt": "0:01:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só hoje vai 3k.",
+      "inicio": 102.0,
+      "fim": 104.0,
+      "inicio_fmt": "0:01:42",
+      "fim_fmt": "0:01:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aquela essa da minha casa.",
+      "inicio": 104.0,
+      "fim": 105.0,
+      "inicio_fmt": "0:01:44",
+      "fim_fmt": "0:01:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você viu que tem uma aval ali também vendida.",
+      "inicio": 105.0,
+      "fim": 107.0,
+      "inicio_fmt": "0:01:45",
+      "fim_fmt": "0:01:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, então é de cacalotre.",
+      "inicio": 107.0,
+      "fim": 108.0,
+      "inicio_fmt": "0:01:47",
+      "fim_fmt": "0:01:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas, então é o seguinte ó, eu preciso disso, de alguma coisa assim diferente, sabe?",
+      "inicio": 108.0,
+      "fim": 113.0,
+      "inicio_fmt": "0:01:48",
+      "fim_fmt": "0:01:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque assim, e também, se eu mandar imagem pra você, você cria alguma coisa pra eu postar.",
+      "inicio": 113.0,
+      "fim": 119.0,
+      "inicio_fmt": "0:01:53",
+      "fim_fmt": "0:01:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É só isso.",
+      "inicio": 119.0,
+      "fim": 120.0,
+      "inicio_fmt": "0:01:59",
+      "fim_fmt": "0:02:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ou você cuidar do Instagram, então eu não tenho muita ideia do que eu quero, porque até então, eu sou nova no negócio, né?",
+      "inicio": 120.0,
+      "fim": 127.0,
+      "inicio_fmt": "0:02:00",
+      "fim_fmt": "0:02:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, o que você acha?",
+      "inicio": 127.0,
+      "fim": 128.0,
+      "inicio_fmt": "0:02:07",
+      "fim_fmt": "0:02:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Deixa eu entender como que tá sendo essa comunicação.",
+      "inicio": 128.0,
+      "fim": 131.0,
+      "inicio_fmt": "0:02:08",
+      "fim_fmt": "0:02:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Como que eu tô recebendo cliente?",
+      "inicio": 131.0,
+      "fim": 133.0,
+      "inicio_fmt": "0:02:11",
+      "fim_fmt": "0:02:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, você precisa saber disso.",
+      "inicio": 133.0,
+      "fim": 135.0,
+      "inicio_fmt": "0:02:13",
+      "fim_fmt": "0:02:15"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Olha só, eu só recebo cliente pelo Shopcar.",
+      "inicio": 135.0,
+      "fim": 139.0,
+      "inicio_fmt": "0:02:15",
+      "fim_fmt": "0:02:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Cara, dá muito cliente pelo Shopcar.",
+      "inicio": 139.0,
+      "fim": 141.0,
+      "inicio_fmt": "0:02:19",
+      "fim_fmt": "0:02:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Shopcar, ele ó, o segredo é captação, que eu tenho que captar os carros e colocar no Shopcar.",
+      "inicio": 141.0,
+      "fim": 149.0,
+      "inicio_fmt": "0:02:21",
+      "fim_fmt": "0:02:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que aí vem o pessoal que filtra lá e vem pra mim no email.",
+      "inicio": 149.0,
+      "fim": 153.0,
+      "inicio_fmt": "0:02:29",
+      "fim_fmt": "0:02:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu recebo de madrugada.",
+      "inicio": 153.0,
+      "fim": 155.0,
+      "inicio_fmt": "0:02:33",
+      "fim_fmt": "0:02:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí eu chego aqui, trabalho ele, trago ele e fecho o carro.",
+      "inicio": 155.0,
+      "fim": 159.0,
+      "inicio_fmt": "0:02:35",
+      "fim_fmt": "0:02:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Geralmente no email tem todas as especificações, tipo do WhatsApp, do cliente.",
+      "inicio": 159.0,
+      "fim": 164.0,
+      "inicio_fmt": "0:02:39",
+      "fim_fmt": "0:02:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E tem, eu vou abrir pra você.",
+      "inicio": 164.0,
+      "fim": 166.0,
+      "inicio_fmt": "0:02:44",
+      "fim_fmt": "0:02:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Do dado pro carro que ele puxou.",
+      "inicio": 166.0,
+      "fim": 168.0,
+      "inicio_fmt": "0:02:46",
+      "fim_fmt": "0:02:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, exatamente, que é assim ó.",
+      "inicio": 168.0,
+      "fim": 170.0,
+      "inicio_fmt": "0:02:48",
+      "fim_fmt": "0:02:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Dá uma olhadinha aqui, só pra você.",
+      "inicio": 170.0,
+      "fim": 172.0,
+      "inicio_fmt": "0:02:50",
+      "fim_fmt": "0:02:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ó, não precisa ser uma coisa hoje, porque você também tá começando.",
+      "inicio": 172.0,
+      "fim": 176.0,
+      "inicio_fmt": "0:02:52",
+      "fim_fmt": "0:02:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então não precisa ser uma coisa assim fora do comum e outra coisa.",
+      "inicio": 176.0,
+      "fim": 179.0,
+      "inicio_fmt": "0:02:56",
+      "fim_fmt": "0:02:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E nem é pra ser fora do comum, porque na verdade, eu e você estamos começando.",
+      "inicio": 179.0,
+      "fim": 183.0,
+      "inicio_fmt": "0:02:59",
+      "fim_fmt": "0:03:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Exato.",
+      "inicio": 183.0,
+      "fim": 184.0,
+      "inicio_fmt": "0:03:03",
+      "fim_fmt": "0:03:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, por exemplo, vem assim ó.",
+      "inicio": 184.0,
+      "fim": 186.0,
+      "inicio_fmt": "0:03:04",
+      "fim_fmt": "0:03:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Deixa eu ver aqui.",
+      "inicio": 186.0,
+      "fim": 188.0,
+      "inicio_fmt": "0:03:06",
+      "fim_fmt": "0:03:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que eu recebi hoje de madrugada.",
+      "inicio": 188.0,
+      "fim": 190.0,
+      "inicio_fmt": "0:03:08",
+      "fim_fmt": "0:03:10"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Shopcar.",
+      "inicio": 190.0,
+      "fim": 192.0,
+      "inicio_fmt": "0:03:10",
+      "fim_fmt": "0:03:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aqui o Shopcar.",
+      "inicio": 192.0,
+      "fim": 194.0,
+      "inicio_fmt": "0:03:12",
+      "fim_fmt": "0:03:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele vem assim ó.",
+      "inicio": 194.0,
+      "fim": 196.0,
+      "inicio_fmt": "0:03:14",
+      "fim_fmt": "0:03:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E vem o telefone do cliente e isso aqui no email.",
+      "inicio": 196.0,
+      "fim": 200.0,
+      "inicio_fmt": "0:03:16",
+      "fim_fmt": "0:03:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Perfeito.",
+      "inicio": 200.0,
+      "fim": 202.0,
+      "inicio_fmt": "0:03:20",
+      "fim_fmt": "0:03:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entendeu? Então, o que acontece?",
+      "inicio": 202.0,
+      "fim": 204.0,
+      "inicio_fmt": "0:03:22",
+      "fim_fmt": "0:03:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, isso aqui é outro grid.",
+      "inicio": 204.0,
+      "fim": 207.0,
+      "inicio_fmt": "0:03:24",
+      "fim_fmt": "0:03:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu não tinha visto isso.",
+      "inicio": 207.0,
+      "fim": 209.0,
+      "inicio_fmt": "0:03:27",
+      "fim_fmt": "0:03:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ó, que legal.",
+      "inicio": 209.0,
+      "fim": 210.0,
+      "inicio_fmt": "0:03:29",
+      "fim_fmt": "0:03:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você entende que toda hora chega alguma coisa assim.",
+      "inicio": 210.0,
+      "fim": 212.0,
+      "inicio_fmt": "0:03:30",
+      "fim_fmt": "0:03:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É só você trabalhar.",
+      "inicio": 212.0,
+      "fim": 213.0,
+      "inicio_fmt": "0:03:32",
+      "fim_fmt": "0:03:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E é quente.",
+      "inicio": 213.0,
+      "fim": 214.0,
+      "inicio_fmt": "0:03:33",
+      "fim_fmt": "0:03:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É o pessoal que tá procurando em casa.",
+      "inicio": 214.0,
+      "fim": 216.0,
+      "inicio_fmt": "0:03:34",
+      "fim_fmt": "0:03:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E assim, só que assim, você tem que ser muito ligeiro.",
+      "inicio": 216.0,
+      "fim": 218.0,
+      "inicio_fmt": "0:03:36",
+      "fim_fmt": "0:03:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque o mercado tem 20 garagens aqui perto de mim.",
+      "inicio": 218.0,
+      "fim": 221.0,
+      "inicio_fmt": "0:03:38",
+      "fim_fmt": "0:03:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem 500 lá na Bandeirante.",
+      "inicio": 221.0,
+      "fim": 223.0,
+      "inicio_fmt": "0:03:41",
+      "fim_fmt": "0:03:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então você tem que ser muito rápido.",
+      "inicio": 223.0,
+      "fim": 225.0,
+      "inicio_fmt": "0:03:43",
+      "fim_fmt": "0:03:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E outra coisa, eles são muito piscateiros.",
+      "inicio": 225.0,
+      "fim": 227.0,
+      "inicio_fmt": "0:03:45",
+      "fim_fmt": "0:03:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Uma hora tá aqui, outra tá lá.",
+      "inicio": 227.0,
+      "fim": 228.0,
+      "inicio_fmt": "0:03:47",
+      "fim_fmt": "0:03:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, por isso que esse, sabe assim, tem que ser muito ligeiro.",
+      "inicio": 228.0,
+      "fim": 232.0,
+      "inicio_fmt": "0:03:48",
+      "fim_fmt": "0:03:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E a captação não é uma coisa muito fácil.",
+      "inicio": 232.0,
+      "fim": 235.0,
+      "inicio_fmt": "0:03:52",
+      "fim_fmt": "0:03:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu consigo eu digo, não.",
+      "inicio": 235.0,
+      "fim": 237.0,
+      "inicio_fmt": "0:03:55",
+      "fim_fmt": "0:03:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Por que que eu consigo?",
+      "inicio": 237.0,
+      "fim": 238.0,
+      "inicio_fmt": "0:03:57",
+      "fim_fmt": "0:03:58"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque eu tenho um pouco mais de jeito de falar com esse tipo de cliente.",
+      "inicio": 238.0,
+      "fim": 242.0,
+      "inicio_fmt": "0:03:58",
+      "fim_fmt": "0:04:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quando eu pego um carro aqui, que é anúncio particular,",
+      "inicio": 242.0,
+      "fim": 245.0,
+      "inicio_fmt": "0:04:02",
+      "fim_fmt": "0:04:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "que eu entro no carro e peço o carro,",
+      "inicio": 245.0,
+      "fim": 247.0,
+      "inicio_fmt": "0:04:05",
+      "fim_fmt": "0:04:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "o cliente fica com receio.",
+      "inicio": 247.0,
+      "fim": 248.0,
+      "inicio_fmt": "0:04:07",
+      "fim_fmt": "0:04:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, você já desce em uma garagem que me liga,",
+      "inicio": 248.0,
+      "fim": 251.0,
+      "inicio_fmt": "0:04:08",
+      "fim_fmt": "0:04:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "me pedindo meu carro pra eu anunciar numa garagem.",
+      "inicio": 251.0,
+      "fim": 253.0,
+      "inicio_fmt": "0:04:11",
+      "fim_fmt": "0:04:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele anunciou particular, certo?",
+      "inicio": 253.0,
+      "fim": 255.0,
+      "inicio_fmt": "0:04:13",
+      "fim_fmt": "0:04:15"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "No shopping cart.",
+      "inicio": 255.0,
+      "fim": 256.0,
+      "inicio_fmt": "0:04:15",
+      "fim_fmt": "0:04:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, quando ele faz isso, ele tá com o pé atrás.",
+      "inicio": 256.0,
+      "fim": 260.0,
+      "inicio_fmt": "0:04:16",
+      "fim_fmt": "0:04:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu falo pra ele, eu falo, olha,",
+      "inicio": 260.0,
+      "fim": 262.0,
+      "inicio_fmt": "0:04:20",
+      "fim_fmt": "0:04:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Marcella, deixa eu te falar.",
+      "inicio": 262.0,
+      "fim": 264.0,
+      "inicio_fmt": "0:04:22",
+      "fim_fmt": "0:04:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Se o senhor quiser referência, que nem esse eu vi aqui,",
+      "inicio": 264.0,
+      "fim": 267.0,
+      "inicio_fmt": "0:04:24",
+      "fim_fmt": "0:04:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "era o Rogério, lá do Dama, Dama 1.",
+      "inicio": 267.0,
+      "fim": 269.0,
+      "inicio_fmt": "0:04:27",
+      "fim_fmt": "0:04:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu olhei no shopping cart, tava as informações dele,",
+      "inicio": 269.0,
+      "fim": 271.0,
+      "inicio_fmt": "0:04:29",
+      "fim_fmt": "0:04:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "e era particular.",
+      "inicio": 271.0,
+      "fim": 272.0,
+      "inicio_fmt": "0:04:31",
+      "fim_fmt": "0:04:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu falei, Rogério, eu sou da Fialimó, do Adressa,",
+      "inicio": 272.0,
+      "fim": 275.0,
+      "inicio_fmt": "0:04:32",
+      "fim_fmt": "0:04:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "fui falando, quem é?",
+      "inicio": 275.0,
+      "fim": 276.0,
+      "inicio_fmt": "0:04:35",
+      "fim_fmt": "0:04:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí ele falou assim, não tem interesse, obrigado.",
+      "inicio": 276.0,
+      "fim": 278.0,
+      "inicio_fmt": "0:04:36",
+      "fim_fmt": "0:04:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Falei, Rogério, é o seguinte,",
+      "inicio": 278.0,
+      "fim": 280.0,
+      "inicio_fmt": "0:04:38",
+      "fim_fmt": "0:04:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "eu conheço todo mundo aí no Dama 1, você quer uma referência?",
+      "inicio": 280.0,
+      "fim": 282.0,
+      "inicio_fmt": "0:04:40",
+      "fim_fmt": "0:04:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu mandei três clientes, tipo clientaços, entendeu?",
+      "inicio": 282.0,
+      "fim": 287.0,
+      "inicio_fmt": "0:04:42",
+      "fim_fmt": "0:04:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu mandei um textinho pra ele, ele falou assim, tudo bem, pode postar.",
+      "inicio": 287.0,
+      "fim": 292.0,
+      "inicio_fmt": "0:04:47",
+      "fim_fmt": "0:04:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É assim, é diferente, é porque eu não consigo Dama 1 não.",
+      "inicio": 292.0,
+      "fim": 295.0,
+      "inicio_fmt": "0:04:52",
+      "fim_fmt": "0:04:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não é tão simples assim, entendeu?",
+      "inicio": 295.0,
+      "fim": 297.0,
+      "inicio_fmt": "0:04:55",
+      "fim_fmt": "0:04:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Fala aí, eu tô falando comigo.",
+      "inicio": 297.0,
+      "fim": 299.0,
+      "inicio_fmt": "0:04:57",
+      "fim_fmt": "0:04:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, eu não consigo, então,",
+      "inicio": 299.0,
+      "fim": 302.0,
+      "inicio_fmt": "0:04:59",
+      "fim_fmt": "0:05:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "eu também precisava de alguma coisa assim pra mostrar",
+      "inicio": 302.0,
+      "fim": 305.0,
+      "inicio_fmt": "0:05:02",
+      "fim_fmt": "0:05:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "pro cliente, pra ser uma credibilidade, sabe?",
+      "inicio": 305.0,
+      "fim": 307.0,
+      "inicio_fmt": "0:05:05",
+      "fim_fmt": "0:05:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, cara, eu...",
+      "inicio": 307.0,
+      "fim": 309.0,
+      "inicio_fmt": "0:05:07",
+      "fim_fmt": "0:05:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A princípio, aquilo lá foi maravilhoso que você fez.",
+      "inicio": 309.0,
+      "fim": 311.0,
+      "inicio_fmt": "0:05:09",
+      "fim_fmt": "0:05:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, então, aquilo lá é só o que a gente pode fazer,",
+      "inicio": 311.0,
+      "fim": 314.0,
+      "inicio_fmt": "0:05:11",
+      "fim_fmt": "0:05:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "mas eu precisava ter essa conversa com você,",
+      "inicio": 314.0,
+      "fim": 316.0,
+      "inicio_fmt": "0:05:14",
+      "fim_fmt": "0:05:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "pra realmente entender as suas necessidades,",
+      "inicio": 316.0,
+      "fim": 318.0,
+      "inicio_fmt": "0:05:16",
+      "fim_fmt": "0:05:18"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "e entender melhor como tá sendo o trabalho de vocês aqui.",
+      "inicio": 318.0,
+      "fim": 321.0,
+      "inicio_fmt": "0:05:18",
+      "fim_fmt": "0:05:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas essas informações foram muito importantes, porque assim,",
+      "inicio": 321.0,
+      "fim": 324.0,
+      "inicio_fmt": "0:05:21",
+      "fim_fmt": "0:05:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "é o que eu tô querendo aprender agora também, tá?",
+      "inicio": 324.0,
+      "fim": 327.0,
+      "inicio_fmt": "0:05:24",
+      "fim_fmt": "0:05:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É integração de inteligência artificial pra justamente afirmar tudo isso.",
+      "inicio": 327.0,
+      "fim": 331.0,
+      "inicio_fmt": "0:05:27",
+      "fim_fmt": "0:05:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, você me trouxe, por exemplo,",
+      "inicio": 331.0,
+      "fim": 333.0,
+      "inicio_fmt": "0:05:31",
+      "fim_fmt": "0:05:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "um canal de comunicação pra você receber leads.",
+      "inicio": 333.0,
+      "fim": 335.0,
+      "inicio_fmt": "0:05:33",
+      "fim_fmt": "0:05:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu consigo colocar uma consciência configurada",
+      "inicio": 335.0,
+      "fim": 340.0,
+      "inicio_fmt": "0:05:35",
+      "fim_fmt": "0:05:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "pra recolher essas informações, por exemplo, jogando no teu WhatsApp.",
+      "inicio": 340.0,
+      "fim": 343.0,
+      "inicio_fmt": "0:05:40",
+      "fim_fmt": "0:05:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Uma coisa, porque eu tava pensando na madrugada sobre você e eu e a loja.",
+      "inicio": 343.0,
+      "fim": 347.0,
+      "inicio_fmt": "0:05:43",
+      "fim_fmt": "0:05:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vi isso o tempo todo, tá?",
+      "inicio": 347.0,
+      "fim": 349.0,
+      "inicio_fmt": "0:05:47",
+      "fim_fmt": "0:05:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você não tá entendendo, eu já entrei em contato com o Renato,",
+      "inicio": 349.0,
+      "fim": 352.0,
+      "inicio_fmt": "0:05:49",
+      "fim_fmt": "0:05:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "lá da GWM e da Porsche.",
+      "inicio": 352.0,
+      "fim": 354.0,
+      "inicio_fmt": "0:05:52",
+      "fim_fmt": "0:05:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você não tá entendendo, a minha cabeça ela fica assim, ó,",
+      "inicio": 354.0,
+      "fim": 357.0,
+      "inicio_fmt": "0:05:54",
+      "fim_fmt": "0:05:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "porque eu vejo tanta possibilidade dos negócios",
+      "inicio": 357.0,
+      "fim": 359.0,
+      "inicio_fmt": "0:05:57",
+      "fim_fmt": "0:05:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "acontecerem que você não tem ideia.",
+      "inicio": 359.0,
+      "fim": 361.0,
+      "inicio_fmt": "0:05:59",
+      "fim_fmt": "0:06:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É o seguinte, ó, no Shopcar os carros são todos iguais.",
+      "inicio": 361.0,
+      "fim": 365.0,
+      "inicio_fmt": "0:06:01",
+      "fim_fmt": "0:06:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A gente poderia criar alguma coisa de imagem com alguma informação,",
+      "inicio": 365.0,
+      "fim": 369.0,
+      "inicio_fmt": "0:06:05",
+      "fim_fmt": "0:06:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "tipo assim, ó, carro com 22 mil KM e único dono,",
+      "inicio": 369.0,
+      "fim": 372.0,
+      "inicio_fmt": "0:06:09",
+      "fim_fmt": "0:06:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "pra pessoa quando tá entrando ela vê aquela informação destacada no...",
+      "inicio": 372.0,
+      "fim": 376.0,
+      "inicio_fmt": "0:06:12",
+      "fim_fmt": "0:06:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "igual foi um status do Edgar que ele colocou,",
+      "inicio": 376.0,
+      "fim": 380.0,
+      "inicio_fmt": "0:06:16",
+      "fim_fmt": "0:06:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "apenas 42 mil KM.",
+      "inicio": 380.0,
+      "fim": 382.0,
+      "inicio_fmt": "0:06:20",
+      "fim_fmt": "0:06:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tipo assim, a pessoa abre a imagem, ela já tá aqui, ó, ela já tá...",
+      "inicio": 382.0,
+      "fim": 385.0,
+      "inicio_fmt": "0:06:22",
+      "fim_fmt": "0:06:25"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "já tá aqui, as informações grandes, entendeu?",
+      "inicio": 385.0,
+      "fim": 388.0,
+      "inicio_fmt": "0:06:25",
+      "fim_fmt": "0:06:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A primeira coisa que a pessoa vê na primeira imagem,",
+      "inicio": 388.0,
+      "fim": 390.0,
+      "inicio_fmt": "0:06:28",
+      "fim_fmt": "0:06:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "depois ela vai só passando porque ela se interessou.",
+      "inicio": 390.0,
+      "fim": 393.0,
+      "inicio_fmt": "0:06:30",
+      "fim_fmt": "0:06:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É alguma coisa pra shopar, porque é tudo muito igual.",
+      "inicio": 393.0,
+      "fim": 395.0,
+      "inicio_fmt": "0:06:33",
+      "fim_fmt": "0:06:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sim.",
+      "inicio": 395.0,
+      "fim": 396.0,
+      "inicio_fmt": "0:06:35",
+      "fim_fmt": "0:06:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tudo muito igual.",
+      "inicio": 396.0,
+      "fim": 397.0,
+      "inicio_fmt": "0:06:36",
+      "fim_fmt": "0:06:37"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então acho que isso daí se liga.",
+      "inicio": 397.0,
+      "fim": 398.0,
+      "inicio_fmt": "0:06:37",
+      "fim_fmt": "0:06:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso é legal também, a forma comunicativa de chat.",
+      "inicio": 398.0,
+      "fim": 401.0,
+      "inicio_fmt": "0:06:38",
+      "fim_fmt": "0:06:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não é isso no Shopcar, tá?",
+      "inicio": 401.0,
+      "fim": 402.0,
+      "inicio_fmt": "0:06:41",
+      "fim_fmt": "0:06:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Boa.",
+      "inicio": 402.0,
+      "fim": 403.0,
+      "inicio_fmt": "0:06:42",
+      "fim_fmt": "0:06:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não existe.",
+      "inicio": 403.0,
+      "fim": 404.0,
+      "inicio_fmt": "0:06:43",
+      "fim_fmt": "0:06:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A gente pode.",
+      "inicio": 404.0,
+      "fim": 405.0,
+      "inicio_fmt": "0:06:44",
+      "fim_fmt": "0:06:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "As coisas que vocês estão trabalhando, fala pra mim,",
+      "inicio": 405.0,
+      "fim": 407.0,
+      "inicio_fmt": "0:06:45",
+      "fim_fmt": "0:06:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "pra me contextualizar.",
+      "inicio": 407.0,
+      "fim": 409.0,
+      "inicio_fmt": "0:06:47",
+      "fim_fmt": "0:06:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Assim, a loja, ela foi pintada nessa cor de fora, duas cores, tá errado.",
+      "inicio": 409.0,
+      "fim": 414.0,
+      "inicio_fmt": "0:06:49",
+      "fim_fmt": "0:06:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu quero fazer em preta.",
+      "inicio": 414.0,
+      "fim": 416.0,
+      "inicio_fmt": "0:06:54",
+      "fim_fmt": "0:06:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, tá.",
+      "inicio": 416.0,
+      "fim": 417.0,
+      "inicio_fmt": "0:06:56",
+      "fim_fmt": "0:06:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aquele anúncio que tem ali na frente, a fachada,",
+      "inicio": 417.0,
+      "fim": 420.0,
+      "inicio_fmt": "0:06:57",
+      "fim_fmt": "0:07:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "só foi porque a gente... eu gastei aqui, né?",
+      "inicio": 420.0,
+      "fim": 422.0,
+      "inicio_fmt": "0:07:00",
+      "fim_fmt": "0:07:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu tive que fazer isso aqui.",
+      "inicio": 422.0,
+      "fim": 423.0,
+      "inicio_fmt": "0:07:02",
+      "fim_fmt": "0:07:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu vou quebrar aquele muro de lá, vou ter que colocar um grande,",
+      "inicio": 423.0,
+      "fim": 429.0,
+      "inicio_fmt": "0:07:03",
+      "fim_fmt": "0:07:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "e eu vou fazer um painel bem legal, tipo de metalão, amarelo,",
+      "inicio": 429.0,
+      "fim": 433.0,
+      "inicio_fmt": "0:07:09",
+      "fim_fmt": "0:07:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "bem legal, que eu vi lá na Coronel Antonino, vou fazer igual aqui.",
+      "inicio": 433.0,
+      "fim": 436.0,
+      "inicio_fmt": "0:07:13",
+      "fim_fmt": "0:07:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que eu preciso de me capitalizar.",
+      "inicio": 436.0,
+      "fim": 440.0,
+      "inicio_fmt": "0:07:16",
+      "fim_fmt": "0:07:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu vou fazer a varanda aqui também pra colocar os carros.",
+      "inicio": 440.0,
+      "fim": 443.0,
+      "inicio_fmt": "0:07:20",
+      "fim_fmt": "0:07:23"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque eu não jogo o carro aqui dentro porque eu não quero deixar no sol.",
+      "inicio": 443.0,
+      "fim": 446.0,
+      "inicio_fmt": "0:07:23",
+      "fim_fmt": "0:07:26"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu preciso da tal da varanda.",
+      "inicio": 446.0,
+      "fim": 448.0,
+      "inicio_fmt": "0:07:26",
+      "fim_fmt": "0:07:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Já fiz o orçamento, já sei quanto eu vou.",
+      "inicio": 448.0,
+      "fim": 449.0,
+      "inicio_fmt": "0:07:28",
+      "fim_fmt": "0:07:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu preciso vender mais ou menos uns 4k sem pagar conta nenhuma pra poder fazer isso.",
+      "inicio": 449.0,
+      "fim": 453.0,
+      "inicio_fmt": "0:07:29",
+      "fim_fmt": "0:07:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entendeu?",
+      "inicio": 453.0,
+      "fim": 454.0,
+      "inicio_fmt": "0:07:33",
+      "fim_fmt": "0:07:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí, depois disso, o que eu vou fazer?",
+      "inicio": 454.0,
+      "fim": 456.0,
+      "inicio_fmt": "0:07:34",
+      "fim_fmt": "0:07:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu faço a varanda, meto o carro aqui dentro.",
+      "inicio": 456.0,
+      "fim": 458.0,
+      "inicio_fmt": "0:07:36",
+      "fim_fmt": "0:07:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso aqui é só assim, ó.",
+      "inicio": 458.0,
+      "fim": 459.0,
+      "inicio_fmt": "0:07:38",
+      "fim_fmt": "0:07:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que tem que trabalhar, organizar, montar o alicerce pra não cair,",
+      "inicio": 459.0,
+      "fim": 464.0,
+      "inicio_fmt": "0:07:39",
+      "fim_fmt": "0:07:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "porque isso aqui dá uma iludida, tá?",
+      "inicio": 464.0,
+      "fim": 467.0,
+      "inicio_fmt": "0:07:44",
+      "fim_fmt": "0:07:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Já sabe como é.",
+      "inicio": 467.0,
+      "fim": 469.0,
+      "inicio_fmt": "0:07:47",
+      "fim_fmt": "0:07:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu sei, eu sei como é.",
+      "inicio": 469.0,
+      "fim": 470.0,
+      "inicio_fmt": "0:07:49",
+      "fim_fmt": "0:07:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E nós somos iludidos.",
+      "inicio": 470.0,
+      "fim": 472.0,
+      "inicio_fmt": "0:07:50",
+      "fim_fmt": "0:07:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Nós somos ricos, né?",
+      "inicio": 472.0,
+      "fim": 474.0,
+      "inicio_fmt": "0:07:52",
+      "fim_fmt": "0:07:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Nós somos ricos, você sabe.",
+      "inicio": 474.0,
+      "fim": 477.0,
+      "inicio_fmt": "0:07:54",
+      "fim_fmt": "0:07:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Nós não somos ricos.",
+      "inicio": 477.0,
+      "fim": 479.0,
+      "inicio_fmt": "0:07:57",
+      "fim_fmt": "0:07:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Brilhantes.",
+      "inicio": 479.0,
+      "fim": 480.0,
+      "inicio_fmt": "0:07:59",
+      "fim_fmt": "0:08:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Brilhantes, radiantes.",
+      "inicio": 480.0,
+      "fim": 482.0,
+      "inicio_fmt": "0:08:00",
+      "fim_fmt": "0:08:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Radiantes, eu sei que é.",
+      "inicio": 482.0,
+      "fim": 483.0,
+      "inicio_fmt": "0:08:02",
+      "fim_fmt": "0:08:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá, e o que você...",
+      "inicio": 483.0,
+      "fim": 484.0,
+      "inicio_fmt": "0:08:03",
+      "fim_fmt": "0:08:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá, então, perfeito.",
+      "inicio": 484.0,
+      "fim": 486.0,
+      "inicio_fmt": "0:08:04",
+      "fim_fmt": "0:08:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu imaginei já que estaria nesse momento, tá?",
+      "inicio": 486.0,
+      "fim": 490.0,
+      "inicio_fmt": "0:08:06",
+      "fim_fmt": "0:08:10"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu acho muito interessante a gente traçar os planos agora.",
+      "inicio": 490.0,
+      "fim": 495.0,
+      "inicio_fmt": "0:08:10",
+      "fim_fmt": "0:08:15"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Se, por exemplo, eu consigo fazer uma forma de você vender melhor, mais efetividade,",
+      "inicio": 495.0,
+      "fim": 503.0,
+      "inicio_fmt": "0:08:15",
+      "fim_fmt": "0:08:23"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "responder com mais efetividade e isso fazer você vender, trazer o cliente pra você,",
+      "inicio": 503.0,
+      "fim": 508.0,
+      "inicio_fmt": "0:08:23",
+      "fim_fmt": "0:08:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "isso você vai gostar.",
+      "inicio": 508.0,
+      "fim": 510.0,
+      "inicio_fmt": "0:08:28",
+      "fim_fmt": "0:08:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí, gente, e aí você vai me remunerar?",
+      "inicio": 510.0,
+      "fim": 514.0,
+      "inicio_fmt": "0:08:30",
+      "fim_fmt": "0:08:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sim.",
+      "inicio": 514.0,
+      "fim": 515.0,
+      "inicio_fmt": "0:08:34",
+      "fim_fmt": "0:08:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Na verdade, eu vou pagar você mensal.",
+      "inicio": 515.0,
+      "fim": 516.0,
+      "inicio_fmt": "0:08:35",
+      "fim_fmt": "0:08:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu quero que você faça o orçamento sobre isso.",
+      "inicio": 516.0,
+      "fim": 518.0,
+      "inicio_fmt": "0:08:36",
+      "fim_fmt": "0:08:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sim.",
+      "inicio": 518.0,
+      "fim": 519.0,
+      "inicio_fmt": "0:08:38",
+      "fim_fmt": "0:08:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entenda que hoje você tem que fazer o seguinte,",
+      "inicio": 519.0,
+      "fim": 521.0,
+      "inicio_fmt": "0:08:39",
+      "fim_fmt": "0:08:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "você só tem que criar alguma coisa que chame a atenção no próprio ShopKart, certo?",
+      "inicio": 521.0,
+      "fim": 526.0,
+      "inicio_fmt": "0:08:41",
+      "fim_fmt": "0:08:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu vou ver até se eles deixam fazer isso porque eu não sei.",
+      "inicio": 526.0,
+      "fim": 528.0,
+      "inicio_fmt": "0:08:46",
+      "fim_fmt": "0:08:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Outra coisa, você vai usar inteligência artificial?",
+      "inicio": 528.0,
+      "fim": 532.0,
+      "inicio_fmt": "0:08:48",
+      "fim_fmt": "0:08:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então você utiliza de forma que eu consiga atingir o pessoal pelo Instagram e regiões.",
+      "inicio": 532.0,
+      "fim": 537.0,
+      "inicio_fmt": "0:08:52",
+      "fim_fmt": "0:08:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu consigo?",
+      "inicio": 537.0,
+      "fim": 538.0,
+      "inicio_fmt": "0:08:57",
+      "fim_fmt": "0:08:58"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sim, porque eu também ia chegar nessa parte de o orgânico institucional,",
+      "inicio": 538.0,
+      "fim": 543.0,
+      "inicio_fmt": "0:08:58",
+      "fim_fmt": "0:09:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "porque a gente precisa, com certeza, criar a marca.",
+      "inicio": 543.0,
+      "fim": 545.0,
+      "inicio_fmt": "0:09:03",
+      "fim_fmt": "0:09:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você vai fazer marca, tia?",
+      "inicio": 545.0,
+      "fim": 547.0,
+      "inicio_fmt": "0:09:05",
+      "fim_fmt": "0:09:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu quero criar.",
+      "inicio": 547.0,
+      "fim": 548.0,
+      "inicio_fmt": "0:09:07",
+      "fim_fmt": "0:09:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu nunca esqueço de você me falar.",
+      "inicio": 548.0,
+      "fim": 551.0,
+      "inicio_fmt": "0:09:08",
+      "fim_fmt": "0:09:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu sei, mas você tem que fazer uma faculdade pra ganhar muito mais.",
+      "inicio": 551.0,
+      "fim": 554.0,
+      "inicio_fmt": "0:09:11",
+      "fim_fmt": "0:09:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você saiu daquele nível lá de entregador e veio pra esse nível aqui,",
+      "inicio": 554.0,
+      "fim": 559.0,
+      "inicio_fmt": "0:09:14",
+      "fim_fmt": "0:09:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "mas ainda tá muito próximo, entendeu?",
+      "inicio": 559.0,
+      "fim": 561.0,
+      "inicio_fmt": "0:09:19",
+      "fim_fmt": "0:09:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E a coisa cai.",
+      "inicio": 561.0,
+      "fim": 562.0,
+      "inicio_fmt": "0:09:21",
+      "fim_fmt": "0:09:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então pra você ficar mais, coloca um degrau aqui, ó, que não saia daqui, entendeu?",
+      "inicio": 562.0,
+      "fim": 567.0,
+      "inicio_fmt": "0:09:22",
+      "fim_fmt": "0:09:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que é o alicerce.",
+      "inicio": 567.0,
+      "fim": 568.0,
+      "inicio_fmt": "0:09:27",
+      "fim_fmt": "0:09:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem que fazer a tal da faculdade.",
+      "inicio": 568.0,
+      "fim": 570.0,
+      "inicio_fmt": "0:09:28",
+      "fim_fmt": "0:09:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Se você fizer a tal da faculdade, ninguém vai tirar isso de você, beleza?",
+      "inicio": 570.0,
+      "fim": 573.0,
+      "inicio_fmt": "0:09:30",
+      "fim_fmt": "0:09:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí você não precisa ficar na poste, você pode montar uma empresa.",
+      "inicio": 573.0,
+      "fim": 576.0,
+      "inicio_fmt": "0:09:33",
+      "fim_fmt": "0:09:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que assim, ó, a poste é status, ela é nome, ela não te abre portas,",
+      "inicio": 576.0,
+      "fim": 582.0,
+      "inicio_fmt": "0:09:36",
+      "fim_fmt": "0:09:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "ela vai te aprender, não, ela vai te abrir aprendizado.",
+      "inicio": 582.0,
+      "fim": 586.0,
+      "inicio_fmt": "0:09:42",
+      "fim_fmt": "0:09:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então tudo você vai conseguir ali.",
+      "inicio": 586.0,
+      "fim": 590.0,
+      "inicio_fmt": "0:09:46",
+      "fim_fmt": "0:09:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Esse aí vai ser sua chave.",
+      "inicio": 590.0,
+      "fim": 592.0,
+      "inicio_fmt": "0:09:50",
+      "fim_fmt": "0:09:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que pra você se manter, você precisa do estudo.",
+      "inicio": 592.0,
+      "fim": 595.0,
+      "inicio_fmt": "0:09:52",
+      "fim_fmt": "0:09:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então faz faculdade.",
+      "inicio": 595.0,
+      "fim": 597.0,
+      "inicio_fmt": "0:09:55",
+      "fim_fmt": "0:09:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Faz.",
+      "inicio": 598.0,
+      "fim": 599.0,
+      "inicio_fmt": "0:09:58",
+      "fim_fmt": "0:09:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A gente mata.",
+      "inicio": 599.0,
+      "fim": 600.0,
+      "inicio_fmt": "0:09:59",
+      "fim_fmt": "0:10:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entendeu?",
+      "inicio": 600.0,
+      "fim": 601.0,
+      "inicio_fmt": "0:10:00",
+      "fim_fmt": "0:10:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque senão é ilusória, que nem a gente falei,",
+      "inicio": 601.0,
+      "fim": 603.0,
+      "inicio_fmt": "0:10:01",
+      "fim_fmt": "0:10:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "eu tô aprendendo um monte de coisa, eu tô aprendendo um monte de jeito, viajando tudo.",
+      "inicio": 603.0,
+      "fim": 607.0,
+      "inicio_fmt": "0:10:03",
+      "fim_fmt": "0:10:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas qualquer momento isso pode, porque você tá flutuando, aqui não tem base.",
+      "inicio": 607.0,
+      "fim": 612.0,
+      "inicio_fmt": "0:10:07",
+      "fim_fmt": "0:10:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E você tem que ter uma base.",
+      "inicio": 612.0,
+      "fim": 614.0,
+      "inicio_fmt": "0:10:12",
+      "fim_fmt": "0:10:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E a sua base é a sua faculdade.",
+      "inicio": 614.0,
+      "fim": 616.0,
+      "inicio_fmt": "0:10:14",
+      "fim_fmt": "0:10:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Bele?",
+      "inicio": 616.0,
+      "fim": 617.0,
+      "inicio_fmt": "0:10:16",
+      "fim_fmt": "0:10:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então tá.",
+      "inicio": 617.0,
+      "fim": 618.0,
+      "inicio_fmt": "0:10:17",
+      "fim_fmt": "0:10:18"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então vamos lá, resumindo, tem que criar alguma coisa pra chocar, pra chamar a atenção.",
+      "inicio": 618.0,
+      "fim": 622.0,
+      "inicio_fmt": "0:10:18",
+      "fim_fmt": "0:10:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Criativo.",
+      "inicio": 622.0,
+      "fim": 623.0,
+      "inicio_fmt": "0:10:22",
+      "fim_fmt": "0:10:23"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu mando pra você as imagens quando entrar os carros.",
+      "inicio": 623.0,
+      "fim": 626.0,
+      "inicio_fmt": "0:10:23",
+      "fim_fmt": "0:10:26"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Perfeito.",
+      "inicio": 626.0,
+      "fim": 627.0,
+      "inicio_fmt": "0:10:26",
+      "fim_fmt": "0:10:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É outra coisa, é por região, a gente tem que atingir região, no Instagram,",
+      "inicio": 627.0,
+      "fim": 632.0,
+      "inicio_fmt": "0:10:27",
+      "fim_fmt": "0:10:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "não sei se dá pra fazer isso.",
+      "inicio": 632.0,
+      "fim": 633.0,
+      "inicio_fmt": "0:10:32",
+      "fim_fmt": "0:10:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem como fazer o patrocinado, eu faço a cotação última.",
+      "inicio": 633.0,
+      "fim": 636.0,
+      "inicio_fmt": "0:10:33",
+      "fim_fmt": "0:10:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ótimo, ótimo.",
+      "inicio": 636.0,
+      "fim": 637.0,
+      "inicio_fmt": "0:10:36",
+      "fim_fmt": "0:10:37"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí a gente direciona pras regiões.",
+      "inicio": 637.0,
+      "fim": 639.0,
+      "inicio_fmt": "0:10:37",
+      "fim_fmt": "0:10:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pras regiões.",
+      "inicio": 639.0,
+      "fim": 640.0,
+      "inicio_fmt": "0:10:39",
+      "fim_fmt": "0:10:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aí eu venho aqui, a gente senta e direciona.",
+      "inicio": 640.0,
+      "fim": 641.0,
+      "inicio_fmt": "0:10:40",
+      "fim_fmt": "0:10:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, é no Instagram?",
+      "inicio": 641.0,
+      "fim": 642.0,
+      "inicio_fmt": "0:10:41",
+      "fim_fmt": "0:10:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Jogo juntos.",
+      "inicio": 642.0,
+      "fim": 643.0,
+      "inicio_fmt": "0:10:42",
+      "fim_fmt": "0:10:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com o patrocinado?",
+      "inicio": 643.0,
+      "fim": 644.0,
+      "inicio_fmt": "0:10:43",
+      "fim_fmt": "0:10:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá.",
+      "inicio": 644.0,
+      "fim": 645.0,
+      "inicio_fmt": "0:10:44",
+      "fim_fmt": "0:10:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí é bom a gente criar essa identidade visual primeiro com os criatícias.",
+      "inicio": 645.0,
+      "fim": 648.0,
+      "inicio_fmt": "0:10:45",
+      "fim_fmt": "0:10:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sim.",
+      "inicio": 648.0,
+      "fim": 649.0,
+      "inicio_fmt": "0:10:48",
+      "fim_fmt": "0:10:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vamos estruturar mais pra frente então a parte de vídeo, né?",
+      "inicio": 649.0,
+      "fim": 652.0,
+      "inicio_fmt": "0:10:49",
+      "fim_fmt": "0:10:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, isso.",
+      "inicio": 652.0,
+      "fim": 653.0,
+      "inicio_fmt": "0:10:52",
+      "fim_fmt": "0:10:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que aí eu quero mostrar seu gostinho.",
+      "inicio": 653.0,
+      "fim": 654.0,
+      "inicio_fmt": "0:10:53",
+      "fim_fmt": "0:10:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá, tá bom.",
+      "inicio": 654.0,
+      "fim": 655.0,
+      "inicio_fmt": "0:10:54",
+      "fim_fmt": "0:10:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas depois.",
+      "inicio": 655.0,
+      "fim": 656.0,
+      "inicio_fmt": "0:10:55",
+      "fim_fmt": "0:10:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vamos primeiro começar isso, começar assim, pra gente poder ir entendendo qual vai ser",
+      "inicio": 656.0,
+      "fim": 661.0,
+      "inicio_fmt": "0:10:56",
+      "fim_fmt": "0:11:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "a lenda e qual que é a próxima dor, entendeu?",
+      "inicio": 661.0,
+      "fim": 664.0,
+      "inicio_fmt": "0:11:01",
+      "fim_fmt": "0:11:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E pra gente poder ensinar tudo isso, beleza?",
+      "inicio": 664.0,
+      "fim": 667.0,
+      "inicio_fmt": "0:11:04",
+      "fim_fmt": "0:11:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas olha, eu acho que isso institucional com seu gostinho tem que ser o quanto antes,",
+      "inicio": 667.0,
+      "fim": 671.0,
+      "inicio_fmt": "0:11:07",
+      "fim_fmt": "0:11:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "porque é exatamente isso.",
+      "inicio": 671.0,
+      "fim": 673.0,
+      "inicio_fmt": "0:11:11",
+      "fim_fmt": "0:11:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu sei.",
+      "inicio": 673.0,
+      "fim": 674.0,
+      "inicio_fmt": "0:11:13",
+      "fim_fmt": "0:11:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas assim, dá pra esperar um pouquinho.",
+      "inicio": 674.0,
+      "fim": 677.0,
+      "inicio_fmt": "0:11:14",
+      "fim_fmt": "0:11:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu tenho um tanque aqui, que é o meu cliente que foi que voltou, que foi que voltou.",
+      "inicio": 677.0,
+      "fim": 682.0,
+      "inicio_fmt": "0:11:17",
+      "fim_fmt": "0:11:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu preciso dele, eu preciso chamar a atenção dele, porque ele tem 60 mil de acessórios.",
+      "inicio": 682.0,
+      "fim": 688.0,
+      "inicio_fmt": "0:11:22",
+      "fim_fmt": "0:11:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "60 mil?",
+      "inicio": 688.0,
+      "fim": 689.0,
+      "inicio_fmt": "0:11:28",
+      "fim_fmt": "0:11:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "60 mil agora...",
+      "inicio": 689.0,
+      "fim": 690.0,
+      "inicio_fmt": "0:11:29",
+      "fim_fmt": "0:11:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quanto?",
+      "inicio": 690.0,
+      "fim": 691.0,
+      "inicio_fmt": "0:11:30",
+      "fim_fmt": "0:11:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quanto que ele está anunciando?",
+      "inicio": 691.0,
+      "fim": 692.0,
+      "inicio_fmt": "0:11:31",
+      "fim_fmt": "0:11:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, aí que está.",
+      "inicio": 692.0,
+      "fim": 693.0,
+      "inicio_fmt": "0:11:32",
+      "fim_fmt": "0:11:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, ele quer...",
+      "inicio": 693.0,
+      "fim": 694.0,
+      "inicio_fmt": "0:11:33",
+      "fim_fmt": "0:11:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O cliente quer tudo.",
+      "inicio": 694.0,
+      "fim": 695.0,
+      "inicio_fmt": "0:11:34",
+      "fim_fmt": "0:11:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não, foi assim, ó.",
+      "inicio": 695.0,
+      "fim": 696.0,
+      "inicio_fmt": "0:11:35",
+      "fim_fmt": "0:11:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O cliente pegou e entregou num negócio pra outro cliente.",
+      "inicio": 696.0,
+      "fim": 699.0,
+      "inicio_fmt": "0:11:36",
+      "fim_fmt": "0:11:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Estava anunciado comigo, ele tirou pra poder colocar num terreno.",
+      "inicio": 699.0,
+      "fim": 702.0,
+      "inicio_fmt": "0:11:39",
+      "fim_fmt": "0:11:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O cara comprou o terreno, deu o carro como entrada e pegou ele por 330, eu acho 350, não lembro.",
+      "inicio": 702.0,
+      "fim": 708.0,
+      "inicio_fmt": "0:11:42",
+      "fim_fmt": "0:11:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que o carro vale hoje 339, certo?",
+      "inicio": 708.0,
+      "fim": 711.0,
+      "inicio_fmt": "0:11:48",
+      "fim_fmt": "0:11:51"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Carro zero.",
+      "inicio": 711.0,
+      "fim": 712.0,
+      "inicio_fmt": "0:11:51",
+      "fim_fmt": "0:11:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Zero.",
+      "inicio": 712.0,
+      "fim": 713.0,
+      "inicio_fmt": "0:11:52",
+      "fim_fmt": "0:11:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quantos mil, 13 mil?",
+      "inicio": 713.0,
+      "fim": 714.0,
+      "inicio_fmt": "0:11:53",
+      "fim_fmt": "0:11:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não, tá com 12, 14.",
+      "inicio": 714.0,
+      "fim": 716.0,
+      "inicio_fmt": "0:11:54",
+      "fim_fmt": "0:11:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Fez problema.",
+      "inicio": 716.0,
+      "fim": 717.0,
+      "inicio_fmt": "0:11:56",
+      "fim_fmt": "0:11:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O problema é que tá com 65 mil, vamos colocar, de acessório.",
+      "inicio": 717.0,
+      "fim": 722.0,
+      "inicio_fmt": "0:11:57",
+      "fim_fmt": "0:12:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então eu preciso...",
+      "inicio": 722.0,
+      "fim": 724.0,
+      "inicio_fmt": "0:12:02",
+      "fim_fmt": "0:12:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu tô anunciando ele por 325, não tô ainda, vou anunciar, 325.",
+      "inicio": 724.0,
+      "fim": 728.0,
+      "inicio_fmt": "0:12:04",
+      "fim_fmt": "0:12:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que ele é muito próximo do novo, ninguém vai querer comprar escada desse jeito.",
+      "inicio": 728.0,
+      "fim": 731.0,
+      "inicio_fmt": "0:12:08",
+      "fim_fmt": "0:12:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que ele é o mais bonito que tem em Campo Grande.",
+      "inicio": 731.0,
+      "fim": 734.0,
+      "inicio_fmt": "0:12:11",
+      "fim_fmt": "0:12:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, mas Juss, 325 compra um zero.",
+      "inicio": 734.0,
+      "fim": 736.0,
+      "inicio_fmt": "0:12:14",
+      "fim_fmt": "0:12:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Beleza.",
+      "inicio": 736.0,
+      "fim": 737.0,
+      "inicio_fmt": "0:12:16",
+      "fim_fmt": "0:12:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só que você vai comprar um zero e vai colocar 70% aí de acessório?",
+      "inicio": 737.0,
+      "fim": 740.0,
+      "inicio_fmt": "0:12:17",
+      "fim_fmt": "0:12:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem tudo isso, tem escada, tem o pneu, ele mudou, tem tudo.",
+      "inicio": 740.0,
+      "fim": 744.0,
+      "inicio_fmt": "0:12:20",
+      "fim_fmt": "0:12:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele colocou o PPF, não sei, em cima, aquele preto, mudou o farol, mudou o capul, mudou tudo.",
+      "inicio": 744.0,
+      "fim": 752.0,
+      "inicio_fmt": "0:12:24",
+      "fim_fmt": "0:12:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Onde tá esse carro?",
+      "inicio": 752.0,
+      "fim": 753.0,
+      "inicio_fmt": "0:12:32",
+      "fim_fmt": "0:12:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele tá com um cliente agora, um procurador e as fotos estão comigo.",
+      "inicio": 753.0,
+      "fim": 758.0,
+      "inicio_fmt": "0:12:33",
+      "fim_fmt": "0:12:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu preciso chamar atenção nesse carro.",
+      "inicio": 758.0,
+      "fim": 760.0,
+      "inicio_fmt": "0:12:38",
+      "fim_fmt": "0:12:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você não consegue fazer esse carro rapidinho?",
+      "inicio": 760.0,
+      "fim": 763.0,
+      "inicio_fmt": "0:12:40",
+      "fim_fmt": "0:12:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pra fazer um vídeo, vou pedir pra ele.",
+      "inicio": 763.0,
+      "fim": 765.0,
+      "inicio_fmt": "0:12:43",
+      "fim_fmt": "0:12:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Porque cara, seria incrível a gente mostrar.",
+      "inicio": 765.0,
+      "fim": 767.0,
+      "inicio_fmt": "0:12:45",
+      "fim_fmt": "0:12:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá, eu vou...",
+      "inicio": 767.0,
+      "fim": 768.0,
+      "inicio_fmt": "0:12:47",
+      "fim_fmt": "0:12:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E outra, esse seria, possivelmente, o primeiro institucional.",
+      "inicio": 768.0,
+      "fim": 772.0,
+      "inicio_fmt": "0:12:48",
+      "fim_fmt": "0:12:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá bom.",
+      "inicio": 772.0,
+      "fim": 773.0,
+      "inicio_fmt": "0:12:52",
+      "fim_fmt": "0:12:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí você falando, olha, tem 60 mil opção.",
+      "inicio": 773.0,
+      "fim": 776.0,
+      "inicio_fmt": "0:12:53",
+      "fim_fmt": "0:12:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí...",
+      "inicio": 776.0,
+      "fim": 777.0,
+      "inicio_fmt": "0:12:56",
+      "fim_fmt": "0:12:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí mostra, porque o cliente precisa ver.",
+      "inicio": 777.0,
+      "fim": 779.0,
+      "inicio_fmt": "0:12:57",
+      "fim_fmt": "0:12:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele precisa ver que o carro tá bonito.",
+      "inicio": 779.0,
+      "fim": 781.0,
+      "inicio_fmt": "0:12:59",
+      "fim_fmt": "0:13:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu acho que fotos, às vezes, não consegue transmitir aquele impacto, né?",
+      "inicio": 781.0,
+      "fim": 784.0,
+      "inicio_fmt": "0:13:01",
+      "fim_fmt": "0:13:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não, não consegue.",
+      "inicio": 784.0,
+      "fim": 785.0,
+      "inicio_fmt": "0:13:04",
+      "fim_fmt": "0:13:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu falei exatamente isso com o cliente ontem.",
+      "inicio": 785.0,
+      "fim": 787.0,
+      "inicio_fmt": "0:13:05",
+      "fim_fmt": "0:13:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu falei, olha, esse carro é diferenciado.",
+      "inicio": 787.0,
+      "fim": 789.0,
+      "inicio_fmt": "0:13:07",
+      "fim_fmt": "0:13:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu preciso mostrar.",
+      "inicio": 789.0,
+      "fim": 790.0,
+      "inicio_fmt": "0:13:09",
+      "fim_fmt": "0:13:10"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não é som take.",
+      "inicio": 790.0,
+      "fim": 791.0,
+      "inicio_fmt": "0:13:10",
+      "fim_fmt": "0:13:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não, não é.",
+      "inicio": 791.0,
+      "fim": 792.0,
+      "inicio_fmt": "0:13:11",
+      "fim_fmt": "0:13:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí, o que acontece?",
+      "inicio": 792.0,
+      "fim": 793.0,
+      "inicio_fmt": "0:13:12",
+      "fim_fmt": "0:13:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu faço assim, ó, quando é que você pode e eu vou trazer o carro.",
+      "inicio": 793.0,
+      "fim": 797.0,
+      "inicio_fmt": "0:13:13",
+      "fim_fmt": "0:13:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vou pedir pra ele deixar um meio período aqui.",
+      "inicio": 797.0,
+      "fim": 800.0,
+      "inicio_fmt": "0:13:17",
+      "fim_fmt": "0:13:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Já que você fala quando, tá?",
+      "inicio": 800.0,
+      "fim": 802.0,
+      "inicio_fmt": "0:13:20",
+      "fim_fmt": "0:13:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu tô trabalhando até domingo, tá, bebê?",
+      "inicio": 802.0,
+      "fim": 804.0,
+      "inicio_fmt": "0:13:22",
+      "fim_fmt": "0:13:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, porque eu tenho que trazer os carros de fora e eu não tenho que fazer.",
+      "inicio": 804.0,
+      "fim": 807.0,
+      "inicio_fmt": "0:13:24",
+      "fim_fmt": "0:13:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, creio que não tem tempo falando, então vem domingo.",
+      "inicio": 807.0,
+      "fim": 810.0,
+      "inicio_fmt": "0:13:27",
+      "fim_fmt": "0:13:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vou abrir pra ti, entendeu?",
+      "inicio": 810.0,
+      "fim": 811.0,
+      "inicio_fmt": "0:13:30",
+      "fim_fmt": "0:13:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que bom é isso.",
+      "inicio": 811.0,
+      "fim": 812.0,
+      "inicio_fmt": "0:13:31",
+      "fim_fmt": "0:13:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Personalizado, atendimento personalizado.",
+      "inicio": 812.0,
+      "fim": 814.0,
+      "inicio_fmt": "0:13:32",
+      "fim_fmt": "0:13:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu sei, eu sei.",
+      "inicio": 814.0,
+      "fim": 815.0,
+      "inicio_fmt": "0:13:34",
+      "fim_fmt": "0:13:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu sei, eu sei.",
+      "inicio": 816.0,
+      "fim": 817.0,
+      "inicio_fmt": "0:13:36",
+      "fim_fmt": "0:13:37"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então tá, se você faz a condição então ao patrocinado,",
+      "inicio": 817.0,
+      "fim": 820.0,
+      "inicio_fmt": "0:13:37",
+      "fim_fmt": "0:13:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "o que nós precisamos do seu e eu mando as fotos pra você.",
+      "inicio": 820.0,
+      "fim": 824.0,
+      "inicio_fmt": "0:13:40",
+      "fim_fmt": "0:13:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que é isso que eu consegui, o candidato.",
+      "inicio": 824.0,
+      "fim": 826.0,
+      "inicio_fmt": "0:13:44",
+      "fim_fmt": "0:13:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá, beleza.",
+      "inicio": 826.0,
+      "fim": 827.0,
+      "inicio_fmt": "0:13:46",
+      "fim_fmt": "0:13:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vou fazer alguns modelos lá.",
+      "inicio": 827.0,
+      "fim": 829.0,
+      "inicio_fmt": "0:13:47",
+      "fim_fmt": "0:13:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí você soa acelerado.",
+      "inicio": 829.0,
+      "fim": 830.0,
+      "inicio_fmt": "0:13:49",
+      "fim_fmt": "0:13:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Já viu conversando com nós dois?",
+      "inicio": 830.0,
+      "fim": 831.0,
+      "inicio_fmt": "0:13:50",
+      "fim_fmt": "0:13:51"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, é demais.",
+      "inicio": 831.0,
+      "fim": 832.0,
+      "inicio_fmt": "0:13:51",
+      "fim_fmt": "0:13:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O chat vai ficar...",
+      "inicio": 832.0,
+      "fim": 834.0,
+      "inicio_fmt": "0:13:52",
+      "fim_fmt": "0:13:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, meu Deus.",
+      "inicio": 834.0,
+      "fim": 835.0,
+      "inicio_fmt": "0:13:54",
+      "fim_fmt": "0:13:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Deve ser.",
+      "inicio": 835.0,
+      "fim": 836.0,
+      "inicio_fmt": "0:13:55",
+      "fim_fmt": "0:13:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, mas é beleza então, fecho.",
+      "inicio": 836.0,
+      "fim": 838.0,
+      "inicio_fmt": "0:13:56",
+      "fim_fmt": "0:13:58"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quando você tem carro pra consignar, manda aqui, tá?",
+      "inicio": 838.0,
+      "fim": 841.0,
+      "inicio_fmt": "0:13:58",
+      "fim_fmt": "0:14:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O seu pai também trabalha com isso, né?",
+      "inicio": 841.0,
+      "fim": 843.0,
+      "inicio_fmt": "0:14:01",
+      "fim_fmt": "0:14:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem, tem muito carro, ó.",
+      "inicio": 843.0,
+      "fim": 844.0,
+      "inicio_fmt": "0:14:03",
+      "fim_fmt": "0:14:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem muito cliente também que nem quer.",
+      "inicio": 844.0,
+      "fim": 846.0,
+      "inicio_fmt": "0:14:04",
+      "fim_fmt": "0:14:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É?",
+      "inicio": 846.0,
+      "fim": 847.0,
+      "inicio_fmt": "0:14:06",
+      "fim_fmt": "0:14:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Manda tudo aqui.",
+      "inicio": 847.0,
+      "fim": 848.0,
+      "inicio_fmt": "0:14:07",
+      "fim_fmt": "0:14:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vou melhorar aqui porque aqui exige isso, né?",
+      "inicio": 848.0,
+      "fim": 852.0,
+      "inicio_fmt": "0:14:08",
+      "fim_fmt": "0:14:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O público aqui, o local aqui, tudo tem que ir.",
+      "inicio": 852.0,
+      "fim": 856.0,
+      "inicio_fmt": "0:14:12",
+      "fim_fmt": "0:14:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tudo existe.",
+      "inicio": 856.0,
+      "fim": 857.0,
+      "inicio_fmt": "0:14:16",
+      "fim_fmt": "0:14:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas olha, eu vou falar pra você.",
+      "inicio": 857.0,
+      "fim": 858.0,
+      "inicio_fmt": "0:14:17",
+      "fim_fmt": "0:14:18"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Dá pra fazer algo muito melhor, tá muito bolha.",
+      "inicio": 858.0,
+      "fim": 859.0,
+      "inicio_fmt": "0:14:18",
+      "fim_fmt": "0:14:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Show muito bonita.",
+      "inicio": 859.0,
+      "fim": 860.0,
+      "inicio_fmt": "0:14:19",
+      "fim_fmt": "0:14:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O que tem show bonita?",
+      "inicio": 860.0,
+      "fim": 861.0,
+      "inicio_fmt": "0:14:20",
+      "fim_fmt": "0:14:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Show bonita?",
+      "inicio": 861.0,
+      "fim": 862.0,
+      "inicio_fmt": "0:14:21",
+      "fim_fmt": "0:14:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aquele loja lá que você tá falando.",
+      "inicio": 862.0,
+      "fim": 863.0,
+      "inicio_fmt": "0:14:22",
+      "fim_fmt": "0:14:23"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, tá.",
+      "inicio": 863.0,
+      "fim": 864.0,
+      "inicio_fmt": "0:14:23",
+      "fim_fmt": "0:14:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Fábio, todo mundo é o Fábio, é o Fábio, é o Fábio.",
+      "inicio": 864.0,
+      "fim": 865.0,
+      "inicio_fmt": "0:14:24",
+      "fim_fmt": "0:14:25"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quem é Fábio?",
+      "inicio": 865.0,
+      "fim": 866.0,
+      "inicio_fmt": "0:14:25",
+      "fim_fmt": "0:14:26"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Fábio Anache.",
+      "inicio": 866.0,
+      "fim": 867.0,
+      "inicio_fmt": "0:14:26",
+      "fim_fmt": "0:14:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, sim, é isso.",
+      "inicio": 867.0,
+      "fim": 868.0,
+      "inicio_fmt": "0:14:27",
+      "fim_fmt": "0:14:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É isso.",
+      "inicio": 868.0,
+      "fim": 869.0,
+      "inicio_fmt": "0:14:28",
+      "fim_fmt": "0:14:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entende.",
+      "inicio": 869.0,
+      "fim": 870.0,
+      "inicio_fmt": "0:14:29",
+      "fim_fmt": "0:14:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Que ele...",
+      "inicio": 870.0,
+      "fim": 871.0,
+      "inicio_fmt": "0:14:30",
+      "fim_fmt": "0:14:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ongarezão.",
+      "inicio": 871.0,
+      "fim": 872.0,
+      "inicio_fmt": "0:14:31",
+      "fim_fmt": "0:14:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Todo mundo gosta dele?",
+      "inicio": 872.0,
+      "fim": 873.0,
+      "inicio_fmt": "0:14:32",
+      "fim_fmt": "0:14:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Nossa, todo mundo paga um pau pra aquele cara.",
+      "inicio": 873.0,
+      "fim": 874.0,
+      "inicio_fmt": "0:14:33",
+      "fim_fmt": "0:14:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mentira.",
+      "inicio": 874.0,
+      "fim": 875.0,
+      "inicio_fmt": "0:14:34",
+      "fim_fmt": "0:14:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tipo assim.",
+      "inicio": 875.0,
+      "fim": 876.0,
+      "inicio_fmt": "0:14:35",
+      "fim_fmt": "0:14:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com aquela arrogância?",
+      "inicio": 876.0,
+      "fim": 877.0,
+      "inicio_fmt": "0:14:36",
+      "fim_fmt": "0:14:37"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aham.",
+      "inicio": 877.0,
+      "fim": 878.0,
+      "inicio_fmt": "0:14:37",
+      "fim_fmt": "0:14:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pode falar isso, aquela arrogância?",
+      "inicio": 878.0,
+      "fim": 879.0,
+      "inicio_fmt": "0:14:38",
+      "fim_fmt": "0:14:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É prepotente.",
+      "inicio": 879.0,
+      "fim": 880.0,
+      "inicio_fmt": "0:14:39",
+      "fim_fmt": "0:14:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É prepotente.",
+      "inicio": 880.0,
+      "fim": 881.0,
+      "inicio_fmt": "0:14:40",
+      "fim_fmt": "0:14:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sério?",
+      "inicio": 881.0,
+      "fim": 882.0,
+      "inicio_fmt": "0:14:41",
+      "fim_fmt": "0:14:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Aham.",
+      "inicio": 883.0,
+      "fim": 884.0,
+      "inicio_fmt": "0:14:43",
+      "fim_fmt": "0:14:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Agora ele pensou.",
+      "inicio": 884.0,
+      "fim": 885.0,
+      "inicio_fmt": "0:14:44",
+      "fim_fmt": "0:14:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Já, já me sei.",
+      "inicio": 885.0,
+      "fim": 886.0,
+      "inicio_fmt": "0:14:45",
+      "fim_fmt": "0:14:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E aí, o que você falou ali, amor?",
+      "inicio": 886.0,
+      "fim": 887.0,
+      "inicio_fmt": "0:14:46",
+      "fim_fmt": "0:14:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O que você fez nesse dia?",
+      "inicio": 887.0,
+      "fim": 888.0,
+      "inicio_fmt": "0:14:47",
+      "fim_fmt": "0:14:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele tá fazendo isso.",
+      "inicio": 888.0,
+      "fim": 889.0,
+      "inicio_fmt": "0:14:48",
+      "fim_fmt": "0:14:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você ficou todo o papo em dia.",
+      "inicio": 889.0,
+      "fim": 890.0,
+      "inicio_fmt": "0:14:49",
+      "fim_fmt": "0:14:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem cliente.",
+      "inicio": 890.0,
+      "fim": 891.0,
+      "inicio_fmt": "0:14:50",
+      "fim_fmt": "0:14:51"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tem cliente.",
+      "inicio": 891.0,
+      "fim": 892.0,
+      "inicio_fmt": "0:14:51",
+      "fim_fmt": "0:14:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tchau.",
+      "inicio": 892.0,
+      "fim": 893.0,
+      "inicio_fmt": "0:14:52",
+      "fim_fmt": "0:14:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Muito obrigada.",
+      "inicio": 893.0,
+      "fim": 894.0,
+      "inicio_fmt": "0:14:53",
+      "fim_fmt": "0:14:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Achou que fosse descansar.",
+      "inicio": 894.0,
+      "fim": 895.0,
+      "inicio_fmt": "0:14:54",
+      "fim_fmt": "0:14:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quem que é?",
+      "inicio": 895.0,
+      "fim": 896.0,
+      "inicio_fmt": "0:14:55",
+      "fim_fmt": "0:14:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 896.0,
+      "fim": 897.0,
+      "inicio_fmt": "0:14:56",
+      "fim_fmt": "0:14:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 897.0,
+      "fim": 898.0,
+      "inicio_fmt": "0:14:57",
+      "fim_fmt": "0:14:58"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 898.0,
+      "fim": 899.0,
+      "inicio_fmt": "0:14:58",
+      "fim_fmt": "0:14:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 899.0,
+      "fim": 900.0,
+      "inicio_fmt": "0:14:59",
+      "fim_fmt": "0:15:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 900.0,
+      "fim": 901.0,
+      "inicio_fmt": "0:15:00",
+      "fim_fmt": "0:15:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 901.0,
+      "fim": 902.0,
+      "inicio_fmt": "0:15:01",
+      "fim_fmt": "0:15:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 902.0,
+      "fim": 903.0,
+      "inicio_fmt": "0:15:02",
+      "fim_fmt": "0:15:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 903.0,
+      "fim": 904.0,
+      "inicio_fmt": "0:15:03",
+      "fim_fmt": "0:15:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 904.0,
+      "fim": 905.0,
+      "inicio_fmt": "0:15:04",
+      "fim_fmt": "0:15:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 905.0,
+      "fim": 906.0,
+      "inicio_fmt": "0:15:05",
+      "fim_fmt": "0:15:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 906.0,
+      "fim": 907.0,
+      "inicio_fmt": "0:15:06",
+      "fim_fmt": "0:15:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 907.0,
+      "fim": 908.0,
+      "inicio_fmt": "0:15:07",
+      "fim_fmt": "0:15:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 908.0,
+      "fim": 909.0,
+      "inicio_fmt": "0:15:08",
+      "fim_fmt": "0:15:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 909.0,
+      "fim": 910.0,
+      "inicio_fmt": "0:15:09",
+      "fim_fmt": "0:15:10"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Alvaro.",
+      "inicio": 910.0,
+      "fim": 911.0,
+      "inicio_fmt": "0:15:10",
+      "fim_fmt": "0:15:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pra o Atahid não?",
+      "inicio": 911.0,
+      "fim": 912.0,
+      "inicio_fmt": "0:15:11",
+      "fim_fmt": "0:15:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O Vurner?",
+      "inicio": 912.0,
+      "fim": 913.0,
+      "inicio_fmt": "0:15:12",
+      "fim_fmt": "0:15:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, tá.",
+      "inicio": 913.0,
+      "fim": 914.0,
+      "inicio_fmt": "0:15:13",
+      "fim_fmt": "0:15:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Entendi.",
+      "inicio": 914.0,
+      "fim": 915.0,
+      "inicio_fmt": "0:15:14",
+      "fim_fmt": "0:15:15"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "O da S4?",
+      "inicio": 915.0,
+      "fim": 916.0,
+      "inicio_fmt": "0:15:15",
+      "fim_fmt": "0:15:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pra eu passar outra?",
+      "inicio": 916.0,
+      "fim": 917.0,
+      "inicio_fmt": "0:15:16",
+      "fim_fmt": "0:15:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então é isso.",
+      "inicio": 917.0,
+      "fim": 918.0,
+      "inicio_fmt": "0:15:17",
+      "fim_fmt": "0:15:18"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vamos traçar o plano, tá?",
+      "inicio": 918.0,
+      "fim": 919.0,
+      "inicio_fmt": "0:15:18",
+      "fim_fmt": "0:15:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E eu te mando tudo estruturado.",
+      "inicio": 919.0,
+      "fim": 920.0,
+      "inicio_fmt": "0:15:19",
+      "fim_fmt": "0:15:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso.",
+      "inicio": 920.0,
+      "fim": 921.0,
+      "inicio_fmt": "0:15:20",
+      "fim_fmt": "0:15:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A gente tá...",
+      "inicio": 921.0,
+      "fim": 922.0,
+      "inicio_fmt": "0:15:21",
+      "fim_fmt": "0:15:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "E depois a gente dá pra aproveitar bastante.",
+      "inicio": 922.0,
+      "fim": 923.0,
+      "inicio_fmt": "0:15:22",
+      "fim_fmt": "0:15:23"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Desde muito contexto.",
+      "inicio": 923.0,
+      "fim": 924.0,
+      "inicio_fmt": "0:15:23",
+      "fim_fmt": "0:15:24"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, quando os dois já estão...",
+      "inicio": 924.0,
+      "fim": 925.0,
+      "inicio_fmt": "0:15:24",
+      "fim_fmt": "0:15:25"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, quando os dois já estão...",
+      "inicio": 925.0,
+      "fim": 926.0,
+      "inicio_fmt": "0:15:25",
+      "fim_fmt": "0:15:26"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Se vocês combinaram, entende?",
+      "inicio": 926.0,
+      "fim": 927.0,
+      "inicio_fmt": "0:15:26",
+      "fim_fmt": "0:15:27"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tá por que, gente?",
+      "inicio": 927.0,
+      "fim": 928.0,
+      "inicio_fmt": "0:15:27",
+      "fim_fmt": "0:15:28"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não.",
+      "inicio": 928.0,
+      "fim": 929.0,
+      "inicio_fmt": "0:15:28",
+      "fim_fmt": "0:15:29"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A princípio, essa é a minha ideia, tá?",
+      "inicio": 929.0,
+      "fim": 930.0,
+      "inicio_fmt": "0:15:29",
+      "fim_fmt": "0:15:30"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Só...",
+      "inicio": 930.0,
+      "fim": 931.0,
+      "inicio_fmt": "0:15:30",
+      "fim_fmt": "0:15:31"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Olha, é o Ângelo na verdade.",
+      "inicio": 931.0,
+      "fim": 932.0,
+      "inicio_fmt": "0:15:31",
+      "fim_fmt": "0:15:32"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ah, o Menarim.",
+      "inicio": 932.0,
+      "fim": 933.0,
+      "inicio_fmt": "0:15:32",
+      "fim_fmt": "0:15:33"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Depois a gente...",
+      "inicio": 933.0,
+      "fim": 934.0,
+      "inicio_fmt": "0:15:33",
+      "fim_fmt": "0:15:34"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, depois a gente conversa.",
+      "inicio": 934.0,
+      "fim": 935.0,
+      "inicio_fmt": "0:15:34",
+      "fim_fmt": "0:15:35"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Depois a gente fala o que eu vou passar por ele, tá?",
+      "inicio": 935.0,
+      "fim": 936.0,
+      "inicio_fmt": "0:15:35",
+      "fim_fmt": "0:15:36"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ele ainda vai montar, né?",
+      "inicio": 937.0,
+      "fim": 938.0,
+      "inicio_fmt": "0:15:37",
+      "fim_fmt": "0:15:38"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tudo bem?",
+      "inicio": 938.0,
+      "fim": 939.0,
+      "inicio_fmt": "0:15:38",
+      "fim_fmt": "0:15:39"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É, eu monto e mando como pd.",
+      "inicio": 939.0,
+      "fim": 940.0,
+      "inicio_fmt": "0:15:39",
+      "fim_fmt": "0:15:40"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Isso, ótimo.",
+      "inicio": 940.0,
+      "fim": 941.0,
+      "inicio_fmt": "0:15:40",
+      "fim_fmt": "0:15:41"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "A previsão também da gente...",
+      "inicio": 941.0,
+      "fim": 942.0,
+      "inicio_fmt": "0:15:41",
+      "fim_fmt": "0:15:42"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ela vai dar a parte de Alvaro caminho.",
+      "inicio": 942.0,
+      "fim": 943.0,
+      "inicio_fmt": "0:15:42",
+      "fim_fmt": "0:15:43"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Chega ação.",
+      "inicio": 943.0,
+      "fim": 944.0,
+      "inicio_fmt": "0:15:43",
+      "fim_fmt": "0:15:44"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vamos ver, vamos fazer os primeiros criativos.",
+      "inicio": 944.0,
+      "fim": 945.0,
+      "inicio_fmt": "0:15:44",
+      "fim_fmt": "0:15:45"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas eu quero implementar...",
+      "inicio": 945.0,
+      "fim": 946.0,
+      "inicio_fmt": "0:15:45",
+      "fim_fmt": "0:15:46"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vou trabalhar isso, tá?",
+      "inicio": 946.0,
+      "fim": 947.0,
+      "inicio_fmt": "0:15:46",
+      "fim_fmt": "0:15:47"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mas eu quero implementar a IA no seu WhatsApp.",
+      "inicio": 947.0,
+      "fim": 948.0,
+      "inicio_fmt": "0:15:47",
+      "fim_fmt": "0:15:48"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "No seu email.",
+      "inicio": 948.0,
+      "fim": 949.0,
+      "inicio_fmt": "0:15:48",
+      "fim_fmt": "0:15:49"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Tipo assim, caiu o email, ele vai tipo...",
+      "inicio": 949.0,
+      "fim": 950.0,
+      "inicio_fmt": "0:15:49",
+      "fim_fmt": "0:15:50"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Pim!",
+      "inicio": 950.0,
+      "fim": 951.0,
+      "inicio_fmt": "0:15:50",
+      "fim_fmt": "0:15:51"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Mandar uma mensagem no grupo já.",
+      "inicio": 951.0,
+      "fim": 952.0,
+      "inicio_fmt": "0:15:51",
+      "fim_fmt": "0:15:52"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 952.0,
+      "fim": 953.0,
+      "inicio_fmt": "0:15:52",
+      "fim_fmt": "0:15:53"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Link do shopping.",
+      "inicio": 953.0,
+      "fim": 954.0,
+      "inicio_fmt": "0:15:53",
+      "fim_fmt": "0:15:54"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 954.0,
+      "fim": 955.0,
+      "inicio_fmt": "0:15:54",
+      "fim_fmt": "0:15:55"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 955.0,
+      "fim": 956.0,
+      "inicio_fmt": "0:15:55",
+      "fim_fmt": "0:15:56"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 956.0,
+      "fim": 957.0,
+      "inicio_fmt": "0:15:56",
+      "fim_fmt": "0:15:57"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 957.0,
+      "fim": 958.0,
+      "inicio_fmt": "0:15:57",
+      "fim_fmt": "0:15:58"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 958.0,
+      "fim": 959.0,
+      "inicio_fmt": "0:15:58",
+      "fim_fmt": "0:15:59"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 959.0,
+      "fim": 960.0,
+      "inicio_fmt": "0:15:59",
+      "fim_fmt": "0:16:00"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 960.0,
+      "fim": 961.0,
+      "inicio_fmt": "0:16:00",
+      "fim_fmt": "0:16:01"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 961.0,
+      "fim": 962.0,
+      "inicio_fmt": "0:16:01",
+      "fim_fmt": "0:16:02"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu vou mandar uma mensagem no grupo já.",
+      "inicio": 962.0,
+      "fim": 963.0,
+      "inicio_fmt": "0:16:02",
+      "fim_fmt": "0:16:03"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Com qual veículo?",
+      "inicio": 963.0,
+      "fim": 964.0,
+      "inicio_fmt": "0:16:03",
+      "fim_fmt": "0:16:04"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Link do shopping.",
+      "inicio": 964.0,
+      "fim": 965.0,
+      "inicio_fmt": "0:16:04",
+      "fim_fmt": "0:16:05"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Do email.",
+      "inicio": 965.0,
+      "fim": 966.0,
+      "inicio_fmt": "0:16:05",
+      "fim_fmt": "0:16:06"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Para você já visualizar até o WhatsApp pronto.",
+      "inicio": 966.0,
+      "fim": 967.0,
+      "inicio_fmt": "0:16:06",
+      "fim_fmt": "0:16:07"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você só clicar e mandar mensagem pra ele.",
+      "inicio": 967.0,
+      "fim": 968.0,
+      "inicio_fmt": "0:16:07",
+      "fim_fmt": "0:16:08"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Vitor, tem mais um detalhe.",
+      "inicio": 968.0,
+      "fim": 969.0,
+      "inicio_fmt": "0:16:08",
+      "fim_fmt": "0:16:09"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Sabe aquele que você criou pra colocar lá no grupo do seu avalete?",
+      "inicio": 969.0,
+      "fim": 970.0,
+      "inicio_fmt": "0:16:09",
+      "fim_fmt": "0:16:10"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você fala?",
+      "inicio": 970.0,
+      "fim": 971.0,
+      "inicio_fmt": "0:16:10",
+      "fim_fmt": "0:16:11"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Não.",
+      "inicio": 971.0,
+      "fim": 972.0,
+      "inicio_fmt": "0:16:11",
+      "fim_fmt": "0:16:12"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Quando eu coloco aqui lá, ele vai pro meu WhatsApp.",
+      "inicio": 972.0,
+      "fim": 973.0,
+      "inicio_fmt": "0:16:12",
+      "fim_fmt": "0:16:13"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Chega no meu WhatsApp, se eu estiver atendendo eu não vou olhar.",
+      "inicio": 973.0,
+      "fim": 974.0,
+      "inicio_fmt": "0:16:13",
+      "fim_fmt": "0:16:14"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então dá pra colocar alguma coisa tipo assim, oi, tudo bem?",
+      "inicio": 974.0,
+      "fim": 975.0,
+      "inicio_fmt": "0:16:14",
+      "fim_fmt": "0:16:15"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Prazer em sua ajuda.",
+      "inicio": 975.0,
+      "fim": 976.0,
+      "inicio_fmt": "0:16:15",
+      "fim_fmt": "0:16:16"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Ou seja, no momento que eu estou atendendo já liga.",
+      "inicio": 976.0,
+      "fim": 977.0,
+      "inicio_fmt": "0:16:16",
+      "fim_fmt": "0:16:17"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Eu tava falando pro ele.",
+      "inicio": 977.0,
+      "fim": 978.0,
+      "inicio_fmt": "0:16:17",
+      "fim_fmt": "0:16:18"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "É?",
+      "inicio": 978.0,
+      "fim": 979.0,
+      "inicio_fmt": "0:16:18",
+      "fim_fmt": "0:16:19"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, depois que você está atendendo, você vai fazer o que?",
+      "inicio": 979.0,
+      "fim": 980.0,
+      "inicio_fmt": "0:16:19",
+      "fim_fmt": "0:16:20"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você vai fazer o que?",
+      "inicio": 980.0,
+      "fim": 981.0,
+      "inicio_fmt": "0:16:20",
+      "fim_fmt": "0:16:21"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Você vai fazer o que?",
+      "inicio": 981.0,
+      "fim": 982.0,
+      "inicio_fmt": "0:16:21",
+      "fim_fmt": "0:16:22"
+    },
+    {
+      "speaker": "Interlocutor A",
+      "texto": "Então, isso que você está pensando de alinhar pra ele dar um start.",
+      "inicio": 982.0,
+      "fim": 1007.1,
+      "inicio_fmt": "0:16:22",
+      "fim_fmt": "0:16:47"
+    }
+  ],
+  "texto_completo": " Preciso saber das suas necessidades, o que está sendo mais recorrente, o que dá pra hoje, o que hoje é a sua dor? Então, eu acho o seguinte, eu acho que a gente tem que... Porque assim, no Instagram eu vejo que é tudo muito igual. Ah, eu postei um carro que entrou, aí eu postei um carro que saiu. E aí eu queria algo diferente, onde passasse a informação e ao mesmo tempo o cliente que estiver interessado interagir. Sabe, tipo assim, ó. Ah, caraca, esse carro saiu pra mim. Puta, 20 mil km? Ele entrar em alguma coisa, saber informações do carro e o carro passar essa informação. E não só aí. Eu vi uma, eu acho que aqui ó, sabe essa garagem que tem do lado do Thiago ali? Um pouquinho mais showroom, eu acho. Sabe a showroom? A showroom, lá no showroom, sei lá. Ele state um Instagram onde passa a informação e coloca... E aí você clica... Criativo. Isso, você clica e ele vai passando as imagens do carro e as informações do carro. Ah, não sabe o Instagram. Entendeu? É como uma lei de page. Eu não sei o que isso significa, mas assim ó, é tipo assim, eu me interessei por um carro deles que eu achei, um Jeep 2222 com 24 mil km. Que eu fiz clica aí em cima, apareceu um motor e foi uma salgada. Eu achei incrível, eu falei, caramba, que massa. Eu queria alguma coisa assim, sabe? Que legal. Isso seria muito legal. Querido, muito obrigado, parabéns. Obrigado, prazer em conhecer. Eu te dei um oizinho, se você precisar, um só que lá comigo, tá bem? Maravilha. Então tá bom, obrigado, viu? Tudo de bom. Parabéns, viu? Então, eu vou pegar essa pra você. Tá bom, meu amor, obrigado, tá? Só hoje vai 3k. Aquela essa da minha casa. Você viu que tem uma aval ali também vendida. Ah, então é de cacalotre. Mas, então é o seguinte ó, eu preciso disso, de alguma coisa assim diferente, sabe? Porque assim, e também, se eu mandar imagem pra você, você cria alguma coisa pra eu postar. É só isso. Ou você cuidar do Instagram, então eu não tenho muita ideia do que eu quero, porque até então, eu sou nova no negócio, né? Então, o que você acha? Deixa eu entender como que tá sendo essa comunicação. Como que eu tô recebendo cliente? Isso, você precisa saber disso. Olha só, eu só recebo cliente pelo Shopcar. Cara, dá muito cliente pelo Shopcar. O Shopcar, ele ó, o segredo é captação, que eu tenho que captar os carros e colocar no Shopcar. Que aí vem o pessoal que filtra lá e vem pra mim no email. Eu recebo de madrugada. E aí eu chego aqui, trabalho ele, trago ele e fecho o carro. Geralmente no email tem todas as especificações, tipo do WhatsApp, do cliente. E tem, eu vou abrir pra você. Do dado pro carro que ele puxou. Isso, exatamente, que é assim ó. Dá uma olhadinha aqui, só pra você. Ó, não precisa ser uma coisa hoje, porque você também tá começando. Então não precisa ser uma coisa assim fora do comum e outra coisa. E nem é pra ser fora do comum, porque na verdade, eu e você estamos começando. Exato. Então, por exemplo, vem assim ó. Deixa eu ver aqui. Que eu recebi hoje de madrugada. Shopcar. Aqui o Shopcar. Ele vem assim ó. E vem o telefone do cliente e isso aqui no email. Perfeito. Entendeu? Então, o que acontece? É, isso aqui é outro grid. Eu não tinha visto isso. Ó, que legal. Você entende que toda hora chega alguma coisa assim. É só você trabalhar. E é quente. É o pessoal que tá procurando em casa. E assim, só que assim, você tem que ser muito ligeiro. Porque o mercado tem 20 garagens aqui perto de mim. Tem 500 lá na Bandeirante. Então você tem que ser muito rápido. E outra coisa, eles são muito piscateiros. Uma hora tá aqui, outra tá lá. Então, por isso que esse, sabe assim, tem que ser muito ligeiro. E a captação não é uma coisa muito fácil. Eu consigo eu digo, não. Por que que eu consigo? Porque eu tenho um pouco mais de jeito de falar com esse tipo de cliente. Quando eu pego um carro aqui, que é anúncio particular, que eu entro no carro e peço o carro, o cliente fica com receio. Ah, você já desce em uma garagem que me liga, me pedindo meu carro pra eu anunciar numa garagem. Ele anunciou particular, certo? No shopping cart. Então, quando ele faz isso, ele tá com o pé atrás. Aí eu falo pra ele, eu falo, olha, Marcella, deixa eu te falar. Se o senhor quiser referência, que nem esse eu vi aqui, era o Rogério, lá do Dama, Dama 1. Eu olhei no shopping cart, tava as informações dele, e era particular. Eu falei, Rogério, eu sou da Fialimó, do Adressa, fui falando, quem é? Aí ele falou assim, não tem interesse, obrigado. Falei, Rogério, é o seguinte, eu conheço todo mundo aí no Dama 1, você quer uma referência? Aí eu mandei três clientes, tipo clientaços, entendeu? Aí eu mandei um textinho pra ele, ele falou assim, tudo bem, pode postar. É assim, é diferente, é porque eu não consigo Dama 1 não. Não é tão simples assim, entendeu? Fala aí, eu tô falando comigo. Então, eu não consigo, então, eu também precisava de alguma coisa assim pra mostrar pro cliente, pra ser uma credibilidade, sabe? Então, cara, eu... A princípio, aquilo lá foi maravilhoso que você fez. É, então, aquilo lá é só o que a gente pode fazer, mas eu precisava ter essa conversa com você, pra realmente entender as suas necessidades, e entender melhor como tá sendo o trabalho de vocês aqui. Mas essas informações foram muito importantes, porque assim, é o que eu tô querendo aprender agora também, tá? É integração de inteligência artificial pra justamente afirmar tudo isso. Então, você me trouxe, por exemplo, um canal de comunicação pra você receber leads. Eu consigo colocar uma consciência configurada pra recolher essas informações, por exemplo, jogando no teu WhatsApp. Uma coisa, porque eu tava pensando na madrugada sobre você e eu e a loja. Eu vi isso o tempo todo, tá? Você não tá entendendo, eu já entrei em contato com o Renato, lá da GWM e da Porsche. Você não tá entendendo, a minha cabeça ela fica assim, ó, porque eu vejo tanta possibilidade dos negócios acontecerem que você não tem ideia. É o seguinte, ó, no Shopcar os carros são todos iguais. A gente poderia criar alguma coisa de imagem com alguma informação, tipo assim, ó, carro com 22 mil KM e único dono, pra pessoa quando tá entrando ela vê aquela informação destacada no... igual foi um status do Edgar que ele colocou, apenas 42 mil KM. Tipo assim, a pessoa abre a imagem, ela já tá aqui, ó, ela já tá... já tá aqui, as informações grandes, entendeu? A primeira coisa que a pessoa vê na primeira imagem, depois ela vai só passando porque ela se interessou. É alguma coisa pra shopar, porque é tudo muito igual. Sim. Tudo muito igual. Então acho que isso daí se liga. Isso é legal também, a forma comunicativa de chat. Não é isso no Shopcar, tá? Boa. Não existe. A gente pode. As coisas que vocês estão trabalhando, fala pra mim, pra me contextualizar. Assim, a loja, ela foi pintada nessa cor de fora, duas cores, tá errado. Eu quero fazer em preta. Ah, tá. Aquele anúncio que tem ali na frente, a fachada, só foi porque a gente... eu gastei aqui, né? Eu tive que fazer isso aqui. Aí eu vou quebrar aquele muro de lá, vou ter que colocar um grande, e eu vou fazer um painel bem legal, tipo de metalão, amarelo, bem legal, que eu vi lá na Coronel Antonino, vou fazer igual aqui. Só que eu preciso de me capitalizar. E eu vou fazer a varanda aqui também pra colocar os carros. Porque eu não jogo o carro aqui dentro porque eu não quero deixar no sol. E eu preciso da tal da varanda. Já fiz o orçamento, já sei quanto eu vou. Eu preciso vender mais ou menos uns 4k sem pagar conta nenhuma pra poder fazer isso. Entendeu? E aí, depois disso, o que eu vou fazer? Aí eu faço a varanda, meto o carro aqui dentro. Isso aqui é só assim, ó. Só que tem que trabalhar, organizar, montar o alicerce pra não cair, porque isso aqui dá uma iludida, tá? Já sabe como é. Eu sei, eu sei como é. E nós somos iludidos. Nós somos ricos, né? Nós somos ricos, você sabe. Nós não somos ricos. Brilhantes. Brilhantes, radiantes. Radiantes, eu sei que é. Tá, e o que você... Tá, então, perfeito. Eu imaginei já que estaria nesse momento, tá? E eu acho muito interessante a gente traçar os planos agora. Se, por exemplo, eu consigo fazer uma forma de você vender melhor, mais efetividade, responder com mais efetividade e isso fazer você vender, trazer o cliente pra você, isso você vai gostar. E aí, gente, e aí você vai me remunerar? Sim. Na verdade, eu vou pagar você mensal. Eu quero que você faça o orçamento sobre isso. Sim. Entenda que hoje você tem que fazer o seguinte, você só tem que criar alguma coisa que chame a atenção no próprio ShopKart, certo? E eu vou ver até se eles deixam fazer isso porque eu não sei. Outra coisa, você vai usar inteligência artificial? Então você utiliza de forma que eu consiga atingir o pessoal pelo Instagram e regiões. Eu consigo? Sim, porque eu também ia chegar nessa parte de o orgânico institucional, porque a gente precisa, com certeza, criar a marca. Você vai fazer marca, tia? Eu quero criar. Eu nunca esqueço de você me falar. Eu sei, mas você tem que fazer uma faculdade pra ganhar muito mais. Você saiu daquele nível lá de entregador e veio pra esse nível aqui, mas ainda tá muito próximo, entendeu? E a coisa cai. Então pra você ficar mais, coloca um degrau aqui, ó, que não saia daqui, entendeu? Que é o alicerce. Tem que fazer a tal da faculdade. Se você fizer a tal da faculdade, ninguém vai tirar isso de você, beleza? E aí você não precisa ficar na poste, você pode montar uma empresa. Só que assim, ó, a poste é status, ela é nome, ela não te abre portas, ela vai te aprender, não, ela vai te abrir aprendizado. Então tudo você vai conseguir ali. Esse aí vai ser sua chave. Só que pra você se manter, você precisa do estudo. Então faz faculdade. Faz. A gente mata. Entendeu? Porque senão é ilusória, que nem a gente falei, eu tô aprendendo um monte de coisa, eu tô aprendendo um monte de jeito, viajando tudo. Mas qualquer momento isso pode, porque você tá flutuando, aqui não tem base. E você tem que ter uma base. E a sua base é a sua faculdade. Bele? Então tá. Então vamos lá, resumindo, tem que criar alguma coisa pra chocar, pra chamar a atenção. Criativo. Eu mando pra você as imagens quando entrar os carros. Perfeito. É outra coisa, é por região, a gente tem que atingir região, no Instagram, não sei se dá pra fazer isso. Tem como fazer o patrocinado, eu faço a cotação última. Ótimo, ótimo. E aí a gente direciona pras regiões. Pras regiões. Aí eu venho aqui, a gente senta e direciona. Isso, é no Instagram? Jogo juntos. Com o patrocinado? Tá. E aí é bom a gente criar essa identidade visual primeiro com os criatícias. Sim. Vamos estruturar mais pra frente então a parte de vídeo, né? Isso, isso. Que aí eu quero mostrar seu gostinho. Tá, tá bom. Mas depois. Vamos primeiro começar isso, começar assim, pra gente poder ir entendendo qual vai ser a lenda e qual que é a próxima dor, entendeu? E pra gente poder ensinar tudo isso, beleza? Mas olha, eu acho que isso institucional com seu gostinho tem que ser o quanto antes, porque é exatamente isso. Eu sei. Mas assim, dá pra esperar um pouquinho. Eu tenho um tanque aqui, que é o meu cliente que foi que voltou, que foi que voltou. E eu preciso dele, eu preciso chamar a atenção dele, porque ele tem 60 mil de acessórios. 60 mil? 60 mil agora... Quanto? Quanto que ele está anunciando? Então, aí que está. Ah, ele quer... O cliente quer tudo. Não, foi assim, ó. O cliente pegou e entregou num negócio pra outro cliente. Estava anunciado comigo, ele tirou pra poder colocar num terreno. O cara comprou o terreno, deu o carro como entrada e pegou ele por 330, eu acho 350, não lembro. Só que o carro vale hoje 339, certo? Carro zero. Zero. Quantos mil, 13 mil? Não, tá com 12, 14. Fez problema. O problema é que tá com 65 mil, vamos colocar, de acessório. Então eu preciso... Eu tô anunciando ele por 325, não tô ainda, vou anunciar, 325. Só que ele é muito próximo do novo, ninguém vai querer comprar escada desse jeito. Só que ele é o mais bonito que tem em Campo Grande. Ah, mas Juss, 325 compra um zero. Beleza. Só que você vai comprar um zero e vai colocar 70% aí de acessório? Tem tudo isso, tem escada, tem o pneu, ele mudou, tem tudo. Ele colocou o PPF, não sei, em cima, aquele preto, mudou o farol, mudou o capul, mudou tudo. Onde tá esse carro? Ele tá com um cliente agora, um procurador e as fotos estão comigo. E eu preciso chamar atenção nesse carro. Você não consegue fazer esse carro rapidinho? Pra fazer um vídeo, vou pedir pra ele. Porque cara, seria incrível a gente mostrar. Tá, eu vou... E outra, esse seria, possivelmente, o primeiro institucional. Tá bom. E aí você falando, olha, tem 60 mil opção. E aí... E aí mostra, porque o cliente precisa ver. Ele precisa ver que o carro tá bonito. E eu acho que fotos, às vezes, não consegue transmitir aquele impacto, né? Não, não consegue. E eu falei exatamente isso com o cliente ontem. Eu falei, olha, esse carro é diferenciado. Eu preciso mostrar. Não é som take. Não, não é. E aí, o que acontece? Eu faço assim, ó, quando é que você pode e eu vou trazer o carro. Vou pedir pra ele deixar um meio período aqui. Já que você fala quando, tá? Eu tô trabalhando até domingo, tá, bebê? É, porque eu tenho que trazer os carros de fora e eu não tenho que fazer. Então, creio que não tem tempo falando, então vem domingo. Vou abrir pra ti, entendeu? Que bom é isso. Personalizado, atendimento personalizado. Eu sei, eu sei. Eu sei, eu sei. Então tá, se você faz a condição então ao patrocinado, o que nós precisamos do seu e eu mando as fotos pra você. Que é isso que eu consegui, o candidato. Tá, beleza. Eu vou fazer alguns modelos lá. E aí você soa acelerado. Já viu conversando com nós dois? É, é demais. O chat vai ficar... É, meu Deus. Deve ser. Então, mas é beleza então, fecho. Quando você tem carro pra consignar, manda aqui, tá? O seu pai também trabalha com isso, né? Tem, tem muito carro, ó. Tem muito cliente também que nem quer. É? Manda tudo aqui. Eu vou melhorar aqui porque aqui exige isso, né? O público aqui, o local aqui, tudo tem que ir. Tudo existe. Mas olha, eu vou falar pra você. Dá pra fazer algo muito melhor, tá muito bolha. Show muito bonita. O que tem show bonita? Show bonita? Aquele loja lá que você tá falando. Ah, tá. O Fábio, todo mundo é o Fábio, é o Fábio, é o Fábio. Quem é Fábio? O Fábio Anache. Ah, sim, é isso. É isso. Entende. Que ele... Ongarezão. Todo mundo gosta dele? Nossa, todo mundo paga um pau pra aquele cara. Mentira. Tipo assim. Com aquela arrogância? Aham. Pode falar isso, aquela arrogância? É prepotente. É prepotente. Sério? Aham. Agora ele pensou. Já, já me sei. E aí, o que você falou ali, amor? O que você fez nesse dia? Ele tá fazendo isso. Você ficou todo o papo em dia. Tem cliente. Tem cliente. Tchau. Muito obrigada. Achou que fosse descansar. Quem que é? O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. O Alvaro. Pra o Atahid não? O Vurner? Ah, tá. Entendi. O da S4? Pra eu passar outra? Então é isso. Vamos traçar o plano, tá? E eu te mando tudo estruturado. Isso. A gente tá... E depois a gente dá pra aproveitar bastante. Desde muito contexto. Isso, quando os dois já estão... Isso, quando os dois já estão... Se vocês combinaram, entende? Tá por que, gente? Não. A princípio, essa é a minha ideia, tá? Só... Olha, é o Ângelo na verdade. Ah, o Menarim. Depois a gente... É, depois a gente conversa. Depois a gente fala o que eu vou passar por ele, tá? Ele ainda vai montar, né? Tudo bem? É, eu monto e mando como pd. Isso, ótimo. A previsão também da gente... Ela vai dar a parte de Alvaro caminho. Chega ação. Vamos ver, vamos fazer os primeiros criativos. Mas eu quero implementar... Eu vou trabalhar isso, tá? Mas eu quero implementar a IA no seu WhatsApp. No seu email. Tipo assim, caiu o email, ele vai tipo... Pim! Mandar uma mensagem no grupo já. Com qual veículo? Link do shopping. Com qual veículo? Com qual veículo? Com qual veículo? Com qual veículo? Com qual veículo? Com qual veículo? Com qual veículo? Com qual veículo? Eu vou mandar uma mensagem no grupo já. Com qual veículo? Link do shopping. Do email. Para você já visualizar até o WhatsApp pronto. Você só clicar e mandar mensagem pra ele. Vitor, tem mais um detalhe. Sabe aquele que você criou pra colocar lá no grupo do seu avalete? Você fala? Não. Quando eu coloco aqui lá, ele vai pro meu WhatsApp. Chega no meu WhatsApp, se eu estiver atendendo eu não vou olhar. Então dá pra colocar alguma coisa tipo assim, oi, tudo bem? Prazer em sua ajuda. Ou seja, no momento que eu estou atendendo já liga. Eu tava falando pro ele. É? Então, depois que você está atendendo, você vai fazer o que? Você vai fazer o que? Você vai fazer o que? Então, isso que você está pensando de alinhar pra ele dar um start."
+}

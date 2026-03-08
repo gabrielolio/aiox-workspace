@@ -1,0 +1,191 @@
+# Base de Conhecimento: Porsche Personas 2025
+# Criado: 2026-03-04
+# Fonte: PDF "Porsche Personas" (Bamaq / Porsche Center)
+# Arquivo original: knowledge-base/brands/porsche-personas-2025.pdf
+# Uso: Agentes Muse (tom de voz por publico), Briefer (angulos de conteudo), Guardiao (adequacao)
+
+visao_macro:
+  descricao: >
+    Analise comparativa entre dados reais de clientes Porsche e personas
+    planejadas para 2025. Revela insights para otimizar estrategia de
+    marketing e vendas.
+
+  insights_chave:
+    - titulo: "Perfil demografico mais maduro"
+      dado: "Idade media 53 anos, 61% na faixa 41-60 anos"
+      implicacao: "Maior estabilidade financeira e experiencia de vida"
+
+    - titulo: "Dominancia de empresarios e profissionais liberais"
+      dado: "87.7% em duas categorias (Empresarios 61.9% + Profissionais liberais 25.8%)"
+      implicacao: "Alta renda e autonomia profissional — comunicacao deve refletir isso"
+
+    - titulo: "Interesses tradicionais superam tendencias futuras"
+      dado: "Passion points: Motorsports, Sports & Outdoor, Travel, Luxury Lifestyle"
+      implicacao: "Equilibrar inovacao com valores consolidados na comunicacao"
+
+    - titulo: "Gap de sustentabilidade"
+      dado: "Sustentabilidade ausente nos passion points reais"
+      implicacao: "Comunicar como consequencia de inovacao/performance, nao como motivacao primaria"
+
+personas:
+  - nome: "Gabriel"
+    modelo: "718"
+    idade: 37
+    ocupacao: "Empreendedor"
+    perfil: >
+      Jovem empresario em ascensao que busca no 718 sua primeira grande
+      conquista com a Porsche. Movido por emocao e performance, ve o
+      modelo como simbolo de status e um passo rumo ao sonho do 911.
+    dores:
+      - "Pouco espaco e praticidade para a familia"
+      - "Dificuldade em equilibrar esportividade com conforto em viagens"
+      - "Opcao esportiva, mas nao tao potente quanto um 911"
+    interesses:
+      - "Motorsports e velocidade"
+      - "Lifestyle de luxo e viagens curtas"
+      - "Carros esportivos"
+      - "Carro de entrada na marca"
+    content_angles:
+      - "Conquista pessoal / primeiro Porsche"
+      - "Performance pura (pista, curvas)"
+      - "Lifestyle jovem e ambicioso"
+
+  - nome: "Gustavo"
+    modelo: "Cayenne"
+    idade: 47
+    ocupacao: "Empresario ou profissional liberal consolidado"
+    perfil: >
+      Rotina familiar intensa. Enxerga no Cayenne o SUV ideal para unir
+      viagens, praticidade urbana, luxo e seguranca, mantendo
+      prestigio e exclusividade.
+    dores:
+      - "Expectativa de tecnologia e conectividade de ponta sempre atualizada"
+      - "Estacionamento e manobras em areas urbanas"
+    interesses:
+      - "Viagens nacionais e internacionais"
+      - "Lifestyle sofisticado e gastronomico"
+      - "Conforto e praticidade com status"
+      - "Esportividade e tecnologia"
+    content_angles:
+      - "Familia + luxo (viagem, weekend)"
+      - "Tecnologia embarcada"
+      - "Versatilidade (urbano + estrada)"
+
+  - nome: "Mariana"
+    modelo: "Cayenne"
+    idade: 45
+    ocupacao: "Empresaria varejista"
+    perfil: >
+      Consolidada, com redes em shoppings, vive rotina intensa entre
+      negocios e compromissos sociais. Ve no Cayenne o SUV que traduz
+      prestigio e sucesso.
+    dores:
+      - "Busca transmitir sofisticacao, credibilidade e status"
+      - "Necessidade de conciliar agenda profissional exigente e vida familiar"
+    interesses:
+      - "Moda, tendencias e consumo premium"
+      - "Networking, eventos de negocios e viagens"
+      - "Experiencias exclusivas em gastronomia, cultura e bem-estar"
+    content_angles:
+      - "Empoderamento feminino + luxo"
+      - "Rotina de negocios + lifestyle"
+      - "Experiencias exclusivas"
+
+  - nome: "Fernanda"
+    modelo: "Macan"
+    idade: 42
+    ocupacao: "Profissional liberal"
+    perfil: >
+      Profissional liberal de sucesso que busca um SUV premium mais
+      compacto. O Macan representa sofisticacao discreta e praticidade
+      urbana, sem abrir mao da performance e do lifestyle Porsche.
+    dores:
+      - "Menor espaco em relacao ao Cayenne"
+      - "Necessidade de equilibrio entre sofisticacao e praticidade urbana"
+      - "Ansiedade sobre autonomia de recarga"
+      - "Carro ICE (combustao) ser visualmente desatualizado em relacao ao line up"
+    interesses:
+      - "Sofisticacao sem ostentacao"
+      - "Atividades outdoor e esportes leves"
+      - "Lifestyle de luxo equilibrado com praticidade"
+    content_angles:
+      - "Design discreto e elegante"
+      - "Dia a dia urbano premium"
+      - "Transicao eletrica (Macan Electric)"
+
+  - nome: "Ricardo"
+    modelo: "Panamera"
+    idade: 55
+    ocupacao: "Empresario"
+    perfil: >
+      Valoriza elegancia e conforto executivo. O Panamera equilibra
+      sofisticacao e esportividade, ideal para viagens de negocios
+      e lifestyle sofisticado, com discricao e status.
+    dores:
+      - "Espaco pode ser limitado em algumas situacoes familiares"
+    interesses:
+      - "Viagens a negocios"
+      - "Gastronomia e vinhos sofisticados"
+      - "Lifestyle de luxo com discricao"
+    content_angles:
+      - "Elegancia executiva"
+      - "Gran Turismo (viagens longas)"
+      - "Interior premium e conforto"
+
+  - nome: "Leonardo"
+    modelo: "Taycan"
+    idade: 45
+    ocupacao: "Empresario de tecnologia ou investimentos"
+    perfil: >
+      Inovador e conectado a tecnologia, ve no Taycan a chance de
+      unir performance eletrica, design futurista e exclusividade.
+      Gosta de se posicionar a frente do seu tempo.
+    dores:
+      - "Ansiedade com infraestrutura de recarga"
+      - "Desvalorizacao no mercado de usados"
+      - "Adaptacao em viagens longas"
+    interesses:
+      - "Inovacao e conectividade"
+      - "Performance e exclusividade"
+      - "Lifestyle futurista ligado a tecnologia"
+    content_angles:
+      - "Tech + performance (dados, numeros)"
+      - "Futuro da mobilidade"
+      - "Exclusividade de early adopter"
+
+  - nome: "Eduardo"
+    modelo: "911"
+    idade: 52
+    ocupacao: "Empresario consolidado / colecionador"
+    perfil: >
+      Apaixonado por automoveis. O 911 simboliza tradicao, performance
+      e exclusividade, sendo a realizacao de um sonho e a expressao
+      maxima de seu sucesso pessoal.
+    dores:
+      - "Pouca praticidade para uso diario, chama muita atencao"
+      - "Dificuldade em substituir como carro principal — geralmente e secundario"
+    interesses:
+      - "Motorsports e track days"
+      - "Colecionismo automotivo"
+      - "Viagens de lazer e experiencias ao volante"
+      - "Produto de maior desejo da marca — significa atingir o auge"
+    content_angles:
+      - "Heritage e historia (icone desde 1963)"
+      - "Track days e experiencia de pista"
+      - "Sonho realizado / conquista pessoal"
+      - "Colecionismo e exclusividade"
+
+# Regras de uso para agentes KING:
+usage_rules:
+  muse: >
+    Use as personas para direcionar o tom de conteudo por modelo.
+    Um post do 718 fala de conquista e ambicao.
+    Um post do 911 fala de legado e realizacao.
+    Um post do Cayenne fala de familia e versatilidade.
+  guardiao: >
+    Valide que o conteudo fala com o publico correto.
+    Nao use linguagem jovem/descolada pro 911 (publico 52+).
+    Nao use linguagem corporativa/formal pro 718 (publico 37).
+  briefer: >
+    Rotacione conteudo entre personas — nao foque so no 911 ou Cayenne.
+    Use as dores como gancho de conteudo (resolver problema = engajamento).

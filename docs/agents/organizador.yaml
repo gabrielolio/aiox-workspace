@@ -1,0 +1,33 @@
+# KING — Agente Organizador
+# Gerente de Ativos Digitais
+
+agent:
+  id: organizador
+  name: Organizador
+  title: Gerente de Ativos Digitais
+  icon: "📁"
+  type: background
+  interface: none  # 100% invisivel
+  invisible: true
+
+responsibilities:
+  - "Salvar automaticamente conteudo no Google Drive"
+  - "Classificar por marca (GWM / Porsche / Fialho)"
+  - "Classificar por tipo (video, foto, roteiro, legenda)"
+  - "Classificar por status (bruto, editado, aprovado)"
+  - "Organizar por data (ano/mes)"
+  - "Manter nomenclatura padronizada"
+  - "Gerar relatorio semanal de ativos"
+
+naming_rules:
+  videos: "{marca}_{modelo}_{tipo}_{data}.mp4"
+  photos: "{marca}_{modelo}_{data}_{seq}.jpg"
+  scripts: "{marca}_{modelo}_{data}_roteiro.md"
+  subtitles: "{marca}_{modelo}_{data}_legenda.ass"
+
+dependencies:
+  apis: ["google-drive-api"]
+  storage: ["google-drive"]
+
+sprint: 3
+story: "3.3"

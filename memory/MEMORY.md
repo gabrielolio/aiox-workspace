@@ -1,67 +1,108 @@
-# MEMORY — Projeto AIOX (C:\Windows\system32)
+# MEMORY — Workspace AIOX (C:\Windows\system32)
 
 ## Preferências do Usuário
 
-- **Gemini para escrita pesada** — usar Gemini (via subagente ou API) para tarefas de geração de conteúdo extenso, pesquisa aprofundada e escrita de documentos longos. Não gastar tokens Claude desnecessariamente nessas operações.
-- **Idioma:** Português brasileiro
-- **Explicações ao final de atividades** — sempre encerrar com resumo informal e simples, sem jargão técnico, usando analogias do dia a dia. O usuário não programa e precisa entender o que foi feito e por quê importa.
+- **Idioma:** Português brasileiro — sempre
+- **Explicações simples ao final** — encerrar com resumo informal, sem jargão técnico, usando analogias do dia a dia
+- **Gabriel não programa** — toda implementação deve ser explicada em linguagem acessível
+- **Gemini para escrita pesada** — conteúdo extenso, pesquisa aprofundada, documentos longos
+
+## Repositórios
+
+- **aiox-workspace** (GitHub: gabrielolio/aiox-workspace) — fonte da verdade, backup completo
+- **claudio-core** (GitHub: gabrielolio/claudio-core, branch `claude/continue-king-config-uB5lS`) — KING system
 
 ## Estado do Framework
 
-- Framework: Synkra AIOX (renomeado de AIOS em 04/03/2026)
-- Versão local: `4.4.6` (atualizada em 04/03/2026 via rsync manual do npm package)
-- Package: `aios-core@4.4.6` (instalado globalmente)
-- Diretório: `C:\Windows\system32\.aios-core\`
-- Nota: `aios update` CLI tem bug de validação (`.minisig` ausente) — usar rsync via WSL como workaround
+- Framework: Synkra AIOX v4.4.6 (renomeado de AIOS em 04/03/2026)
+- Instalado em: `C:\Windows\System32\.aios-core\`
+- Bug: `aios update` falha (`.minisig` ausente) — workaround: rsync via WSL
 
-## Base de Dados Alan Nicolas
+## Projeto KING — Sistema de Automação WhatsApp
 
-- Localização: `/Documents/Obsidian Vault/BASE DE DADOS/Alan Nicolas/DOSSIES/`
-- 6 arquivos criados em 04/03/2026
-- Vídeos cobertos: p1d7jvT_fuw, gEUtUdqiAyk, Vgrs6EA4kCg, pqtLLYyztc8
-- Limitação: YouTube bloqueia transcrição automática — transcrições manuais via botão "Transcrição" no YouTube
-- 21 configurações pendentes identificadas e priorizadas
+**Objetivo:** Bot WhatsApp para Victor (social media Bamaq) automatizar produção de conteúdo Porsche + GWM
+
+### 6 Agentes KING
+| Agente | Função |
+|--------|--------|
+| Diretor | Classifica intenção e roteia para o agente certo |
+| Legendador | Transcreve áudio/vídeo via Whisper + subtítulos |
+| Briefer | PM do conteúdo: planeja semana, 3 mensagens semanais |
+| Guardião | Valida conteúdo contra diretrizes das marcas |
+| Muse | Geração de copy e sugestões criativas |
+| Organizador | Arquivamento e sync com Google Drive |
+
+### Stack KING
+- TypeScript + better-sqlite3 (sem Redis — simplicidade)
+- WhatsApp via Evolution API | Anthropic SDK + OpenAI SDK (Whisper)
+
+### Status Stories KING
+| Story | Status |
+|-------|--------|
+| 1.1 Setup | ✅ CONCLUÍDA |
+| 1.2 Bot WhatsApp | ✅ CONCLUÍDA |
+| 1.3 Diretor v0 | ✅ CONCLUÍDA |
+| 2.1 SQLite | ✅ CONCLUÍDA |
+| 2.2 Legendador | ✅ CONCLUÍDA |
+| 3.1 Guardião | ✅ CONCLUÍDA |
+| 3.2 Briefer MVP | ✅ CONCLUÍDA |
+| 4.1 Muse | 🔄 Ready for Review |
+| 4.2 Organizador | 🔄 Ready for Review |
+
+### Decisão Arquitetural: Inferência de Marca (sem perguntar a Victor)
+1. Calendário: Seg/Qua/Sex=Porsche, Ter/Qui=GWM (~70% acerto)
+2. Conteúdo: Cayenne/911→Porsche, Tank/Haval→GWM (+20%)
+3. Confirmação passiva na resposta (Victor corrige se errado)
+
+## Envolvidos
+| Pessoa | Papel |
+|--------|-------|
+| Gabriel | Fundador, visão estratégica |
+| Victor (Vitor King) | Social media Bamaq (Porsche + GWM), usuário final do KING |
+| Jucilene Diass | Cliente Fialho Motors (Campo Grande/MS, R$800-1.200/mês) |
 
 ## Hub Notion — Central da Agência
 
 - Hub: "🏢 Central da Agência" — page_id: `31aff01f-f66b-8191-801d-fd2ca520d28f`
 - Clientes DB — data-source: `e1253c21-a799-4d12-8f14-121608b80e25`
-- Projetos DB — data-source: `63861429-1dc1-4f8f-929b-e80ae8dc0fb5` (relation → Clientes)
-- Tarefas AIOX DB — data-source: `8f7c65ac-7840-4c1d-b5fe-b098aeb1fff5` (relation → Projetos)
+- Projetos DB — data-source: `63861429-1dc1-4f8f-929b-e80ae8dc0fb5`
+- Tarefas AIOX DB — data-source: `8f7c65ac-7840-4c1d-b5fe-b098aeb1fff5`
 - Squads — page_id: `31aff01f-f66b-8184-9440-db4173606aea`
 - Base de Conhecimento — page_id: `31aff01f-f66b-81b1-9357-c097cb9a00c2`
 
-## Configurações Críticas Pendentes (AIOX) — Fonte: Análise cruzada 4 vídeos primários
+## Base de Dados Alan Nicolas
 
-### CRÍTICAS ✅ IMPLEMENTADAS (05/03/2026)
-- ✅ Journey Log: `.claude/hooks/journey-log.cjs` — PostToolUse (Bash/Write/Edit/Task) → `.aios/journey.log`
-- ✅ Skills framework: `.claude/skills/` — skill-creator.md + pdf-to-markdown.md + README.md criados
+- Localização: `knowledge-base/alan-nicolas/` — 90 dossiês
+- Vídeos cobertos: p1d7jvT_fuw, gEUtUdqiAyk, Vgrs6EA4kCg, pqtLLYyztc8
+- Limitação: YouTube bloqueia transcrição automática — usar botão "Transcrição" manualmente
+
+## Configurações AIOX — Status
+
+### ✅ IMPLEMENTADAS (05/03/2026)
+- Journey Log: `.claude/hooks/journey-log.cjs` → `.aios/journey.log`
+- Skills: `.claude/skills/` — skill-creator.md + pdf-to-markdown.md
+- Hooks: synapse-engine.cjs + precompact-session-digest.cjs
 
 ### CRÍTICAS PENDENTES
-- MCPs: nenhum configurado — começar por ClickUp MCP (via @devops `*add-mcp`)
-- Open Router: não configurado — rotear via openrouter.ai (modificar synapse-engine ou settings)
+- MCPs: nenhum — começar por ClickUp MCP (`@devops *add-mcp`)
+- Open Router: não configurado (openrouter.ai)
+- .env KING: ANTHROPIC_API_KEY, OPENAI_API_KEY, EVOLUTION_API_URL vazias
 
 ### ALTAS
-- Workers: implementar scripts determinísticos para 80% das tarefas repetitivas
+- Workers: scripts determinísticos para 80% tarefas repetitivas
 - Comando `handoff` entre agentes
-- Tradutor N8N → AIOX workflow
+- Número WhatsApp dedicado pro KING (decisão pendente)
 
 ### MÉDIAS
-- Alias `brownfield-discovery` atalho
-- Calculadora de Squads
-- Agente noturno (cron job)
-- Task `review-de-tarefas`
+- Alias `brownfield-discovery`, calculadora de squads, agente noturno, task `review-de-tarefas`
 
-## Materiais de Apoio dos Vídeos
-- aitpl.com — repositório de agents/skills/comandos prontos
-- openrouter.ai — roteador de LLMs
+## Materiais de Referência
+- aitpl.com — repositório de agents/skills prontos
+- openrouter.ai — roteador de LLMs (70-80% redução custo)
 - coderabbit.ai — revisão automática de PRs
 - Atomic Design (Brad Frost) — metodologia do agente ux-design-expert
 
-## Arquivos KB Criados (04/03/2026)
-- DOSSIE_PRIMARIO_p1d7jvT_fuw_20260205.md — Claude Code é Fácil (32k palavras)
-- DOSSIE_PRIMARIO_gEUtUdqiAyk_20260212.md — AIOS Squad (42k palavras)
-- DOSSIE_PRIMARIO_Vgrs6EA4kCg_20260219.md — R$86k Dev (40k palavras)
-- DOSSIE_PRIMARIO_pqtLLYyztc8_20260304.md — AIOX Exército (40k palavras)
-- ANALISE_CRUZADA_4_VIDEOS_20260304.md — gap analysis + plano implementação
-- MATERIAIS_APOIO_VIDEOS_20260304.md — materiais mencionados nos vídeos
+## Knowledge-Base KING
+- `knowledge-base/brands/` — gwm-brasil-2026.yaml, porsche-brasil-2026.yaml, PDFs Porsche
+- `knowledge-base/clients/` — bamaq.yaml, fialho-motors.yaml
+- `knowledge-base/profiles/` — vitor-king.yaml

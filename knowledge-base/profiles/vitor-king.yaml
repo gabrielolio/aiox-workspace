@@ -1,0 +1,65 @@
+# Perfil: Vitor King (Vitor Lopes)
+# Criado: 2026-03-03
+# Fonte: Conversas transcritas + observacao de comportamento
+# Uso: Todos os agentes (personaliza tom e abordagem)
+
+profile:
+  name: "Vitor Lopes"
+  alias: "Vitor King"
+  role: "Produtor de conteudo / Social media"
+  location: "Campo Grande, MS"
+
+  employment:
+    primary: "Grupo Bamaq (fixo)"
+    freelance: ["Fialho Motors", "Pipeline: Gigante"]
+
+  work_style:
+    strengths:
+      - "Qualidade visual excepcional (identidade visual, flyers, fotos)"
+      - "Velocidade de execucao (entregou pacote completo em 5h num domingo)"
+      - "Criatividade natural (multiplas variacoes sem briefing)"
+      - "Relacionamento forte com clientes (vinculo emocional)"
+    weaknesses:
+      - "Subvalorizacao cronica do trabalho (cobra R$80 por R$2.000+)"
+      - "Nao formaliza propostas (cliente pede contrato, ele nao manda)"
+      - "Falta de constancia (tira foto, nao edita, nao posta)"
+      - "Zero estrutura de rotina (depende de demandas externas)"
+      - "Organizacao dispersa (WhatsApp, galeria, Drive sem padrao)"
+      - "Visao de longo prazo sem execucao (promete drone desde janeiro)"
+
+  communication:
+    preferred_channel: "WhatsApp"
+    tone: "Informal, afetuoso, entusiasmado"
+    responds_well_to:
+      - "Motivacao e celebracao de conquistas"
+      - "Direcao clara e especifica ('faz X hoje')"
+      - "Tom de parceiro, nao de chefe"
+    does_not_respond_to:
+      - "Cobranca rigida"
+      - "Tom corporativo ou frio"
+      - "Excesso de opcoes sem direcao"
+
+  tools_current:
+    design: "Ferramenta nao especificada + CapCut"
+    ai: "ChatGPT (reclama de limites e tempo de espera)"
+    storage: "Galeria celular + Google Drive (sem estrutura)"
+    communication: "WhatsApp"
+
+  content_preferences:
+    style: "Letras grandes, design curvo, animacoes de entrada/saida (bounce, slide)"
+    format_preference: "Reels e Stories (vertical, dinamico)"
+    editing_pain: "Legendas no CapCut — repetitivo, limitado, demorado"
+
+  pricing_behavior:
+    pattern: "Cobra muito abaixo do mercado por vinculo emocional"
+    example: "R$80 por identidade visual + 7 flyers + fotos tratadas (mercado: R$2.000-5.000)"
+    justification: "amizade, parceria, gratidao"
+    target: "Transicionar pra modelos mensais (R$800-1.500/cliente)"
+
+  motivation:
+    primary: "Reconhecimento e afeto"
+    secondary: "Crescimento profissional"
+    evidence:
+      - "Priorizou Jucilene num domingo de folga"
+      - "Responde com entusiasmo a elogios"
+      - "Quer ser visto como profissional, nao como 'freela barato'"

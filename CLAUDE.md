@@ -1,218 +1,406 @@
-# CLAUDE.md
+# CLAUDE.md - claudio-core
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Este arquivo configura o comportamento do Claude Code ao trabalhar neste repositorio.
 
 ---
 
-## PRINCÍPIOS DE VETERANO
-*Destilado de +10.000 sessões reais de Claude Code*
+## Principios de Veterano
+*Destilado de operacoes reais com Claude Code — nao ignore.*
 
 ### O Mantra
 > "Never take the lazy path. Do the hard work now. The shortcut is forbidden."
 
-Atalho hoje = debugging amanhã. Sem exceção.
+Atalho hoje = debugging amanha. Sem excecao.
 
-### A Equação que Governa Tudo
-**30 minutos de análise agora = 10 horas de debugging evitadas depois**
-
-O trabalho da IA é devolver tempo ao humano:
-- Análise sempre profunda e completa
-- Relatórios que reduzem carga cognitiva do decisor
-- Nunca otimizar para menos tokens às custas de profundidade
-
-Atalhos criam dívida invisível. Dívida invisível cobra juros compostos.
-
----
-
-### Gradiente de Permissão
+### Gradiente de Permissao
 ```
-READ     → Livre (faça sem perguntar)
-MOVE     → Após aprovação de direção
+READ     → Livre (fazer sem perguntar)
+MOVE     → Apos aprovacao de direcao
 CREATE   → Verificar se similar existe primeiro
 DELETE   → SEMPRE confirmar
 ```
-Aprovação de direção = execute até completar. Nunca "Quer que eu continue?" após aprovação já dada.
+Aprovacao de direcao = execute ate completar. Nunca "Quer que eu continue?" apos aprovacao ja dada.
 
-### A Regra do 2x
-Se o usuário repetiu algo 2x → você não entendeu. PARE e faça EXATAMENTE o que foi pedido.
+### Regras Criticas
+- **Gabriel nao programa** — toda implementacao deve ser explicada em linguagem simples, sem jargoes tecnicos
+- **Resumo ao final** — sempre encerrar atividades com resumo informal usando analogias do dia a dia
+- **Leitura completa** — NUNCA leia arquivos parcialmente. Read parcial + Edit = conflitos e quebras
+- **Discovery antes de implementacao** — verificar o que existe, apresentar gaps, propor opcoes. Nunca implementar direto
+- **So o que foi pedido** — nao adicionar features nao solicitadas "ja que estava mexendo"
+- **Verificacao fisica antes de teoria** — arquivo existe? servidor responde? usuario repetiu 2x?
 
-### Verificação Física Antes de Teoria
-1. Arquivo existe onde o código espera? → `ls -la /caminho/exato/`
-2. Servidor serve? → `curl -I http://localhost:PORT/path`
-3. Usuário repetiu input 2x? → PARE, faça EXATAMENTE o que ele disse
-4. Testou com hard refresh? → Cmd+Shift+R
+### Lei do Melhor Agente (CRITICA — nao ignorar)
+> "Para cada tarefa, o agente com maior especialidade naquele dominio deve ser acionado. Sem excecao."
 
-### Leitura Completa ou Nada
-NUNCA leia arquivos parcialmente. `Read(file, limit: 100)` + Edit = conflitos e quebras.
+- **Pesquisa e exploracao de codebase** → `Explore` agent
+- **Design e UX, estetica, harmonia visual, tipografia** → `ux-design-expert`
+- **Arquitetura e decisoes tecnicas estruturais** → `architect`
+- **Analise de negocio e requisitos** → `analyst`
+- **Implementacao de codigo** → `dev`
+- **Qualidade e testes** → `qa`
+- **Git, CI/CD, deploy** → `devops`
+- **Gestao de produto e prioridades** → `pm`
+- **Backlog e stories** → `po` / `sm`
+- **Dados, banco, queries** → `data-engineer`
+- **Pesquisa ampla e multidisciplinar** → `general-purpose`
 
-### Discovery Antes de Implementação
-Antes de criar, verifique o que existe. Apresente findings no formato:
+**Regra de ouro:** O orquestrador (Aria/Claude Code) distribui. A ordem pode ser quebrada quando for conveniente — mas nunca por preguica. Acionar o agente errado e tao ruim quanto nao acionar nenhum.
+
+### Formato de Discovery
+Antes de criar qualquer coisa, apresentar:
 ```
-Existente: [o que já existe + stats]
+Existente: [o que ja existe + stats]
 Gap: [o que realmente falta]
-Opções: 1. Estender | 2. Criar novo | 3. Não fazer nada
-Recomendação: [número] porque [uma frase]
-```
-
-### Opções Antes de Implementação
-NUNCA implemente direto. Apresente 3 opções com trade-offs, recomende uma, aguarde escolha.
-
-### Determinismo Primeiro
-Script/código > SQL > Regex > LLM. LLM é último recurso — apenas quando criatividade é necessária.
-
-### Só o que Foi Pedido
-```
-FAÇA: Exatamente o que foi solicitado
-NÃO FAÇA: "Também adicionei X já que estava mexendo"
-```
-
-### Debugging por Hipótese
-Gere 3 hipóteses ordenadas por probabilidade. Para cada: como verificar + o que fazer se for. Confirme a causa antes de tentar consertar.
-
-### O Fluxo
-```
-VERIFICAR → REUSAR → PRECISAR → SIMPLIFICAR → PRESERVAR → FOCAR → SILÊNCIO
+Opcoes: 1. Estender | 2. Criar novo | 3. Nao fazer nada
+Recomendacao: [numero] porque [uma frase]
 ```
 
 ---
 
-## Project Overview
+## Visao Geral
 
-This is **Synkra AIOS** — an AI-Orchestrated System for full-stack development. The framework lives in `.aios-core/` (`@aios-fullstack/core` v4.31.1) and orchestrates specialized AI agents via Claude Code slash commands.
+Este repositorio abriga **dois projetos independentes** com ciclos de vida diferentes:
 
----
+### Projetos Ativos
 
-## Key Directories
+| Projeto | Status | Foco | Localizacao |
+|---------|--------|------|-------------|
+| **Fialho Motors** | FOREGROUND — entrega ativa | Gestao de conteudo (manual) | `projects/fialho-motors/` |
+| **KING System** | BACKGROUND — amadurecendo | Automacao com agentes IA | `src/`, `docs/agents/`, `docs/stories/` |
 
-```
-.aios-core/            ← Framework core (Node.js package)
-  core/synapse/        ← Synapse Engine (runs on every prompt via hook)
-  core-config.yaml     ← Master project configuration
-  constitution.md      ← Non-negotiable framework principles
-  development/agents/  ← Agent source definitions (canonical)
-.claude/
-  commands/AIOS/agents/ ← Synced agent files (consumed by Claude Code)
-  hooks/               ← synapse-engine.cjs (UserPromptSubmit), precompact-session-digest.cjs
-  rules/mcp-usage.md   ← MCP governance rules
-docs/
-  stories/             ← Development stories (all work starts here)
-  prd/, architecture/  ← Sharded PRD and architecture docs
-  framework/           ← coding-standards.md, tech-stack.md, source-tree.md (auto-loaded for @dev)
-.ai/                   ← Decision logs (ADR format)
-.aios/project-status.yaml ← Auto-loaded on agent activation
-outputs/minds/         ← PvMind context files
-```
+### Regra de Ouro
 
----
+> Quando estiver trabalhando em entrega pra cliente → foque em `projects/`
+> Quando estiver desenvolvendo o sistema → foque em `src/`
+> Knowledge base e dossies servem ambos os projetos
 
-## Agent System
+### Fialho Motors (FOREGROUND)
+- **Cliente:** Jucilene Diass — Fialho Motors, Campo Grande/MS
+- **Modelo:** 100% manual — templates reutilizaveis + calendario + identidade visual
+- **Receita:** R$800-1.200/mes (contrato mensal)
+- **Ciclo:** Entregas semanais (3 posts/semana)
+- **Roadmap:** `projects/fialho-motors/roadmap.md`
+- **Nao depende do KING** — funciona independente de qualquer automacao
 
-### Activation
-- Agents: `@dev`, `@qa`, `@architect`, `@pm`, `@po`, `@sm`, `@analyst`, `@devops`, `@data-engineer`, `@ux-design-expert`, `@squad-creator`
-- Master: `@aios-master`
-- Agent commands use `*` prefix: `*help`, `*create-story`, `*task {name}`, `*workflow {name}`, `*exit`
+### KING System (BACKGROUND)
+- **O que e:** Sistema de automacao com 6 agentes IA (Diretor, Legendador, Briefer, Muse, Guardiao, Organizador)
+- **Foco:** Bamaq (Porsche + GWM) — volume e complexidade justificam IA
+- **Stack:** Node.js/TypeScript, Evolution API, Claude API, Whisper, FFmpeg
+- **Status:** Design + prototipo inicial. Amadurece usando repertorio real da Fialho
+- **Framework:** [Synkra AIOS](https://github.com/SynkraAI/aios-core) (v4.4.6)
 
-### Agent Authority (from constitution — non-negotiable)
+### Repositorios Relacionados
 
-| Authority | Exclusive Agent |
-|-----------|----------------|
-| `git push` to remote | `@devops` only |
-| Create Pull Requests | `@devops` only |
-| Create releases/tags | `@devops` only |
-| Create stories | `@sm` or `@po` only |
-| Architecture decisions | `@architect` only |
-| Quality verdicts | `@qa` only |
-| MCP management (`*add-mcp`, `*list-mcps`) | `@devops` only |
+| Repositorio | Localizacao Local | Descricao |
+|-------------|-------------------|-----------|
+| **claudio-core** | `/home/user/claudio-core` | Repositorio principal (Fialho + KING) |
+| **aios-core** | `/home/user/aios-core` | Framework AIOS (referencia e ferramentas) |
+| **aiox-workspace** | `github.com/gabrielolio/aiox-workspace` | Workspace AIOX de Gabriel (configs, KB Alan Nicolas) |
 
 ---
 
-## Development Workflow
+## Infraestrutura AIOX Configurada
 
-All development is story-driven. The flow is:
-```
-@po/@sm creates story → @dev implements → @qa validates → @devops pushes/creates PR
-```
+### Hooks (.claude/hooks/)
 
-Stories live in `docs/stories/`. When implementing:
-1. Mark checkboxes as complete: `[ ]` → `[x]`
-2. Keep the **File List** section updated in the story
-3. Implement exactly what acceptance criteria specify — nothing more
+| Hook | Trigger | Funcao |
+|------|---------|--------|
+| `journey-log.cjs` | PostToolUse | Loga toda execucao de tool em `.aios/journey.log` |
+
+### Skills (.claude/skills/)
+
+Skills sao modulos de habilidade carregados dinamicamente — economizam tokens em sessoes longas.
+
+| Skill | Proposito | Quando usar |
+|-------|-----------|-------------|
+| `skill-creator` | Criar novas skills para o framework | Quando precisar encapsular processo novo |
+| `pdf-to-markdown` | Converter PDF para Markdown via OCR local | Antes de analisar qualquer PDF — evita gastar tokens |
+
+**Uso:** "Use a skill pdf-to-markdown para processar este arquivo: guidelines.pdf"
+
+### Synapse (.synapse/)
+
+- `constitution` — regras nao-negociaveis do projeto
+- `global` — contexto da agencia e dos projetos
+- `manifest` — flags de configuracao
+
+### Memoria (memory/MEMORY.md)
+
+Estado persistente do projeto, envolvidos, progresso das stories e configuracoes pendentes.
+**Ler sempre no inicio de uma nova sessao para manter contexto.**
+
+### Journey Log (.aios/journey.log)
+
+Auditoria completa de toda execucao de ferramentas. Consultar para depurar o que foi feito.
 
 ---
 
-## Quality Gates (constitution — non-negotiable)
+## Framework AIOS - Referencia Rapida
 
-Before any story is "Done":
+O Synkra AIOS esta clonado em `/home/user/aios-core` e disponivel para uso.
+
+### Comandos AIOS Essenciais
+
 ```bash
-npm run lint       # must pass without errors
-npm run typecheck  # must pass without errors
-npm test           # must pass without failures
-npm run build      # must complete successfully
+# Diagnostico e informacoes
+cd /home/user/aios-core && node bin/aios.js doctor      # Health check (13 PASS)
+cd /home/user/aios-core && node bin/aios.js info         # Info do sistema
+cd /home/user/aios-core && node bin/aios.js --version    # Versao: 4.4.6
+
+# Instalar AIOS em um projeto
+npx aios-core install                    # Instalacao interativa
+npx aios-core install --quiet --force    # Instalacao silenciosa (CI/CD)
+
+# Criar novo projeto com AIOS
+npx aios-core init <nome-projeto>
+
+# Manutencao
+npx aios-core update                     # Atualizar AIOS
+npx aios-core validate                   # Validar instalacao
 ```
 
-CodeRabbit pre-push review (via WSL):
+### Agentes AIOS Disponiveis
+
+| Agente | ID | Funcao |
+|--------|----|--------|
+| AIOS Master | `aios-master` | Orquestrador do framework |
+| Analyst | `analyst` | Analise de negocios e criacao de PRD |
+| Architect | `architect` | Arquitetura e design tecnico |
+| Developer | `dev` | Implementacao de codigo |
+| QA | `qa` | Garantia de qualidade e testes |
+| Scrum Master | `sm` | Gerenciamento de sprint e criacao de stories |
+| Product Manager | `pm` | Gerenciamento de produto |
+| Product Owner | `po` | Gerenciamento de backlog |
+| DevOps | `devops` | CI/CD, infraestrutura, git push |
+| Data Engineer | `data-engineer` | Engenharia de dados |
+| UX Expert | `ux-design-expert` | Design de experiencia do usuario |
+
+**Ativacao:** `@agent-name` (ex: `@dev`, `@qa`, `@architect`)
+**Comandos:** Prefixo `*` (ex: `*help`, `*create-story`, `*develop`)
+
+### Principio Arquitetural: CLI First
+
+```
+CLI First -> Observability Second -> UI Third
+```
+
+- A CLI e a fonte da verdade - dashboards apenas observam
+- Funcionalidades novas devem funcionar 100% via CLI antes de ter UI
+- A UI nunca deve ser requisito para operacao do sistema
+
+---
+
+## Convencoes de Desenvolvimento
+
+### Idioma
+
+- **Codigo:** Ingles (variaveis, funcoes, classes, comentarios tecnicos)
+- **Documentacao:** Portugues (README, stories, docs de usuario)
+- **Commits:** Portugues ou Ingles, seguindo Conventional Commits
+
+### Conventional Commits
+
+```
+feat: nova funcionalidade
+fix: correcao de bug
+docs: documentacao
+test: testes
+chore: manutencao
+refactor: refatoracao
+style: formatacao (sem mudanca de logica)
+perf: performance
+ci: CI/CD
+```
+
+**Sempre referencie story ID quando aplicavel:** `feat: implementar feature [Story 2.1]`
+
+### Branches
+
+| Tipo | Padrao | Exemplo |
+|------|--------|---------|
+| Principal | `main` ou `master` | - |
+| Feature | `feat/<descricao>` | `feat/auth-system` |
+| Fix | `fix/<descricao>` | `fix/login-redirect` |
+| Docs | `docs/<descricao>` | `docs/api-reference` |
+
+### Nomenclatura de Codigo
+
+| Tipo | Convencao | Exemplo |
+|------|-----------|---------|
+| Arquivos | kebab-case | `user-service.ts` |
+| Componentes | PascalCase | `UserProfile` |
+| Funcoes/Variaveis | camelCase | `getUserById` |
+| Constantes | SCREAMING_SNAKE_CASE | `MAX_RETRIES` |
+| Interfaces/Types | PascalCase | `UserProfileProps` |
+| Hooks (React) | prefixo `use` | `useAuth` |
+
+### Imports
+
+**Sempre use imports absolutos quando o projeto suportar.**
+
+```typescript
+// Correto
+import { useStore } from '@/stores/auth'
+
+// Evitar
+import { useStore } from '../../../stores/auth'
+```
+
+**Ordem de imports:**
+1. Runtime/core (Node.js, React)
+2. Bibliotecas externas
+3. Componentes internos
+4. Utilitarios
+5. Stores/estado
+6. Tipos
+7. Estilos/CSS
+
+### TypeScript (quando aplicavel)
+
+- Sem `any` - Use `unknown` com type guards
+- Defina interfaces para props de componentes
+- Use `as const` para objetos/arrays constantes
+- Tipos de ref explicitos: `useRef<HTMLDivElement>(null)`
+
+### Error Handling
+
+```typescript
+try {
+  // operacao
+} catch (error) {
+  const message = error instanceof Error ? error.message : 'Erro desconhecido'
+  logger.error(`Falha em ${operacao}`, { error })
+  throw new Error(`Falha em ${operacao}: ${message}`)
+}
+```
+
+---
+
+## Quality Gates
+
+### Antes de Commit
 ```bash
-wsl bash -c 'cd ${PROJECT_ROOT} && ~/.local/bin/coderabbit --prompt-only -t uncommitted'
+npm run lint         # ESLint
+npm run typecheck    # TypeScript (se configurado)
+```
+
+### Antes de Push
+```bash
+npm test             # Testes
+npm run lint         # Linting
+npm run typecheck    # Type checking
+```
+
+### CI/CD (obrigatorio para merge)
+- Todos os testes passando
+- Cobertura de testes minima
+- Lint sem erros
+- Build sem erros
+
+---
+
+## Otimizacao Claude Code
+
+### Uso de Ferramentas
+
+| Tarefa | Use | Nao Use |
+|--------|-----|---------|
+| Buscar conteudo em arquivos | `Grep` tool | `grep`/`rg` no bash |
+| Ler arquivos | `Read` tool | `cat`/`head`/`tail` |
+| Editar arquivos | `Edit` tool | `sed`/`awk` |
+| Buscar arquivos por nome | `Glob` tool | `find`/`ls` |
+| Criar arquivos | `Write` tool | `echo`/`cat` redirection |
+| Operacoes complexas | `Task` tool | Multiplos comandos manuais |
+
+### Performance
+
+- Prefira chamadas de ferramentas em paralelo para operacoes independentes
+- Use `Task` tool com subagentes para pesquisas amplas no codebase
+- Cache dados frequentemente acessados durante a sessao
+- Use `/compact` quando o contexto estiver pesado
+
+### Gerenciamento de Sessao
+
+- Rastreie progresso com `TodoWrite` para tarefas complexas
+- Atualize checkboxes de stories imediatamente apos completar tasks
+- Mantenha contexto da story atual sendo trabalhada
+- Salve estado importante antes de operacoes longas
+
+### Recuperacao de Erros
+
+- Forneca sugestoes de recuperacao para falhas
+- Inclua contexto do erro em mensagens ao usuario
+- Sugira procedimentos de rollback quando apropriado
+- Documente correcoes manuais necessarias
+
+---
+
+## Story-Driven Development (AIOS)
+
+Quando o AIOS estiver instalado no projeto:
+
+1. **Todo desenvolvimento comeca com uma story** em `docs/stories/`
+2. **Atualize progresso** - Marque checkboxes: `[ ]` -> `[x]`
+3. **Rastreie mudancas** - Mantenha a secao File List na story
+4. **Siga criterios** - Implemente exatamente o que os acceptance criteria especificam
+
+### Workflow de Story
+```
+@po *create-story -> @dev implementa -> @qa testa -> @devops push
 ```
 
 ---
 
-## MCP Architecture
+## Debug
 
-Docker MCP Toolkit gateway runs at `http://localhost:8080/mcp`.
+### Habilitar Debug (AIOS)
+```bash
+export AIOS_DEBUG=true
+```
 
-**Always prefer native Claude Code tools over MCP** (see `.claude/rules/mcp-usage.md`):
-- Read/write files → `Read`, `Write`, `Edit` tools
-- Run commands → `Bash` tool
-- Search → `Grep`, `Glob` tools
-- Web search → EXA via `mcp__docker-gateway__web_search_exa`
-- Library docs → Context7 via `mcp__docker-gateway__resolve-library-id`
+### Logs
+```bash
+tail -f .aios/logs/agent.log
+tail -f .aios/journey.log    # Journey log de execucoes
+```
 
-Gateway health check: `curl http://localhost:8080/health`
+### Guidelines Porsche (PDF oficiais)
 
----
+Disponiveis em `knowledge-base/brands/porsche-guidelines/`:
+- `Porsche_Finder_Photo_Checklist_PT-BR.pdf` — checklist de fotos
+- `Porsche_Finder_Photo_Guideline_PT-BR.pdf` — guidelines de fotos
+- `Porsche_Finder_Video_Guideline_PT-BR.pdf` — guidelines de video
 
-## Hooks Architecture
-
-Two active hooks in `.claude/hooks/`:
-
-1. **`synapse-engine.cjs`** — fires on every `UserPromptSubmit`. Reads context from `.synapse/` directory, injects `<synapse-rules>` XML into the prompt. Delegates to `.aios-core/core/synapse/runtime/hook-runtime.js`. Silent exit if `.synapse/` missing.
-
-2. **`precompact-session-digest.cjs`** — fires on `PreCompact`. Creates session digest before context compression. Delegates to `.aios-core/hooks/unified/runners/precompact-runner.js`.
-
----
-
-## IDESync
-
-Agent source files live in `.aios-core/development/agents/`. They are synced to multiple IDEs:
-- Claude Code: `.claude/commands/AIOS/agents/` (format: full-markdown-yaml)
-- Cursor: `.cursor/rules/agents/` (format: condensed-rules)
-- Gemini: `.gemini/rules/AIOS/agents/`
-- Codex: `.codex/agents/`
-- GitHub Copilot: `.github/agents/`
-
-**Edit agent definitions in `.aios-core/development/agents/`, then sync** — do not edit the IDE-specific copies directly.
+Para analisar, usar a skill `pdf-to-markdown` antes de processar com Claude.
 
 ---
 
-## Constitution Non-Negotiables
+## Comandos Frequentes
 
-From `.aios-core/constitution.md`:
+### Projeto
+```bash
+npm install             # Instalar dependencias
+npm run dev             # Desenvolvimento local
+npm test                # Rodar testes
+npm run lint            # Verificar estilo
+npm run typecheck       # Verificar tipos
+npm run build           # Build producao
+```
 
-- **CLI First**: Every feature must work 100% via CLI before any UI. Dashboards only observe, never control.
-- **No Invention**: Every statement in specs must trace to a FR-*, NFR-*, or CON-* requirement. Never add unspecified features.
-- **Story-Driven**: No code without an associated story.
-- **Absolute Imports**: Use `@/` alias, not relative paths (`../../../`). Exception: imports within the same module.
+### AIOS (referencia em /home/user/aios-core)
+```bash
+cd /home/user/aios-core && node bin/aios.js doctor   # Diagnostico
+cd /home/user/aios-core && node bin/aios.js info     # Informacoes
+```
+
+### Git
+```bash
+git status              # Estado atual
+git log --oneline -10   # Ultimos commits
+git diff                # Mudancas nao staged
+```
 
 ---
 
-## Project Configuration
-
-`.aios-core/core-config.yaml` is the master config. Key paths derived from it:
-- Stories: `docs/stories/`
-- PRD: `docs/prd/` (sharded, pattern `epic-{n}*.md`)
-- Architecture: `docs/architecture/` (sharded)
-- Decision logs: `.ai/` (ADR format, index at `.ai/decision-logs-index.md`)
-- Project status: `.aios/project-status.yaml`
-- Tools: `.aios-core/tools/`
-- Squads templates: `templates/squad/`
+*KING - Sistema de Automacoes e Inteligencia Criativa*
+*Powered by Synkra AIOS v4.4.6*

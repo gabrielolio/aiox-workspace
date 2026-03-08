@@ -1,0 +1,151 @@
+# Base de Conhecimento: Fialho Motors
+# Criado: 2026-03-03
+# Fonte: Conversa WhatsApp Vitor x Jucilene (19/01 - 02/03/2026)
+# Uso: Alimenta agentes Briefer, Muse, Guardiao, Organizador
+
+client:
+  name: "Fialho Motors"
+  instagram: "@fialhomotorscg"
+  whatsapp: "5567993295454"
+  location:
+    city: "Campo Grande"
+    state: "MS"
+    address: "" # confirmar com Jucilene
+
+  contacts:
+    - name: "Jucilene Diass"
+      nickname: "Ju, Juju"
+      role: "Proprietaria"
+      whatsapp: "" # confirmar
+      communication_style: "Direta, entusiasmada, cobra resultados mas com carinho"
+      notes: "Pede urgencia com frequencia. Valoriza qualidade. Elogia abertamente."
+
+    - name: "Gigante"
+      role: "Socio/Gerente"
+      notes: "Quer contratar Vitor para trabalhos avulsos no celular dele"
+
+    - name: "Marcos"
+      role: "Administrador do grupo Havaleiros"
+      notes: "Precisa aprovar qualquer anuncio no grupo. Moderacao ativa."
+
+  brand:
+    logo_source: "Olhar Comunicacao Visual"
+    logo_versions:
+      - type: "principal"
+        description: "F vermelho 3D com asas + FIALHO MOTORS dourado"
+      - type: "horizontal"
+        description: "Logo + @FIALHOMOTORSCG lado a lado"
+      - type: "icone"
+        description: "F vermelho sozinho (marca d'agua)"
+      - type: "original"
+        description: "Logo plana Olhar Comunicacao (F amarelo + vermelho)"
+        notes: "Jucilene prefere o F original em alguns contextos. SEMPRE confirmar qual versao usar."
+
+    colors:
+      primary: "#1B3A2D"      # verde escuro (fundo principal)
+      secondary: "#C4A14A"    # dourado (titulos, textos destaque)
+      accent: "#CC1B1B"       # vermelho (logo F)
+      background: "#0A0A0A"   # preto profundo (gradientes)
+      text: "#FFFFFF"         # branco (corpo de texto)
+      texture: "Padrao sutil verde escuro com textura tecido/couro"
+
+    typography:
+      title: "Serif bold metalico dourado (3D)"
+      subtitle: "Sans-serif caps espacado (MOTORS)"
+      body: "Sans-serif regular branco"
+      cta: "Serif italico ou sans-serif bold"
+
+    tone_of_voice:
+      style: "Profissional mas acessivel"
+      keywords:
+        - "Atendimento personalizado"
+        - "Especialidade em diversas marcas"
+        - "Incluindo GWM"
+      avoid:
+        - "Urgencia falsa (CORRA!, ULTIMAS UNIDADES!)"
+        - "Agressividade comercial"
+        - "Precos no anuncio (grupo exige discrição)"
+        - "Bombardeio de postagens"
+
+  specialization:
+    primary: "Seminovos multimarcas"
+    focus_brand: "GWM"
+    models_in_demand:
+      - model: "Haval H6"
+        demand: "Alta"
+        notes: "Mais procurado como seminovo"
+      - model: "Tank 300"
+        demand: "Alta"
+        notes: "Alto interesse nos grupos"
+      - model: "Poer P30"
+        demand: "Media"
+        notes: "Fotos ja tratadas por Vitor"
+    services:
+      - "Avaliacao gratuita de veiculos"
+      - "Troca com avaliacao"
+      - "Venda de seminovos selecionados"
+      - "Atendimento personalizado"
+      - "Especialidade GWM"
+
+  channels:
+    instagram:
+      handle: "@fialhomotorscg"
+      status: "Ativo mas sem gestao profissional"
+      target_frequency: "3 posts/semana"
+      formats: ["feed", "story", "reel"]
+      content_types:
+        - "Foto tratada de veiculo em estoque"
+        - "Institucional (apresentacao da loja)"
+        - "Bastidores (dia a dia)"
+        - "Walk-around de modelos"
+
+    whatsapp_groups:
+      - name: "HAVALEIROS & HAVALEIRAS"
+        members: 104
+        admin: "Marcos"
+        rules:
+          - "Aprovacao previa obrigatoria"
+          - "Nao bombardear com anuncios"
+          - "Manter limpo e interessante"
+          - "Link de contato na mensagem, nao na imagem"
+        frequency: "1 post/semana maximo"
+        format: "Imagem + mensagem com link wa.me"
+        active_content: "Membros postam vendas, trocas, avaliacoes de GWM"
+        opportunity: "Canal direto pra entusiastas GWM em CG"
+
+      - name: "Daman"
+        variants: ["1", "2", "3", "4"]
+        rules: "Similar ao Havaleiros"
+        notes: "Jucilene mencionou, formato similar"
+
+  relationship_with_vitor:
+    start_date: "2026-01-19"
+    current_model: "Parceria informal (avulso)"
+    target_model: "Contrato mensal"
+    pricing_history:
+      - date: "2026-03-02"
+        service: "Identidade visual + 7 flyers + fotos tratadas"
+        charged: 80
+        market_value_estimate: "2000-5000"
+    emotional_bond: "Alto"
+    bond_details:
+      - "Amizade pessoal previa"
+      - "Gratidao mutua ('voce me ensinou muita coisa')"
+      - "Jucilene elogia abertamente ('eu te acho foda')"
+      - "Vitor prioriza ela sobre outros trabalhos"
+    pending_requests:
+      - "Gestao mensal do Instagram (Jucilene pediu explicitamente)"
+      - "Trabalho para Gigante (celular dele)"
+      - "Captacao de drone da fachada (prometido desde jan)"
+      - "Video interativo de apresentacao (prometido desde jan)"
+
+  deliverables_history:
+    - date: "2026-03-02"
+      items:
+        - "7+ variacoes de flyer para grupos WhatsApp"
+        - "Redesign de logo (F 3D vermelho + texto dourado)"
+        - "Versao horizontal com @fialhomotorscg"
+        - "4 fotos tratadas da Poer P30 com marca d'agua"
+        - "Post com copy institucional + link WhatsApp"
+      time_spent: "~5 horas (domingo de folga)"
+      tools_used: ["ChatGPT", "ferramenta de design (nao especificada)"]

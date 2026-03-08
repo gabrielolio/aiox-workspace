@@ -1,0 +1,131 @@
+# Base de Conhecimento: Porsche Brasil 2026
+# Criado: 2026-03-03
+# Fonte: Dossie conversa Bamaq + pesquisa de mercado
+# Uso: Agentes Briefer, Muse, Guardiao
+# Personas: porsche-personas-2025.yaml (extraido do PDF oficial)
+# NOTA: Guidelines visuais completas ainda pendentes (PDF com o Vitor)
+
+brand:
+  name: "Porsche"
+  market: "Brasil"
+  year: 2026
+
+  market_data:
+    units_sold_2024: 6237
+    record: true
+    key_market: "MG e 2o maior mercado Porsche do Brasil"
+    concept: "Destination Porsche"
+
+  content_guidelines:
+    freedom_level: "BAIXA"
+    strictness: "ALTA"
+    tone: "Ultra-premium, sofisticado, experiencial, exclusivo"
+    restrictions:
+      - "Emblema sempre posicionado corretamente (em pe)"
+      - "Paleta de cores rigida"
+      - "Tipografia oficial obrigatoria"
+      - "Sem emojis em comunicacao oficial"
+      - "Sem humor ou informalidade excessiva"
+      - "Sem comparacao direta com concorrentes"
+      - "Foco na experiencia, nao no preco"
+    permissions:
+      - "Conteudo experiencial (test drive, lifestyle)"
+      - "Bastidores da concessionaria"
+      - "Detalhes de design e engenharia"
+    personas_pdf: "OBTIDO — porsche-personas-2025.pdf (14 paginas, 7 personas por modelo)"
+    guidelines_pdf: "PENDENTE — Vitor possui, precisa enviar"
+
+  subtitle_typography:
+    # Specs para legendas automaticas (Whisper) em videos Reels/Stories
+    # Fonte oficial: Porsche Next (proprietaria, Type Tailors BVBA, 12 pesos, desde 2017)
+    # Alternativa verificada: Jost — DNA geometrico-humanista identico (CORRIGIDO: Raleway tinha caracter Art Deco)
+    # Referencia completa: knowledge-base/brands/brand-guidelines-reference.md
+    fonte_oficial: "Porsche Next"
+    fonte_alternativa: "Jost"
+    fonte_fallback: "Plus Jakarta Sans"
+    peso: "600"                      # SemiBold — CONFIRMADO via designsystem.porsche.com
+    caixa_captions: "Sentence case"  # Frases completas de legenda — CONFIRMADO
+    caixa_taglines: "UPPERCASE"      # Taglines e CTAs — CONFIRMADO
+    letter_spacing: "0.02em"
+    line_height: "1.4"
+    cor_texto: "#FFFFFF"
+    sombra: "rgba(0,0,0,0.4) blur 6px offset 0 2px"
+    contorno: "none"                 # NUNCA outline/stroke — CONFIRMADO
+    posicao_vertical: "inferior"
+    margem_inferior: "8%"
+    alinhamento_horizontal: "centro"
+    margem_lateral: "5%"
+    tamanho_relativo: "4.5%"         # ~38-42px em 1080p
+    max_chars_por_linha: 42
+    cores_oficiais:
+      red: "#B12B28"                 # CONFIRMADO
+      gold_cream: "#EBD698"          # CONFIRMADO
+      gold_primary: "#E3AB37"        # CONFIRMADO
+      gold_dark: "#C69632"           # CONFIRMADO
+      black: "#000000"
+    regras_criticas:
+      - "NUNCA usar Porsche Next sem licenca — usar Jost como alternativa gratuita"
+      - "NUNCA fonte serifada em legendas — Porsche usa sans-serif em video"
+      - "NUNCA cor dourada em legendas — dourado e reservado para branding/print"
+      - "NUNCA outline/stroke no texto — incompativel com estetica Porsche"
+      - "Fundo semi-transparente maximo: rgba(0,0,0,0.3)"
+      - "Logo Porsche nunca na mesma area que legenda"
+      - "Animacao: fade-in ou slide suave — sem efeitos chamativos"
+      - "Tom sobrio e descritivo — confirmado no PDF Porsche Finder Video Guideline"
+      - "Whisper erra nomes — revisar: Cayenne, Taycan, Panamera, Carrera, Macan, etc."
+      - "Assets Porsche requerem aprovacao previa — portal: brand.porsche.com (acesso restrito)"
+
+  models:
+    current:
+      - name: "911"
+        variants: ["Carrera", "Carrera S", "Turbo", "GT3", "GT3 RS"]
+        segment: "Esportivo icone"
+        content_angles:
+          - "Heritage e historia"
+          - "Performance (pista, aceleracao)"
+          - "Design atemporal"
+          - "Personalizacao (Exclusive Manufaktur)"
+
+      - name: "Cayenne"
+        variants: ["Base", "S", "GTS", "Turbo GT"]
+        segment: "SUV premium"
+        content_angles:
+          - "Versatilidade (familia + esportividade)"
+          - "Interior e conforto"
+          - "Performance surpreendente pra SUV"
+
+      - name: "Macan"
+        variants: ["Electric"]
+        segment: "SUV compacto premium"
+        content_angles:
+          - "Transicao eletrica"
+          - "Design moderno"
+          - "Urbano + esportivo"
+
+      - name: "Panamera"
+        segment: "Seda esportivo"
+        content_angles:
+          - "Elegancia + performance"
+          - "Interior premium"
+          - "Gran Turismo"
+
+      - name: "Taycan"
+        variants: ["Base", "Turbo", "Cross Turismo"]
+        segment: "Eletrico esportivo"
+        content_angles:
+          - "Tecnologia eletrica"
+          - "Performance silenciosa"
+          - "Design futurista"
+
+      - name: "718"
+        variants: ["Cayman", "Boxster"]
+        segment: "Esportivo compacto"
+        content_angles:
+          - "Purismo (motor central)"
+          - "Driving experience"
+          - "Entrada no mundo Porsche"
+
+  calendar:
+    bamaq_days: ["Segunda", "Quarta", "Sexta"]
+    content_frequency: "3 posts/semana"
+    formats: ["feed", "story", "reel", "carrossel"]

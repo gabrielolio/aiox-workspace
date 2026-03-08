@@ -1,0 +1,76 @@
+# Base de Conhecimento: Grupo Bamaq
+# Criado: 2026-03-03
+# Fonte: Dossie conversa Gabriel x Vitor (26/02/2026)
+# Uso: Alimenta agentes Briefer, Muse, Guardiao
+
+client:
+  name: "Grupo Bamaq"
+  legal_name: "Bamaq Automoveis"
+  type: "Empregador (contrato fixo)"
+  location:
+    hq: "Belo Horizonte, MG"
+    vitor_unit: "Campo Grande, MS"
+
+  market_data:
+    revenue_2023: "R$ 3,2 bilhoes"
+    states: 18
+    growth_minas_2025: "+60%"
+
+  brands_managed_by_vitor:
+    gwm:
+      days: ["Terca", "Quinta"]
+      freedom: "Alta"
+      tone: "Moderno, tecnologico, acessivel"
+      concessionarias_cg: 1
+      models_focus:
+        - "Haval H6"
+        - "Tank 300"
+        - "Poer P30"
+        - "Ora 03"
+      guidelines_source: "Em evolucao — sem PDF formal"
+      notable: "Primeira marca no Brasil a fazer comercial 100% com IA"
+
+    porsche:
+      days: ["Segunda", "Quarta", "Sexta"]
+      freedom: "Baixa — restricoes rigidas"
+      tone: "Ultra-premium, sofisticado, experiencial"
+      concessionarias_cg: 1
+      models_focus:
+        - "911"
+        - "Cayenne"
+        - "Macan"
+        - "Panamera"
+        - "Taycan"
+      guidelines_source: "PDF oficial (Vitor possui)"
+      concept: "Destination Porsche"
+      restrictions:
+        - "Emblema sempre em pe"
+        - "Restricao rigorosa de cores e fontes"
+        - "Sem emojis em comunicacao oficial"
+        - "Tom formal, experiencial"
+
+  vitors_role:
+    title: "Produtor de conteudo / Social media"
+    responsibilities:
+      - "Gravacao de video (captura de takes)"
+      - "Selecao de takes bons"
+      - "Tratamento/edicao de imagem"
+      - "Edicao de video no CapCut"
+      - "Adicao de legendas com animacoes"
+      - "Postagem nas redes sociais"
+      - "Criacao de roteiros e ideias de conteudo"
+    tools_current:
+      - "CapCut (edicao)"
+      - "Galeria + Drive (armazenamento)"
+      - "WhatsApp (comunicacao de demandas)"
+      - "ChatGPT (assistencia limitada)"
+    approval_flow: "Cria com liberdade → submete pra gestao → publica"
+    demand_sources: "2-3 pessoas via WhatsApp (informal)"
+
+  pain_points:
+    primary: "Legendas de video — processo demorado e repetitivo no CapCut"
+    secondary:
+      - "Falta de constancia de postagem"
+      - "Falta de rotina/direcao de criacao"
+      - "Organizacao de arquivos dispersa"
+      - "Demandas informais via WhatsApp"
