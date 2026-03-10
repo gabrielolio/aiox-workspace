@@ -1,32 +1,22 @@
 # Roadmap — Fialho Motors
 
-**Atualizado:** 2026-03-04
+**Atualizado:** 2026-03-10
 **Principio:** Resultado primeiro. Automacao depois.
+**Contrato:** R$ 1.200/mes — ATIVO (Pacote Crescimento)
+**Primeiro pagamento:** R$500 (assinatura Pro Max Claudio) — PAGO
+**Acessos:** Instagram e email liberados pela Jucilene
 
 ---
 
-## Fase 1: Fundacao (Semana 1 — 04-07 Marco)
+## Fase 1: Fundacao (Semana 1 — 04-07 Marco) ✅ CONCLUIDA
 
-Objetivo: Fechar contrato e preparar toda a base pra operacao.
-
-- [ ] **1.1 Proposta comercial** — PDF profissional com pacotes, exemplos visuais, termos
-  - Formato: PDF 1-2 paginas, limpo, com identidade Fialho
-  - Incluir: escopo claro, o que NAO esta incluso, forma de pagamento
-  - NAO incluir: drone, IA, bot WhatsApp, video interativo (sao extras futuros)
-
-- [ ] **1.2 Brandbook resumido** — Documentacao da identidade visual
-  - Paleta de cores (#1B3A2D, #C4A14A, #CC1B1B, #0A0A0A, #FFFFFF)
-  - Tipografia (serif bold dourado, sans-serif caps, sans-serif regular)
-  - Versoes do logo (principal, horizontal, icone, original)
-  - Tom de voz (profissional mas acessivel)
-  - Do's and Don'ts visuais
-
+- [x] **1.1 Proposta comercial** — Contrato fechado em R$ 1.200/mes (Pacote Crescimento)
+- [x] **1.2 Brandbook resumido** — Criado em `projects/fialho-motors/brandbook.md`
 - [ ] **1.3 Kit de 4 templates** — Reutilizaveis, 10min por peca
   - Template ShopCar diferenciado (KM destaque, badge, logo)
-  - Template Instagram feed (carrossel veiculo)
-  - Template Story (chegou na loja)
-  - Template flyer WhatsApp (grupos Havaleiros/Daman)
-
+  - Template Instagram feed (carrossel veiculo) — 1080x1350px (4:5)
+  - Template Story (chegou na loja) — 1080x1920px (9:16)
+  - Template flyer WhatsApp (grupos Havaleiros/Daman) — 1080x1080px
 - [ ] **1.4 Auto-responder WhatsApp Business** — Configurar pra Jucilene
   - Mensagem de ausencia profissional
   - Horario personalizado
@@ -71,7 +61,7 @@ Objetivo: Calendario rodando, constancia comprovada.
 
 Objetivo: Escalar o que funcionou, descartar o que nao funcionou.
 
-- [ ] **4.1 Avaliar upgrade pra Pacote Crescimento (R$ 1.200)**
+- [x] **4.1 Pacote Crescimento ja ativo** — Jucilene fechou R$ 1.200 direto
 - [ ] **4.2 Gigante (socio)** — proposta separada pra celular dele
 - [ ] **4.3 Patrocinado por regiao** — campanha segmentada Campo Grande
 - [ ] **4.4 Primeiro relatorio de performance** (pos 30 dias de conteudo)
@@ -96,7 +86,7 @@ Objetivo: Se o manual rodar bem, avaliar onde KING pode ajudar.
 | Tempo por peca | <15min | <10min (templates maduros) |
 | Contrato ativo | Assinado | Renovado ou upgraded |
 | Jucilene satisfeita | Feedback positivo | Indicou outro cliente |
-| Receita mensal | R$ 800 | R$ 1.200+ |
+| Receita mensal | R$ 1.200 (ja fechado) | R$ 1.200+ (renovado ou expandido) |
 
 ---
 

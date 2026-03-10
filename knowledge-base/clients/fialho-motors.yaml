@@ -118,11 +118,36 @@ client:
         rules: "Similar ao Havaleiros"
         notes: "Jucilene mencionou, formato similar"
 
+  contract:
+    status: "ATIVO"
+    start_date: "2026-03-10"
+    monthly_fee: 1200
+    first_month_payment: 500
+    first_month_note: "R$500 destinado a assinatura Pro Max do Claudio — ja pago"
+    remaining_first_month: 700
+    phase: "Inicio do acompanhamento"
+
+  access_granted:
+    instagram: true
+    email: true
+    date_granted: "2026-03-10"
+    notes: "Jucilene liberou acesso completo as redes sociais e email"
+
+  delivery_standard:
+    principle: "Efeito WOW em tudo — ate o minimo vai embalado como premium"
+    format: "HTML interativo (padrao das apresentacoes) sempre que possivel"
+    reference: "docs/clients/apresentacao-fialho-motors.html"
+    notes: "Cliente adorou o padrao HTML. Manter e evoluir esse nivel em toda entrega"
+
   relationship_with_vitor:
     start_date: "2026-01-19"
-    current_model: "Parceria informal (avulso)"
+    current_model: "Contrato mensal fechado"
     target_model: "Contrato mensal"
     pricing_history:
+      - date: "2026-03-10"
+        service: "Contrato mensal de gestao"
+        charged: 1200
+        notes: "Primeiro mes: R$500 pago (assinatura Pro Max Claudio)"
       - date: "2026-03-02"
         service: "Identidade visual + 7 flyers + fotos tratadas"
         charged: 80
