@@ -381,3 +381,5 @@
 2026-03-10T17:11:38.132Z | 898088e6 | TodoWrite | {"todos":[{"content":"Analisar HTML atual e planejar breakpoints","status":"completed","activeForm":
 2026-03-10T17:16:23.203Z | 898088e6 | Write    | /home/user/aiox-workspace/docs/entregas/apresentacao-cliente/index.html
 2026-03-10T17:16:33.574Z | 898088e6 | TodoWrite | {"todos":[{"content":"Analisar HTML atual e planejar breakpoints","status":"completed","activeForm":
+2026-03-10T17:16:45.549Z | 898088e6 | Bash     | git add docs/entregas/apresentacao-cliente/index.html .aios/journey.log && git commit -m "$(cat <<'EOF' feat: reescrever site apresentacao com responsividade to
+2026-03-10T17:16:49.248Z | 898088e6 | TodoWrite | {"todos":[{"content":"Analisar HTML atual e planejar breakpoints","status":"completed","activeForm":
