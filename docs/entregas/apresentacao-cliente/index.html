@@ -2,10 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1B3A2D">
 <title>Fialho Motors — Entregas Semana 01</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Raleway:wght@400;500;600&display=swap');
+  /* ========================================
+     FIALHO MOTORS — APRESENTAÇÃO CLIENTE
+     Mobile-first | 3 breakpoints
+     320-767px → 768-1023px → 1024px+
+     Zero dependências externas
+     ======================================== */
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,238 +26,385 @@
     --preto: #0A0A0A;
     --branco: #FFFFFF;
     --branco-off: #f8f7f4;
-    --glass: rgba(27, 58, 45, 0.85);
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 64px;
+    --space-2xl: 96px;
+    --touch-min: 48px;
   }
 
   html { scroll-behavior: smooth; font-size: 16px; }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: var(--branco-off);
     color: var(--preto);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
-  /* Utility */
-  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-  .section { padding: 80px 0; }
+  /* ===================== UTILITIES ===================== */
+  .container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
   .section-dark { background: var(--verde); color: var(--branco); }
   .section-alt { background: var(--preto); color: var(--branco); }
 
   .section-label {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 0.7rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
   }
 
   .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-sm);
   }
 
   .section-subtitle {
-    font-size: 1rem;
-    opacity: 0.75;
+    font-size: 0.95rem;
+    opacity: 0.7;
     max-width: 540px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  .section-header { margin-bottom: 48px; }
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
 
-  /* Animations */
+  /* ===================== ANIMATIONS ===================== */
   .fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
+
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
   }
-  .fade-in-delay-1 { transition-delay: 0.1s; }
-  .fade-in-delay-2 { transition-delay: 0.2s; }
-  .fade-in-delay-3 { transition-delay: 0.3s; }
+
+  .fade-in-d1 { transition-delay: 0.1s; }
+  .fade-in-d2 { transition-delay: 0.2s; }
+  .fade-in-d3 { transition-delay: 0.3s; }
+
+  /* ===================== NAV ===================== */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+  }
+
+  .nav.scrolled {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 10px var(--space-md);
+    box-shadow: 0 1px 0 rgba(196, 161, 74, 0.1);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--branco);
+  }
+
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: var(--vermelho);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--branco);
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(196, 161, 74, 0.1);
+    border: 1px solid rgba(196, 161, 74, 0.25);
+    color: var(--dourado);
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-height: var(--touch-min);
+    letter-spacing: 0.04em;
+  }
+
+  .nav-wa:hover {
+    background: var(--dourado);
+    color: var(--verde);
+  }
 
   /* ===================== HERO ===================== */
   .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(160deg, var(--verde-dark) 0%, var(--verde) 40%, var(--verde-light) 100%);
     position: relative;
     overflow: hidden;
-    text-align: center;
-    padding: 60px 24px;
+    padding: 80px var(--space-md) 60px;
   }
 
   .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -30%;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(196,161,74,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -40%;
-    left: -20%;
+    top: -30%;
+    right: -20%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(196,161,74,0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(196, 161, 74, 0.06) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
   }
 
-  .hero-content { position: relative; z-index: 1; }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1120px;
+    text-align: center;
+  }
 
   .hero-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 32px;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--space-md);
     background: var(--vermelho);
-    border-radius: 20px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-family: Georgia, serif;
+    font-size: 2.4rem;
     font-weight: 700;
     color: var(--branco);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    animation: logoFloat 3s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: logoFloat 4s ease-in-out infinite;
   }
 
   @keyframes logoFloat {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-6px); }
   }
 
   .hero-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--dourado);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     margin-bottom: 8px;
-    animation: heroFadeIn 1s ease forwards;
+    animation: heroReveal 0.9s ease forwards;
     opacity: 0;
   }
 
   .hero-tagline {
-    font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+    font-size: 0.82rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--branco);
     opacity: 0;
-    animation: heroFadeIn 1s ease 0.3s forwards;
-    margin-bottom: 40px;
+    animation: heroReveal 0.9s ease 0.25s forwards;
+    margin-bottom: var(--space-lg);
   }
 
   .hero-desc {
     font-size: 1rem;
-    color: rgba(255,255,255,0.7);
-    max-width: 480px;
-    margin: 0 auto 48px;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 460px;
+    margin: 0 auto var(--space-lg);
     line-height: 1.8;
     opacity: 0;
-    animation: heroFadeIn 1s ease 0.5s forwards;
+    animation: heroReveal 0.9s ease 0.45s forwards;
   }
 
   .hero-meta {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(196,161,74,0.2);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(196, 161, 74, 0.15);
     border-radius: 100px;
-    padding: 12px 28px;
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.8);
+    padding: 14px 28px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     opacity: 0;
-    animation: heroFadeIn 1s ease 0.7s forwards;
+    animation: heroReveal 0.9s ease 0.6s forwards;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-meta-dot {
-    width: 6px; height: 6px;
+    width: 5px; height: 5px;
     background: var(--dourado);
     border-radius: 50%;
+    flex-shrink: 0;
   }
 
-  @keyframes heroFadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-visual-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(196, 161, 74, 0.12);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: left;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .hero-visual-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-visual-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.88rem;
+  }
+
+  .hero-visual-item:last-child { border-bottom: none; }
+
+  .hero-visual-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(196, 161, 74, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .hero-visual-text strong {
+    display: block;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+  }
+
+  .hero-visual-text span {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  @keyframes heroReveal {
+    from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
   .hero-scroll {
     position: absolute;
-    bottom: 32px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.7rem;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    animation: scrollPulse 2s ease-in-out infinite;
+    animation: scrollPulse 2.5s ease-in-out infinite;
   }
 
   .hero-scroll-line {
-    width: 1px; height: 32px;
+    width: 1px;
+    height: 28px;
     background: linear-gradient(to bottom, var(--dourado), transparent);
   }
 
   @keyframes scrollPulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.7; }
   }
 
   /* ===================== CRONOGRAMA ===================== */
   .timeline-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  @media (min-width: 640px) {
-    .timeline-grid { grid-template-columns: repeat(3, 1fr); }
+    gap: var(--space-sm);
   }
 
   .timeline-card {
     background: var(--branco);
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     position: relative;
     overflow: hidden;
   }
 
   .timeline-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
   }
 
   .timeline-card-accent {
@@ -262,20 +415,19 @@
   }
 
   .timeline-icon {
-    width: 44px; height: 44px;
-    border-radius: 12px;
+    width: 48px; height: 48px;
+    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-    background: rgba(27,58,45,0.06);
+    font-size: 1.4rem;
+    margin-bottom: var(--space-sm);
+    background: rgba(27, 58, 45, 0.06);
   }
 
   .timeline-day {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--dourado-dark);
@@ -286,100 +438,103 @@
     font-weight: 600;
     font-size: 1.05rem;
     color: var(--verde);
-    margin-bottom: 8px;
+    margin-bottom: var(--space-xs);
   }
 
   .timeline-desc {
     font-size: 0.88rem;
-    color: rgba(0,0,0,0.55);
-    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.65;
   }
 
   .timeline-time {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 16px;
+    margin-top: var(--space-sm);
     font-size: 0.75rem;
     color: var(--dourado-dark);
     font-weight: 500;
   }
 
   .timeline-bonus {
-    margin-top: 20px;
+    margin-top: var(--space-md);
     background: linear-gradient(135deg, var(--verde), var(--verde-light));
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
     color: var(--branco);
     text-align: center;
   }
 
   .timeline-bonus-title {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .timeline-bonus-desc {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     opacity: 0.85;
+    line-height: 1.6;
   }
 
   /* ===================== CONTEUDO PRONTO ===================== */
-  .post-cards { display: flex; flex-direction: column; gap: 32px; }
+  .post-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
 
   .post-card {
     background: var(--verde-light);
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(196,161,74,0.15);
+    border: 1px solid rgba(196, 161, 74, 0.1);
   }
 
   .post-card-header {
-    padding: 20px 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .post-card-badge {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--dourado);
-    background: rgba(196,161,74,0.12);
+    background: rgba(196, 161, 74, 0.1);
     padding: 6px 14px;
     border-radius: 100px;
   }
 
   .post-card-date {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
   }
 
   .post-card-mock {
-    padding: 8px 24px 0;
+    padding: var(--space-xs) var(--space-md) 0;
   }
 
   .post-mock-frame {
     background: var(--verde-dark);
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm);
+    border: 1px solid rgba(255, 255, 255, 0.04);
   }
 
   .post-mock-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-sm);
   }
 
   .post-mock-avatar {
@@ -389,14 +544,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--branco);
+    flex-shrink: 0;
   }
 
   .post-mock-user {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--branco);
   }
@@ -405,59 +561,67 @@
     width: 100%;
     aspect-ratio: 4/3;
     border-radius: 8px;
-    background: linear-gradient(135deg, var(--verde) 0%, rgba(196,161,74,0.15) 100%);
+    background: linear-gradient(135deg, var(--verde) 0%, rgba(196, 161, 74, 0.12) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
-    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: var(--space-sm);
+    border: 1px solid rgba(255, 255, 255, 0.04);
   }
 
   .post-mock-image-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-family: Georgia, serif;
+    font-size: 1rem;
     color: var(--dourado);
-    opacity: 0.6;
+    opacity: 0.5;
     text-align: center;
-    padding: 0 16px;
+    padding: 0 var(--space-sm);
+    line-height: 1.5;
   }
 
   .post-mock-actions {
     display: flex;
     gap: 16px;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-xs);
   }
 
   .post-mock-action {
     font-size: 1.1rem;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
-  .post-card-body { padding: 20px 24px 24px; }
+  .post-card-body {
+    padding: var(--space-md);
+  }
 
   .post-card-text {
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.8;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.85;
     white-space: pre-line;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-md);
   }
 
+  /* ===================== BUTTONS ===================== */
   .btn-copy {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    background: rgba(196,161,74,0.12);
-    border: 1px solid rgba(196,161,74,0.25);
+    background: rgba(196, 161, 74, 0.1);
+    border: 1px solid rgba(196, 161, 74, 0.2);
     color: var(--dourado);
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 100px;
     font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
+    min-height: var(--touch-min);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   .btn-copy:hover {
@@ -465,16 +629,20 @@
     color: var(--verde);
   }
 
+  .btn-copy:active {
+    transform: scale(0.97);
+  }
+
   .btn-copy.copied {
-    background: rgba(76,175,80,0.2);
-    border-color: rgba(76,175,80,0.4);
+    background: rgba(76, 175, 80, 0.15);
+    border-color: rgba(76, 175, 80, 0.3);
     color: #81c784;
   }
 
   /* ===================== CARROSSEL ===================== */
   .carousel-wrapper {
     position: relative;
-    max-width: 400px;
+    max-width: 380px;
     margin: 0 auto;
   }
 
@@ -483,7 +651,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 0;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -498,95 +666,115 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 32px;
+    padding: var(--space-lg) var(--space-md);
     text-align: center;
     position: relative;
     background: linear-gradient(160deg, var(--verde-dark), var(--verde));
-    border: 1px solid rgba(196,161,74,0.15);
+    border: 1px solid rgba(196, 161, 74, 0.12);
   }
 
   .carousel-slide-number {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.25);
     text-transform: uppercase;
   }
 
   .carousel-slide-icon {
-    font-size: 2.5rem;
-    margin-bottom: 24px;
-    opacity: 0.4;
+    font-size: 2.2rem;
+    margin-bottom: var(--space-md);
+    opacity: 0.35;
   }
 
   .carousel-slide-label {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 16px;
+    margin-bottom: var(--space-sm);
   }
 
   .carousel-slide-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
     color: var(--dourado);
-    margin-bottom: 20px;
+    margin-bottom: var(--space-md);
     line-height: 1.2;
   }
 
   .carousel-slide-text {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.78);
     line-height: 1.8;
-    max-width: 320px;
+    max-width: 300px;
   }
 
   .carousel-slide-cta {
-    margin-top: 24px;
-    display: inline-block;
+    margin-top: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--dourado);
     color: var(--verde);
-    padding: 12px 28px;
+    padding: 14px 28px;
     border-radius: 100px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     text-decoration: none;
+    min-height: var(--touch-min);
+    transition: opacity 0.3s;
   }
 
+  .carousel-slide-cta:hover { opacity: 0.9; }
+
   .carousel-slide-contact {
-    margin-top: 16px;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.5);
+    margin-top: var(--space-sm);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   .carousel-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: var(--space-md);
   }
 
   .carousel-dot {
     width: 8px; height: 8px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
+    min-width: var(--touch-min);
+    min-height: var(--touch-min);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-clip: content-box;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .carousel-dot.active {
+  .carousel-dot::after {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot { background: transparent; }
+
+  .carousel-dot.active::after {
     background: var(--dourado);
     width: 24px;
     border-radius: 4px;
@@ -596,134 +784,107 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 36px; height: 36px;
+    width: var(--touch-min);
+    height: var(--touch-min);
     border-radius: 50%;
-    background: rgba(196,161,74,0.15);
-    border: 1px solid rgba(196,161,74,0.3);
+    background: rgba(196, 161, 74, 0.12);
+    border: 1px solid rgba(196, 161, 74, 0.25);
     color: var(--dourado);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: all 0.3s ease;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .carousel-nav:hover { background: var(--dourado); color: var(--verde); }
-  .carousel-prev { left: -18px; }
-  .carousel-next { right: -18px; }
-
-  @media (max-width: 480px) {
-    .carousel-prev { left: 8px; }
-    .carousel-next { right: 8px; }
-  }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
 
   /* ===================== WHATSAPP ===================== */
   .wa-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  @media (min-width: 640px) {
-    .wa-grid { grid-template-columns: repeat(2, 1fr); }
+    gap: var(--space-sm);
   }
 
   .wa-card {
-    background: rgba(255,255,255,0.04);
-    border-radius: 16px;
-    padding: 24px;
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: border-color 0.3s ease;
   }
 
-  .wa-card:hover { border-color: rgba(196,161,74,0.2); }
+  .wa-card:hover { border-color: rgba(196, 161, 74, 0.15); }
 
   .wa-card-day {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
   }
 
   .wa-card-text {
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.78);
     line-height: 1.7;
   }
 
-  .wa-auto-section { margin-top: 48px; }
+  .wa-auto-section { margin-top: var(--space-xl); }
 
   .wa-bubble-wrapper { max-width: 420px; }
 
   .wa-bubble {
     background: #dcf8c6;
-    border-radius: 16px 16px 16px 4px;
-    padding: 16px 20px;
+    border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 4px;
+    padding: var(--space-sm) var(--space-md);
     color: var(--preto);
-    font-size: 0.88rem;
-    line-height: 1.7;
+    font-size: 0.86rem;
+    line-height: 1.75;
     position: relative;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: var(--space-sm);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     white-space: pre-line;
-  }
-
-  .wa-bubble::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -8px;
-    width: 0; height: 0;
-    border-style: solid;
-    border-width: 0 0 12px 12px;
-    border-color: transparent transparent #dcf8c6 transparent;
   }
 
   .wa-bubble-received {
     background: var(--branco);
-    border-radius: 16px 16px 4px 16px;
-    margin-left: auto;
-  }
-
-  .wa-bubble-received::before {
-    left: auto;
-    right: -8px;
-    border-width: 0 12px 12px 0;
-    border-color: transparent transparent var(--branco) transparent;
+    border-radius: var(--radius-md) var(--radius-md) 4px var(--radius-md);
   }
 
   .wa-bubble-time {
     display: block;
     text-align: right;
-    font-size: 0.7rem;
-    color: rgba(0,0,0,0.4);
-    margin-top: 8px;
+    font-size: 0.68rem;
+    color: rgba(0, 0, 0, 0.35);
+    margin-top: var(--space-xs);
   }
 
   .wa-bubble-label {
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
   }
 
   /* ===================== HAVALEIROS ===================== */
   .haval-card {
-    max-width: 520px;
+    max-width: 540px;
     margin: 0 auto;
     background: linear-gradient(160deg, var(--verde-dark), var(--verde));
-    border-radius: 20px;
-    padding: 36px 32px;
-    border: 1px solid rgba(196,161,74,0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-md);
+    border: 1px solid rgba(196, 161, 74, 0.15);
     position: relative;
     overflow: hidden;
   }
@@ -733,37 +894,37 @@
     position: absolute;
     top: -50px; right: -50px;
     width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(196,161,74,0.08), transparent 70%);
+    background: radial-gradient(circle, rgba(196, 161, 74, 0.06), transparent 70%);
     border-radius: 50%;
+    pointer-events: none;
   }
 
   .haval-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(196,161,74,0.12);
-    border: 1px solid rgba(196,161,74,0.2);
+    background: rgba(196, 161, 74, 0.1);
+    border: 1px solid rgba(196, 161, 74, 0.15);
     border-radius: 100px;
     padding: 8px 16px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--dourado);
-    margin-bottom: 24px;
+    margin-bottom: var(--space-md);
   }
 
   .haval-text {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.85);
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.82);
     line-height: 1.9;
     white-space: pre-line;
     position: relative;
   }
 
   .haval-copy {
-    margin-top: 24px;
+    margin-top: var(--space-md);
     display: flex;
     justify-content: flex-end;
   }
@@ -771,9 +932,9 @@
   /* ===================== FOOTER ===================== */
   .footer {
     background: var(--preto);
-    padding: 48px 24px;
+    padding: var(--space-xl) var(--space-md);
     text-align: center;
-    border-top: 1px solid rgba(196,161,74,0.1);
+    border-top: 1px solid rgba(196, 161, 74, 0.08);
   }
 
   .footer-logo {
@@ -783,137 +944,185 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--branco);
-    margin-bottom: 20px;
+    margin-bottom: var(--space-md);
   }
 
   .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
     color: var(--dourado);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .footer-contact {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.4);
     margin-bottom: 4px;
   }
 
   .footer-divider {
     width: 40px; height: 1px;
-    background: rgba(196,161,74,0.2);
-    margin: 24px auto;
+    background: rgba(196, 161, 74, 0.15);
+    margin: var(--space-md) auto;
   }
 
   .footer-credit {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.3);
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.25);
     line-height: 1.8;
   }
 
   .footer-credit span {
     color: var(--dourado);
-    opacity: 0.6;
-  }
-
-  /* ===================== NAV ===================== */
-  .nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.4s ease;
-  }
-
-  .nav.scrolled {
-    background: rgba(10,10,10,0.9);
-    backdrop-filter: blur(16px);
-    padding: 12px 24px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-  }
-
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--branco);
-  }
-
-  .nav-logo-icon {
-    width: 32px; height: 32px;
-    background: var(--vermelho);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
-  .nav-logo-text {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .nav-wa {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(196,161,74,0.12);
-    border: 1px solid rgba(196,161,74,0.25);
-    color: var(--dourado);
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .nav-wa:hover {
-    background: var(--dourado);
-    color: var(--verde);
+    opacity: 0.5;
   }
 
   /* ===================== TOAST ===================== */
   .toast {
     position: fixed;
-    bottom: 32px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%) translateY(100px);
     background: var(--verde);
     color: var(--branco);
     padding: 14px 28px;
     border-radius: 100px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     z-index: 200;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    border: 1px solid rgba(196,161,74,0.2);
+    border: 1px solid rgba(196, 161, 74, 0.15);
   }
 
-  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ========================================
+     TABLET — 768px+
+     2 colunas, espacamento expandido
+     ======================================== */
+  @media (min-width: 768px) {
+    .section { padding: var(--space-2xl) 0; }
+    .section-header { margin-bottom: var(--space-xl); }
+    .section-title { font-size: 2.2rem; }
+
+    .hero { padding: 100px var(--space-md) 80px; }
+    .hero-brand { font-size: 2.8rem; }
+    .hero-tagline { font-size: 0.9rem; }
+    .hero-logo { width: 80px; height: 80px; font-size: 2.6rem; border-radius: 20px; }
+
+    .timeline-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+    .timeline-card { padding: var(--space-md) var(--space-md); }
+
+    .wa-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+
+    .carousel-wrapper { max-width: 400px; }
+    .carousel-prev { left: -24px; }
+    .carousel-next { right: -24px; }
+
+    .haval-card { padding: var(--space-xl) var(--space-lg); }
+  }
+
+  /* ========================================
+     DESKTOP — 1024px+
+     3 colunas, hero lateral, layout expandido
+     ======================================== */
+  @media (min-width: 1024px) {
+    .section { padding: 120px 0; }
+    .section-title { font-size: 2.6rem; }
+    .section-subtitle { font-size: 1rem; }
+
+    /* Hero: layout lateral */
+    .hero { min-height: 100vh; padding: 0 var(--space-xl); }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+      text-align: left;
+    }
+    .hero-logo { margin: 0 0 var(--space-md) 0; }
+    .hero-brand { font-size: 3.2rem; }
+    .hero-tagline { font-size: 0.95rem; }
+    .hero-desc { margin: 0 0 var(--space-lg) 0; }
+    .hero-meta { justify-content: flex-start; }
+    .hero-visual {
+      display: block;
+      animation: heroReveal 0.9s ease 0.7s forwards;
+      opacity: 0;
+    }
+
+    /* Timeline: 3 colunas */
+    .timeline-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+    .timeline-card { padding: 28px var(--space-md); }
+
+    /* Post cards: 2 colunas (3 ficaria apertado para o mock) */
+    .post-cards {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+    .post-cards > :last-child {
+      grid-column: 1 / -1;
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    /* WA grid: expandir */
+    .wa-grid { grid-template-columns: repeat(3, 1fr); }
+    .wa-grid > :nth-child(4),
+    .wa-grid > :nth-child(5) {
+      grid-column: span 1;
+    }
+
+    /* Carousel mais largo */
+    .carousel-wrapper { max-width: 440px; }
+    .carousel-prev { left: -56px; }
+    .carousel-next { right: -56px; }
+
+    /* Nav padding */
+    .nav { padding: var(--space-md) var(--space-lg); }
+    .nav.scrolled { padding: 12px var(--space-lg); }
+  }
+
+  /* ========================================
+     LARGE DESKTOP — 1280px+
+     Refinamentos adicionais
+     ======================================== */
+  @media (min-width: 1280px) {
+    .container { padding: 0 var(--space-lg); }
+    .hero-brand { font-size: 3.6rem; }
+    .section { padding: 140px 0; }
+    .post-cards > :last-child { max-width: 48%; }
+  }
+
+  /* ========================================
+     SMALL MOBILE — 320-374px
+     Ajustes para telas muito pequenas
+     ======================================== */
+  @media (max-width: 374px) {
+    :root { --space-md: 16px; }
+    .hero-brand { font-size: 1.8rem; }
+    .hero-tagline { font-size: 0.72rem; letter-spacing: 0.12em; }
+    .hero-meta { padding: 10px 16px; font-size: 0.72rem; gap: 8px; }
+    .section-title { font-size: 1.5rem; }
+    .post-card-body { padding: var(--space-sm); }
+    .carousel-slide { padding: var(--space-md) var(--space-sm); }
+    .carousel-slide-text { font-size: 0.82rem; }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo">
+  <a href="#hero" class="nav-logo">
     <div class="nav-logo-icon">F</div>
     <span class="nav-logo-text">Fialho Motors</span>
   </a>
@@ -922,17 +1131,52 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-content">
-    <div class="hero-logo">F</div>
-    <h1 class="hero-brand">FIALHO MOTORS</h1>
-    <p class="hero-tagline">Sua refer&ecirc;ncia em seminovos em Campo Grande</p>
-    <p class="hero-desc">Confira tudo que preparamos para a primeira semana de conte&uacute;do: legendas, carrossel, mensagens e identidade visual pronta para publicar.</p>
-    <div class="hero-meta">
-      <span>Semana 01</span>
-      <span class="hero-meta-dot"></span>
-      <span>10 &mdash; 14 Mar 2026</span>
-      <span class="hero-meta-dot"></span>
-      <span>Pronto para publica&ccedil;&atilde;o</span>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-logo">F</div>
+      <h1 class="hero-brand">FIALHO MOTORS</h1>
+      <p class="hero-tagline">Sua referencia em seminovos em Campo Grande</p>
+      <p class="hero-desc">Confira tudo que preparamos para a primeira semana de conteudo: legendas, carrossel, mensagens e identidade visual pronta para publicar.</p>
+      <div class="hero-meta">
+        <span>Semana 01</span>
+        <span class="hero-meta-dot"></span>
+        <span>10 - 14 Mar 2026</span>
+        <span class="hero-meta-dot"></span>
+        <span>Pronto</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-card">
+        <p class="hero-visual-label">Entregas da semana</p>
+        <div class="hero-visual-item">
+          <div class="hero-visual-icon">&#127970;</div>
+          <div class="hero-visual-text">
+            <strong>Carrossel "Quem Somos"</strong>
+            <span>Segunda 10/03 - 11h</span>
+          </div>
+        </div>
+        <div class="hero-visual-item">
+          <div class="hero-visual-icon">&#128663;</div>
+          <div class="hero-visual-text">
+            <strong>Veiculo em Destaque</strong>
+            <span>Quarta 12/03 - 18h</span>
+          </div>
+        </div>
+        <div class="hero-visual-item">
+          <div class="hero-visual-icon">&#128218;</div>
+          <div class="hero-visual-text">
+            <strong>Dica de Seminovo</strong>
+            <span>Sexta 14/03 - 11h</span>
+          </div>
+        </div>
+        <div class="hero-visual-item">
+          <div class="hero-visual-icon">&#128172;</div>
+          <div class="hero-visual-text">
+            <strong>Bom Dia WhatsApp</strong>
+            <span>Diario - seg a sex - 08h</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="hero-scroll">
@@ -946,42 +1190,42 @@
   <div class="container">
     <div class="section-header fade-in">
       <p class="section-label">Planejamento</p>
-      <h2 class="section-title">O que preparamos pra voc&ecirc;</h2>
-      <p class="section-subtitle">Tr&ecirc;s postagens estrat&eacute;gicas por semana, mais mensagens di&aacute;rias no WhatsApp. Tudo com a identidade Fialho Motors.</p>
+      <h2 class="section-title">O que preparamos pra voce</h2>
+      <p class="section-subtitle">Tres postagens estrategicas por semana, mais mensagens diarias no WhatsApp. Tudo com a identidade Fialho Motors.</p>
     </div>
 
     <div class="timeline-grid">
-      <div class="timeline-card fade-in fade-in-delay-1">
+      <div class="timeline-card fade-in fade-in-d1">
         <div class="timeline-card-accent"></div>
         <div class="timeline-icon">&#127970;</div>
         <p class="timeline-day">Segunda 10/03</p>
         <p class="timeline-type">Institucional</p>
-        <p class="timeline-desc">Carrossel &ldquo;Quem Somos&rdquo; com 5 slides apresentando a Fialho Motors, a Jucilene e o Edgar.</p>
+        <p class="timeline-desc">Carrossel "Quem Somos" com 5 slides apresentando a Fialho Motors, a Jucilene e o Edgar.</p>
         <span class="timeline-time">&#128340; 11h</span>
       </div>
 
-      <div class="timeline-card fade-in fade-in-delay-2">
+      <div class="timeline-card fade-in fade-in-d2">
         <div class="timeline-card-accent"></div>
         <div class="timeline-icon">&#128663;</div>
         <p class="timeline-day">Quarta 12/03</p>
         <p class="timeline-type">Estoque / Informativo</p>
-        <p class="timeline-desc">Post de ve&iacute;culo em destaque do estoque, com identidade visual e CTA para WhatsApp.</p>
+        <p class="timeline-desc">Post de veiculo em destaque do estoque, com identidade visual e CTA para WhatsApp.</p>
         <span class="timeline-time">&#128340; 18h</span>
       </div>
 
-      <div class="timeline-card fade-in fade-in-delay-3">
+      <div class="timeline-card fade-in fade-in-d3">
         <div class="timeline-card-accent"></div>
         <div class="timeline-icon">&#128218;</div>
         <p class="timeline-day">Sexta 14/03</p>
         <p class="timeline-type">Educacional</p>
-        <p class="timeline-desc">Dica pr&aacute;tica: como avaliar um seminovo antes de comprar. Conte&uacute;do de valor.</p>
+        <p class="timeline-desc">Dica pratica: como avaliar um seminovo antes de comprar. Conteudo de valor.</p>
         <span class="timeline-time">&#128340; 11h</span>
       </div>
     </div>
 
     <div class="timeline-bonus fade-in">
-      <p class="timeline-bonus-title">Bonus di&aacute;rio</p>
-      <p class="timeline-bonus-desc">WhatsApp Status com &ldquo;Bom dia&rdquo; personalizado, de segunda a sexta &agrave;s 08h, com a identidade Fialho Motors.</p>
+      <p class="timeline-bonus-title">Bonus diario</p>
+      <p class="timeline-bonus-desc">WhatsApp Status com "Bom dia" personalizado, de segunda a sexta as 08h, com a identidade Fialho Motors.</p>
     </div>
   </div>
 </section>
@@ -991,7 +1235,7 @@
   <div class="container">
     <div class="section-header fade-in">
       <p class="section-label">Instagram</p>
-      <h2 class="section-title" style="color: var(--dourado);">Conte&uacute;do pronto</h2>
+      <h2 class="section-title" style="color: var(--dourado);">Conteudo pronto</h2>
       <p class="section-subtitle">Legendas completas com hashtags, prontas para copiar e publicar. Cada uma pensada para o tipo de post do dia.</p>
     </div>
 
@@ -1022,11 +1266,11 @@
         <div class="post-card-body">
           <p class="post-card-text" id="post-text-1">A Fialho Motors nasceu de um sonho simples: oferecer carros bons com atendimento de verdade.
 
-Aqui n&atilde;o tem press&atilde;o, n&atilde;o tem enrola&ccedil;&atilde;o. Tem conversa olho no olho, caf&eacute; na mesa e um estoque selecionado a dedo.
+Aqui nao tem pressao, nao tem enrolacao. Tem conversa olho no olho, cafe na mesa e um estoque selecionado a dedo.
 
-A Jucilene t&aacute; na loja todo dia. O Edgar te recebe com um sorriso. E cada carro que entra aqui passa por uma curadoria que a gente leva a s&eacute;rio.
+A Jucilene ta na loja todo dia. O Edgar te recebe com um sorriso. E cada carro que entra aqui passa por uma curadoria que a gente leva a serio.
 
-Especialista em GWM. Refer&ecirc;ncia em seminovos em Campo Grande.
+Especialista em GWM. Referencia em seminovos em Campo Grande.
 
 Vem conhecer de perto.
 
@@ -1034,7 +1278,7 @@ Vem conhecer de perto.
 &#128242; Chama no WhatsApp: wa.me/5567993295454
 
 #FialhoMotors #SeminovosCG #GWMBrasil #CampoGrande #QuemSomos</p>
-          <button class="btn-copy" onclick="copyText('post-text-1', this)">&#128203; Copiar legenda</button>
+          <button class="btn-copy" onclick="copyText('post-text-1', this)">Copiar legenda</button>
         </div>
       </div>
 
@@ -1051,7 +1295,7 @@ Vem conhecer de perto.
               <span class="post-mock-user">fialhomotorscg</span>
             </div>
             <div class="post-mock-image">
-              <span class="post-mock-image-text">Ve&iacute;culo<br>em Destaque</span>
+              <span class="post-mock-image-text">Veiculo<br>em Destaque</span>
             </div>
             <div class="post-mock-actions">
               <span class="post-mock-action">&#9825;</span>
@@ -1063,16 +1307,16 @@ Vem conhecer de perto.
         <div class="post-card-body">
           <p class="post-card-text" id="post-text-2">Seminovo selecionado, revisado e pronto pra rodar.
 
-Na Fialho Motors, cada ve&iacute;culo do estoque passa por uma avalia&ccedil;&atilde;o criteriosa antes de chegar at&eacute; voc&ecirc;. Proced&ecirc;ncia garantida, hist&oacute;rico limpo, sem surpresa.
+Na Fialho Motors, cada veiculo do estoque passa por uma avaliacao criteriosa antes de chegar ate voce. Procedencia garantida, historico limpo, sem surpresa.
 
-Quer saber o que t&aacute; dispon&iacute;vel? Chama no WhatsApp que a gente te mostra tudo com calma.
+Quer saber o que ta disponivel? Chama no WhatsApp que a gente te mostra tudo com calma.
 
 Aceita troca. Financiamento facilitado.
 
 &#128242; wa.me/5567993295454
 
 #FialhoMotors #Seminovos #CampoGrandeMS #CarroRevisado #GWM</p>
-          <button class="btn-copy" onclick="copyText('post-text-2', this)">&#128203; Copiar legenda</button>
+          <button class="btn-copy" onclick="copyText('post-text-2', this)">Copiar legenda</button>
         </div>
       </div>
 
@@ -1099,22 +1343,22 @@ Aceita troca. Financiamento facilitado.
           </div>
         </div>
         <div class="post-card-body">
-          <p class="post-card-text" id="post-text-3">Vai comprar um seminovo? Antes de fechar neg&oacute;cio, presta aten&ccedil;&atilde;o nesses 5 pontos:
+          <p class="post-card-text" id="post-text-3">Vai comprar um seminovo? Antes de fechar negocio, presta atencao nesses 5 pontos:
 
-1. Confira o hist&oacute;rico do ve&iacute;culo &mdash; quilometragem, donos anteriores, sinistro
-2. Olhe a pintura de perto &mdash; diferen&ccedil;a de tom pode indicar reparo
+1. Confira o historico do veiculo - quilometragem, donos anteriores, sinistro
+2. Olhe a pintura de perto - diferenca de tom pode indicar reparo
 3. Teste tudo: vidro, ar, trava, som, luz
-4. Pe&ccedil;a o laudo cautelar &mdash; quem vende com confian&ccedil;a n&atilde;o tem medo de mostrar
-5. Leve algu&eacute;m de confian&ccedil;a ou pe&ccedil;a opini&atilde;o de um mec&acirc;nico
+4. Peca o laudo cautelar - quem vende com confianca nao tem medo de mostrar
+5. Leve alguem de confianca ou peca opiniao de um mecanico
 
-Na Fialho Motors, a gente j&aacute; faz tudo isso por voc&ecirc;. Cada carro do estoque &eacute; revisado e aprovado antes de ir pra vitrine.
+Na Fialho Motors, a gente ja faz tudo isso por voce. Cada carro do estoque e revisado e aprovado antes de ir pra vitrine.
 
-Seminovo com hist&oacute;ria &mdash; e com garantia.
+Seminovo com historia - e com garantia.
 
-&#128242; D&uacute;vidas? Chama: wa.me/5567993295454
+&#128242; Duvidas? Chama: wa.me/5567993295454
 
 #FialhoMotors #DicaDeCarros #SeminovosCG #ComoComprarSeminovo #CampoGrande</p>
-          <button class="btn-copy" onclick="copyText('post-text-3', this)">&#128203; Copiar legenda</button>
+          <button class="btn-copy" onclick="copyText('post-text-3', this)">Copiar legenda</button>
         </div>
       </div>
 
@@ -1132,8 +1376,8 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
     </div>
 
     <div class="carousel-wrapper fade-in">
-      <button class="carousel-nav carousel-prev" onclick="carouselNav(-1)">&#8249;</button>
-      <button class="carousel-nav carousel-next" onclick="carouselNav(1)">&#8250;</button>
+      <button class="carousel-nav carousel-prev" onclick="carouselNav(-1)" aria-label="Slide anterior">&#8249;</button>
+      <button class="carousel-nav carousel-next" onclick="carouselNav(1)" aria-label="Proximo slide">&#8250;</button>
 
       <div class="carousel-track" id="carouselTrack">
 
@@ -1150,8 +1394,8 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
         <div class="carousel-slide">
           <span class="carousel-slide-number">02 / 05</span>
           <div class="carousel-slide-icon">&#127970;</div>
-          <div class="carousel-slide-label">A Hist&oacute;ria</div>
-          <p class="carousel-slide-text">A Fialho Motors nasceu da paix&atilde;o por carros e do desejo de fazer diferente. Nada de press&atilde;o. Nada de enrola&ccedil;&atilde;o. Aqui, cada cliente &eacute; tratado como &uacute;nico &mdash; porque &eacute;.</p>
+          <div class="carousel-slide-label">A Historia</div>
+          <p class="carousel-slide-text">A Fialho Motors nasceu da paixao por carros e do desejo de fazer diferente. Nada de pressao. Nada de enrolacao. Aqui, cada cliente e tratado como unico - porque e.</p>
         </div>
 
         <!-- Slide 3 -->
@@ -1159,7 +1403,7 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
           <span class="carousel-slide-number">03 / 05</span>
           <div class="carousel-slide-icon">&#128101;</div>
           <div class="carousel-slide-label">Quem Faz Acontecer</div>
-          <p class="carousel-slide-text">A Jucilene t&aacute; na loja todo dia. Conhece cada carro, cada detalhe, cada cliente pelo nome. O Edgar te recebe e cuida de tudo com aten&ccedil;&atilde;o. Atendimento de gente, n&atilde;o de rob&ocirc;.</p>
+          <p class="carousel-slide-text">A Jucilene ta na loja todo dia. Conhece cada carro, cada detalhe, cada cliente pelo nome. O Edgar te recebe e cuida de tudo com atencao. Atendimento de gente, nao de robo.</p>
         </div>
 
         <!-- Slide 4 -->
@@ -1167,7 +1411,7 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
           <span class="carousel-slide-number">04 / 05</span>
           <div class="carousel-slide-icon">&#128295;</div>
           <div class="carousel-slide-label">O Que a Gente Faz</div>
-          <p class="carousel-slide-text">Seminovos selecionados com proced&ecirc;ncia garantida. Especialista em GWM &mdash; Haval, Tank, Poer. Avalia&ccedil;&atilde;o gratuita. Troca com avalia&ccedil;&atilde;o. Financiamento facilitado.</p>
+          <p class="carousel-slide-text">Seminovos selecionados com procedencia garantida. Especialista em GWM - Haval, Tank, Poer. Avaliacao gratuita. Troca com avaliacao. Financiamento facilitado.</p>
         </div>
 
         <!-- Slide 5 -->
@@ -1175,7 +1419,7 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
           <span class="carousel-slide-number">05 / 05</span>
           <div class="carousel-slide-icon">&#9749;</div>
           <div class="carousel-slide-label">Vem Conhecer</div>
-          <p class="carousel-slide-text">Sua refer&ecirc;ncia em seminovos em Campo Grande. Vem tomar um caf&eacute; e conhecer o estoque de perto.</p>
+          <p class="carousel-slide-text">Sua referencia em seminovos em Campo Grande. Vem tomar um cafe e conhecer o estoque de perto.</p>
           <a href="https://wa.me/5567993295454" class="carousel-slide-cta" target="_blank" rel="noopener">Chama no WhatsApp</a>
           <div class="carousel-slide-contact">@fialhomotorscg</div>
         </div>
@@ -1183,11 +1427,11 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
       </div>
 
       <div class="carousel-dots" id="carouselDots">
-        <button class="carousel-dot active" onclick="goToSlide(0)"></button>
-        <button class="carousel-dot" onclick="goToSlide(1)"></button>
-        <button class="carousel-dot" onclick="goToSlide(2)"></button>
-        <button class="carousel-dot" onclick="goToSlide(3)"></button>
-        <button class="carousel-dot" onclick="goToSlide(4)"></button>
+        <button class="carousel-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+        <button class="carousel-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+        <button class="carousel-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+        <button class="carousel-dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+        <button class="carousel-dot" onclick="goToSlide(4)" aria-label="Slide 5"></button>
       </div>
     </div>
   </div>
@@ -1199,67 +1443,67 @@ Seminovo com hist&oacute;ria &mdash; e com garantia.
     <div class="section-header fade-in">
       <p class="section-label">WhatsApp Status</p>
       <h2 class="section-title" style="color: var(--dourado);">Bom dia, Fialho Motors</h2>
-      <p class="section-subtitle">Mensagens di&aacute;rias para o status do WhatsApp, de segunda a sexta &agrave;s 08h. Tom leve, profissional e acolhedor.</p>
+      <p class="section-subtitle">Mensagens diarias para o status do WhatsApp, de segunda a sexta as 08h. Tom leve, profissional e acolhedor.</p>
     </div>
 
     <div class="wa-grid">
       <div class="wa-card fade-in">
         <p class="wa-card-day">Segunda-feira</p>
-        <p class="wa-card-text">Bom dia! Come&ccedil;ando a semana com energia na Fialho Motors. Seu pr&oacute;ximo carro pode estar aqui te esperando. Vem ver o estoque! &#128663;</p>
+        <p class="wa-card-text">Bom dia! Comecando a semana com energia na Fialho Motors. Seu proximo carro pode estar aqui te esperando. Vem ver o estoque! &#128663;</p>
       </div>
       <div class="wa-card fade-in">
-        <p class="wa-card-day">Ter&ccedil;a-feira</p>
-        <p class="wa-card-text">Bom dia! Sabia que a gente faz avalia&ccedil;&atilde;o gratuita do seu ve&iacute;culo? Traz o seu e descobre quanto vale na troca. Te esperamos!</p>
+        <p class="wa-card-day">Terca-feira</p>
+        <p class="wa-card-text">Bom dia! Sabia que a gente faz avaliacao gratuita do seu veiculo? Traz o seu e descobre quanto vale na troca. Te esperamos!</p>
       </div>
       <div class="wa-card fade-in">
         <p class="wa-card-day">Quarta-feira</p>
-        <p class="wa-card-text">Bom dia! Meio de semana e o estoque t&aacute; cheio de novidade. Quer saber o que chegou? Chama no WhatsApp que a gente te mostra tudo.</p>
+        <p class="wa-card-text">Bom dia! Meio de semana e o estoque ta cheio de novidade. Quer saber o que chegou? Chama no WhatsApp que a gente te mostra tudo.</p>
       </div>
       <div class="wa-card fade-in">
         <p class="wa-card-day">Quinta-feira</p>
-        <p class="wa-card-text">Bom dia! Na Fialho Motors, cada carro &eacute; revisado antes de ir pra vitrine. Proced&ecirc;ncia garantida e atendimento sem pressa. &Eacute; assim que a gente trabalha.</p>
+        <p class="wa-card-text">Bom dia! Na Fialho Motors, cada carro e revisado antes de ir pra vitrine. Procedencia garantida e atendimento sem pressa. E assim que a gente trabalha.</p>
       </div>
       <div class="wa-card fade-in">
         <p class="wa-card-day">Sexta-feira</p>
-        <p class="wa-card-text">Bom dia e bom fim de semana! A loja t&aacute; aberta e o caf&eacute; t&aacute; passado. Vem conhecer os seminovos selecionados da Fialho Motors. Te esperamos! &#9749;</p>
+        <p class="wa-card-text">Bom dia e bom fim de semana! A loja ta aberta e o cafe ta passado. Vem conhecer os seminovos selecionados da Fialho Motors. Te esperamos! &#9749;</p>
       </div>
     </div>
 
     <!-- Auto-responder -->
     <div class="wa-auto-section fade-in">
-      <div class="section-header" style="margin-bottom: 32px;">
+      <div class="section-header" style="margin-bottom: var(--space-md);">
         <p class="section-label">Auto-Responder</p>
         <h3 class="section-title" style="font-size: 1.4rem; color: var(--dourado);">WhatsApp Business</h3>
       </div>
 
       <div class="wa-bubble-wrapper">
         <p class="wa-bubble-label">Boas-vindas (primeiro contato)</p>
-        <div class="wa-bubble" id="wa-welcome">Ol&aacute;! Bem-vindo &agrave; Fialho Motors! &#128522;
+        <div class="wa-bubble" id="wa-welcome">Ola! Bem-vindo a Fialho Motors! &#128522;
 
 Somos especialistas em seminovos selecionados, com foco em GWM, aqui em Campo Grande/MS.
 
 Como podemos te ajudar?
 
-1&#65039;&#8419; Quero ver o estoque dispon&iacute;vel
-2&#65039;&#8419; Quero avaliar meu ve&iacute;culo para troca
+1&#65039;&#8419; Quero ver o estoque disponivel
+2&#65039;&#8419; Quero avaliar meu veiculo para troca
 3&#65039;&#8419; Quero simular um financiamento
 4&#65039;&#8419; Outro assunto
 
-Responde com o n&uacute;mero da op&ccedil;&atilde;o que a Jucilene ou o Edgar j&aacute; te atendem!
+Responde com o numero da opcao que a Jucilene ou o Edgar ja te atendem!
 
 &#128205; Campo Grande, MS
 &#128247; @fialhomotorscg<span class="wa-bubble-time">08:00</span></div>
-        <button class="btn-copy" onclick="copyText('wa-welcome', this)" style="margin-bottom: 32px;">&#128203; Copiar mensagem</button>
+        <button class="btn-copy" onclick="copyText('wa-welcome', this)" style="margin-bottom: var(--space-md);">Copiar mensagem</button>
 
-        <p class="wa-bubble-label">Aus&ecirc;ncia (fora do hor&aacute;rio)</p>
+        <p class="wa-bubble-label">Ausencia (fora do horario)</p>
         <div class="wa-bubble wa-bubble-received" id="wa-away">Oi! Obrigada por entrar em contato com a Fialho Motors.
 
-Nosso hor&aacute;rio de atendimento &eacute; de segunda a sexta, das 8h &agrave;s 18h, e s&aacute;bado das 8h &agrave;s 12h.
+Nosso horario de atendimento e de segunda a sexta, das 8h as 18h, e sabado das 8h as 12h.
 
-Deixa sua mensagem que a gente responde assim que voltar! Pode mandar o que precisa que j&aacute; anotamos aqui. &#128522;
+Deixa sua mensagem que a gente responde assim que voltar! Pode mandar o que precisa que ja anotamos aqui. &#128522;
 
-Enquanto isso, d&aacute; uma olhada no nosso Instagram: @fialhomotorscg<span class="wa-bubble-time">22:15</span></div>
-        <button class="btn-copy" onclick="copyText('wa-away', this)">&#128203; Copiar mensagem</button>
+Enquanto isso, da uma olhada no nosso Instagram: @fialhomotorscg<span class="wa-bubble-time">22:15</span></div>
+        <button class="btn-copy" onclick="copyText('wa-away', this)">Copiar mensagem</button>
       </div>
     </div>
   </div>
@@ -1271,25 +1515,25 @@ Enquanto isso, d&aacute; uma olhada no nosso Instagram: @fialhomotorscg<span cla
     <div class="section-header fade-in" style="text-align: center;">
       <p class="section-label">Grupo WhatsApp</p>
       <h2 class="section-title">Havaleiros &amp; Havaleiras</h2>
-      <p class="section-subtitle" style="margin: 0 auto;">Mensagem de apresenta&ccedil;&atilde;o para o grupo, pronta para enviar ap&oacute;s aprova&ccedil;&atilde;o do admin.</p>
+      <p class="section-subtitle" style="margin: 0 auto;">Mensagem de apresentacao para o grupo, pronta para enviar apos aprovacao do admin.</p>
     </div>
 
     <div class="haval-card fade-in">
       <div class="haval-badge">&#128101; 104 membros</div>
       <p class="haval-text" id="haval-text">Fala, pessoal! Tudo bem?
 
-Pra quem ainda n&atilde;o conhece, a Fialho Motors &eacute; uma loja de seminovos aqui em Campo Grande, com especialidade em GWM &mdash; Haval, Tank, Poer.
+Pra quem ainda nao conhece, a Fialho Motors e uma loja de seminovos aqui em Campo Grande, com especialidade em GWM - Haval, Tank, Poer.
 
-A Jucilene (dona da loja) &eacute; entusiasta da marca igual voc&ecirc;s. Atendimento personalizado, sem press&atilde;o, sem enrola&ccedil;&atilde;o.
+A Jucilene (dona da loja) e entusiasta da marca igual voces. Atendimento personalizado, sem pressao, sem enrolacao.
 
-Se algu&eacute;m tiver procurando um seminovo GWM com proced&ecirc;ncia garantida, ou quiser avaliar o seu pra troca, &eacute; s&oacute; chamar:
+Se alguem tiver procurando um seminovo GWM com procedencia garantida, ou quiser avaliar o seu pra troca, e so chamar:
 
 &#128242; wa.me/5567993295454
 &#128247; @fialhomotorscg
 
-Prazer estar aqui com voc&ecirc;s!</p>
+Prazer estar aqui com voces!</p>
       <div class="haval-copy">
-        <button class="btn-copy" onclick="copyText('haval-text', this)" style="border-color: rgba(196,161,74,0.3);">&#128203; Copiar mensagem</button>
+        <button class="btn-copy" onclick="copyText('haval-text', this)">Copiar mensagem</button>
       </div>
     </div>
   </div>
@@ -1302,7 +1546,7 @@ Prazer estar aqui com voc&ecirc;s!</p>
   <p class="footer-contact">@fialhomotorscg &middot; Campo Grande, MS</p>
   <p class="footer-contact">(67) 99329-5454</p>
   <div class="footer-divider"></div>
-  <p class="footer-credit">Desenvolvido por <span>V&iacute;tor King</span></p>
+  <p class="footer-credit">Desenvolvido por <span>Vitor King</span></p>
   <p class="footer-credit">Powered by <span>IA</span></p>
 </footer>
 
@@ -1310,77 +1554,108 @@ Prazer estar aqui com voc&ecirc;s!</p>
 <div class="toast" id="toast">Texto copiado!</div>
 
 <script>
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+(function() {
+  'use strict';
+
+  // Scroll fade-in observer
+  var observer = new IntersectionObserver(function(entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add('visible');
+      }
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-// Nav scroll effect
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
-
-// Copy to clipboard
-function copyText(id, btn) {
-  const el = document.getElementById(id);
-  const text = el.innerText.replace(/\n{3,}/g, '\n\n').trim();
-  navigator.clipboard.writeText(text).then(() => {
-    btn.classList.add('copied');
-    btn.innerHTML = '&#10003; Copiado!';
-    showToast();
-    setTimeout(() => {
-      btn.classList.remove('copied');
-      btn.innerHTML = '&#128203; Copiar legenda';
-    }, 2500);
-  });
-}
-
-function showToast() {
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2200);
-}
-
-// Carousel
-const track = document.getElementById('carouselTrack');
-const dots = document.querySelectorAll('.carousel-dot');
-let currentSlide = 0;
-
-function goToSlide(n) {
-  currentSlide = n;
-  const slide = track.children[n];
-  track.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
-  updateDots();
-}
-
-function carouselNav(dir) {
-  const total = track.children.length;
-  currentSlide = (currentSlide + dir + total) % total;
-  goToSlide(currentSlide);
-}
-
-function updateDots() {
-  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-}
-
-track.addEventListener('scroll', () => {
-  const scrollLeft = track.scrollLeft;
-  const slideWidth = track.children[0].offsetWidth;
-  const newSlide = Math.round(scrollLeft / slideWidth);
-  if (newSlide !== currentSlide) {
-    currentSlide = newSlide;
-    updateDots();
+  var fadeEls = document.querySelectorAll('.fade-in');
+  for (var i = 0; i < fadeEls.length; i++) {
+    observer.observe(fadeEls[i]);
   }
-}, { passive: true });
 
-// Touch swipe support is native via scroll-snap
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  var lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY || window.pageYOffset;
+    if (y !== lastScroll) {
+      nav.classList.toggle('scrolled', y > 50);
+      lastScroll = y;
+    }
+  }, { passive: true });
+
+  // Carousel
+  var track = document.getElementById('carouselTrack');
+  var dots = document.querySelectorAll('.carousel-dot');
+  var currentSlide = 0;
+  var totalSlides = track.children.length;
+
+  window.goToSlide = function(n) {
+    currentSlide = n;
+    var slide = track.children[n];
+    track.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
+    updateDots();
+  };
+
+  window.carouselNav = function(dir) {
+    currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+    goToSlide(currentSlide);
+  };
+
+  function updateDots() {
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('active', i === currentSlide);
+    }
+  }
+
+  track.addEventListener('scroll', function() {
+    var slideWidth = track.children[0].offsetWidth;
+    var newSlide = Math.round(track.scrollLeft / slideWidth);
+    if (newSlide !== currentSlide && newSlide >= 0 && newSlide < totalSlides) {
+      currentSlide = newSlide;
+      updateDots();
+    }
+  }, { passive: true });
+
+  // Copy
+  var toastTimer;
+  window.copyText = function(id, btn) {
+    var el = document.getElementById(id);
+    var text = el.innerText.replace(/\n{3,}/g, '\n\n').trim();
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() { onCopied(btn); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      onCopied(btn);
+    }
+  };
+
+  function onCopied(btn) {
+    var original = btn.textContent;
+    btn.classList.add('copied');
+    btn.textContent = 'Copiado!';
+    showToast();
+    setTimeout(function() {
+      btn.classList.remove('copied');
+      btn.textContent = original;
+    }, 2200);
+  }
+
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+})();
 </script>
 
 </body>
