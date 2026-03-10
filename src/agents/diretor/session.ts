@@ -1,11 +1,10 @@
-import type Anthropic from '@anthropic-ai/sdk';
 import type { Brand } from './brand.js';
 
 const SESSION_TIMEOUT_MS = 30 * 60 * 1_000; // 30 minutes
 const MAX_HISTORY = 20; // messages (user + assistant combined)
 const CLEANUP_INTERVAL_MS = 5 * 60 * 1_000; // 5 minutes
 
-type MessageParam = Anthropic.MessageParam;
+type MessageParam = { role: 'user' | 'model'; parts: [{ text: string }] };
 
 interface Session {
   history: MessageParam[];
@@ -51,7 +50,8 @@ export class SessionManager {
       this.sessions.set(sessionId, session);
     }
 
-    session.history.push({ role, content });
+    const geminiRole: 'user' | 'model' = role === 'assistant' ? 'model' : 'user';
+    session.history.push({ role: geminiRole, parts: [{ text: content }] });
     session.lastActivity = Date.now();
 
     // Trim to max history (keep most recent messages)

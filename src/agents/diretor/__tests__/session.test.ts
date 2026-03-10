@@ -20,8 +20,8 @@ describe('SessionManager', () => {
     manager.append('user1', 'user', 'oi');
     manager.append('user1', 'assistant', 'E ai!');
     expect(manager.getHistory('user1')).toEqual([
-      { role: 'user', content: 'oi' },
-      { role: 'assistant', content: 'E ai!' },
+      { role: 'user', parts: [{ text: 'oi' }] },
+      { role: 'model', parts: [{ text: 'E ai!' }] },
     ]);
   });
 
@@ -36,7 +36,7 @@ describe('SessionManager', () => {
     manager.append('user2', 'user', 'msg from user2');
     expect(manager.getHistory('user1')).toHaveLength(1);
     expect(manager.getHistory('user2')).toHaveLength(1);
-    expect(manager.getHistory('user1')[0]?.content).toBe('msg from user1');
+    expect(manager.getHistory('user1')[0]?.parts[0]?.text).toBe('msg from user1');
   });
 
   it('trims history to max 20 messages', () => {
@@ -46,6 +46,6 @@ describe('SessionManager', () => {
     const history = manager.getHistory('user1');
     expect(history.length).toBe(20);
     // Should keep the most recent messages
-    expect(history[history.length - 1]?.content).toBe('msg 24');
+    expect(history[history.length - 1]?.parts[0]?.text).toBe('msg 24');
   });
 });

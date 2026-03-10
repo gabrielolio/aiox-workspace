@@ -11,8 +11,7 @@
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "transcribe": "python3 scripts/transcribe.py"
+    "test:watch": "vitest"
   },
   "keywords": [
     "king",
@@ -27,11 +26,10 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/generative-ai": "^0.21.0",
     "better-sqlite3": "^12.6.2",
     "googleapis": "^144.0.0",
     "node-cron": "^3.0.3",
-    "openai": "^6.27.0",
     "pino": "^9.0.0",
     "zod": "^3.24.0"
   },

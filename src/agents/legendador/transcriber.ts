@@ -1,45 +1,35 @@
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { loadEnv } from '../../config/env.js';
 import { logger } from '../../config/logger.js';
 
-const WHISPER_URL = 'https://api.openai.com/v1/audio/transcriptions';
-const WHISPER_MODEL = 'whisper-1';
-
 /**
- * Sends an audio/video buffer to OpenAI Whisper API and returns the transcript.
- * filename must include extension (.mp4, .ogg, .mp3, etc.) so Whisper knows the format.
+ * Sends an audio/video buffer to Gemini and returns the transcript.
+ * filename must include extension (.mp4, .ogg, .mp3, etc.) so the MIME type can be inferred.
  */
 export async function transcribeBuffer(buffer: Buffer, filename: string): Promise<string> {
   const env = loadEnv();
+  const genAI = new GoogleGenerativeAI(env.GEMINI_API_KEY);
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
-  if (!env.OPENAI_API_KEY) {
-    throw new Error('OPENAI_API_KEY not configured — cannot transcribe');
-  }
+  const mimeType = filename.endsWith('.mp4') ? 'video/mp4' : 'audio/ogg';
+  const base64Data = buffer.toString('base64');
 
-  const formData = new FormData();
-  formData.append('file', new Blob([buffer]), filename);
-  formData.append('model', WHISPER_MODEL);
-  formData.append('language', 'pt');
-  formData.append('response_format', 'text');
+  logger.info({ filename, bytes: buffer.length }, 'Sending to Gemini for transcription');
 
-  logger.info({ filename, bytes: buffer.length }, 'Sending to Whisper API');
-
-  const response = await fetch(WHISPER_URL, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${env.OPENAI_API_KEY}`,
-    },
-    body: formData,
+  const result = await model.generateContent({
+    contents: [{
+      role: 'user',
+      parts: [
+        { inlineData: { mimeType, data: base64Data } },
+        { text: 'Transcreva este áudio em português do Brasil. Retorne apenas o texto transcrito, sem formatação extra.' },
+      ],
+    }],
   });
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`Whisper API ${response.status}: ${error}`);
-  }
+  const transcript = result.response.text().trim();
+  logger.info({ filename, chars: transcript.length }, 'Gemini transcription complete');
 
-  const transcript = await response.text();
-  logger.info({ filename, chars: transcript.length }, 'Whisper transcription complete');
-
-  return transcript.trim();
+  return transcript;
 }
 
 /**

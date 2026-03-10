@@ -6,8 +6,7 @@ const envSchema = z.object({
   LOG_LEVEL: z.string().default('info'),
 
   // Core APIs
-  ANTHROPIC_API_KEY: z.string().min(1),
-  OPENAI_API_KEY: z.string().optional(),
+  GEMINI_API_KEY: z.string().min(1),
 
   // WhatsApp
   EVOLUTION_API_URL: z.string().url().default('http://localhost:8080'),

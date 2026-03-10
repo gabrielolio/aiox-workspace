@@ -22,7 +22,7 @@ function makeFetchError(status: number, message: string) {
 
 // Minimal env so loadEnv() does not throw
 beforeEach(() => {
-  process.env.ANTHROPIC_API_KEY = 'test-key';
+  process.env.GEMINI_API_KEY = 'test-key';
   process.env.EVOLUTION_API_URL = 'http://localhost:8080';
   process.env.EVOLUTION_API_KEY = 'evo-key';
   process.env.WHATSAPP_INSTANCE = 'king-bot';

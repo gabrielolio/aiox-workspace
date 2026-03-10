@@ -2,23 +2,22 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { classifyIntent, handleMessage } from '../index.js';
 import type { Message } from '../index.js';
 
-// Mock Anthropic SDK
-vi.mock('@anthropic-ai/sdk', () => {
-  const mockCreate = vi.fn().mockResolvedValue({
-    content: [{ type: 'text', text: 'E ai Vitor! Bora!' }],
-    usage: { input_tokens: 10, output_tokens: 5 },
+// Mock Gemini SDK
+vi.mock('@google/generative-ai', () => {
+  const mockSendMessage = vi.fn().mockResolvedValue({
+    response: { text: () => 'E ai Vitor! Bora!' },
   });
-
-  const MockAnthropic = vi.fn().mockImplementation(() => ({
-    messages: { create: mockCreate },
+  const mockStartChat = vi.fn().mockReturnValue({ sendMessage: mockSendMessage });
+  const mockGetModel = vi.fn().mockReturnValue({ startChat: mockStartChat });
+  const MockGoogleGenerativeAI = vi.fn().mockImplementation(() => ({
+    getGenerativeModel: mockGetModel,
   }));
-
-  return { default: MockAnthropic };
+  return { GoogleGenerativeAI: MockGoogleGenerativeAI };
 });
 
 // Mock env
 vi.mock('../../../config/env.js', () => ({
-  loadEnv: () => ({ ANTHROPIC_API_KEY: 'test-key' }),
+  loadEnv: () => ({ GEMINI_API_KEY: 'test-key' }),
 }));
 
 // Mock logger
@@ -93,10 +92,11 @@ describe('handleMessage', () => {
     expect(reply).toBe('E ai Vitor! Bora!');
   });
 
-  it('throws when Claude API fails', async () => {
-    const { default: Anthropic } = await import('@anthropic-ai/sdk');
-    const mockInstance = new (Anthropic as unknown as ReturnType<typeof vi.fn>)();
-    mockInstance.messages.create.mockRejectedValueOnce(new Error('API down'));
+  it('throws when Gemini API fails', async () => {
+    const { GoogleGenerativeAI } = await import('@google/generative-ai');
+    const mockInstance = new (GoogleGenerativeAI as unknown as ReturnType<typeof vi.fn>)();
+    const mockChat = mockInstance.getGenerativeModel().startChat();
+    mockChat.sendMessage.mockRejectedValueOnce(new Error('API down'));
 
     // Re-import to get fresh module state with the rejection
     await expect(handleMessage(makeMessage({ text: 'test' }))).rejects.toThrow();

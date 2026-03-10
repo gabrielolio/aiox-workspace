@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { loadEnv } from '../../config/env.js';
 import { logger } from '../../config/logger.js';
 import type { BrandKnowledge, BrandName } from './kb-loader.js';
@@ -50,20 +50,18 @@ function tryFastPath(question: string, knowledge: BrandKnowledge): string | null
   return null;
 }
 
-async function askClaude(
+async function askGemini(
   question: string,
   brand: BrandName,
   yamlContent: string,
 ): Promise<string> {
   const env = loadEnv();
-  const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
-
+  const genAI = new GoogleGenerativeAI(env.GEMINI_API_KEY);
   const brandLabel = brand === 'porsche' ? 'Porsche' : 'GWM';
 
-  const response = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 200,
-    system: `Você é um assistente especialista em brand guidelines.
+  const model = genAI.getGenerativeModel({
+    model: 'gemini-2.0-flash',
+    systemInstruction: `Você é um assistente especialista em brand guidelines.
 Responda APENAS com informações presentes no YAML abaixo — não invente nada.
 Se a informação não estiver no YAML, responda exatamente: "${FALLBACK_MESSAGE}"
 Seja direto e conciso. Use no máximo 3 linhas. Responda em português.
@@ -71,12 +69,10 @@ Marca: ${brandLabel}
 
 YAML:
 ${yamlContent}`,
-    messages: [{ role: 'user', content: question }],
   });
 
-  return response.content[0]?.type === 'text'
-    ? response.content[0].text.trim()
-    : FALLBACK_MESSAGE;
+  const result = await model.generateContent(question);
+  return result.response.text().trim() || FALLBACK_MESSAGE;
 }
 
 export async function answerGuidelineQuestion(
@@ -90,12 +86,12 @@ export async function answerGuidelineQuestion(
     return fastAnswer;
   }
 
-  // 2. Delegate to Claude with the YAML as context
-  logger.info({ brand: knowledge.brand, path: 'claude' }, 'Guardiao: delegating to Claude');
+  // 2. Delegate to Gemini with the YAML as context
+  logger.info({ brand: knowledge.brand, path: 'gemini' }, 'Guardiao: delegating to Gemini');
   try {
-    return await askClaude(question, knowledge.brand, knowledge.raw);
+    return await askGemini(question, knowledge.brand, knowledge.raw);
   } catch (error) {
-    logger.error({ error: String(error) }, 'Guardiao: Claude call failed');
+    logger.error({ error: String(error) }, 'Guardiao: Gemini call failed');
     return FALLBACK_MESSAGE;
   }
 }

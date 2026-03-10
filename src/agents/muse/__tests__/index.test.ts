@@ -1,22 +1,19 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
-// Mock Anthropic before importing the module under test
-vi.mock('@anthropic-ai/sdk', () => {
-  const mockCreate = vi.fn().mockResolvedValue({
-    content: [{ type: 'text', text: '🎨 3 ideias pra você hoje:\n\n1️⃣ Ideia teste\nFormato: Reel 30s\nO quê: Descrição de teste.' }],
-    usage: { input_tokens: 100, output_tokens: 50 },
+// Mock Gemini before importing the module under test
+vi.mock('@google/generative-ai', () => {
+  const mockGenerateContent = vi.fn().mockResolvedValue({
+    response: { text: () => '🎨 3 ideias pra você hoje:\n\n1️⃣ Ideia teste\nFormato: Reel 30s\nO quê: Descrição de teste.' },
   });
-
-  return {
-    default: vi.fn().mockImplementation(() => ({
-      messages: { create: mockCreate },
-    })),
-    __mockCreate: mockCreate,
-  };
+  const mockGetModel = vi.fn().mockReturnValue({ generateContent: mockGenerateContent });
+  const MockGoogleGenerativeAI = vi.fn().mockImplementation(() => ({
+    getGenerativeModel: mockGetModel,
+  }));
+  return { GoogleGenerativeAI: MockGoogleGenerativeAI };
 });
 
 vi.mock('../../../config/env.js', () => ({
-  loadEnv: () => ({ ANTHROPIC_API_KEY: 'test-key' }),
+  loadEnv: () => ({ GEMINI_API_KEY: 'test-key' }),
 }));
 
 vi.mock('../../../config/logger.js', () => ({

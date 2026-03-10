@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { logger } from '../../config/logger.js';
 import { loadEnv } from '../../config/env.js';
 import { SYSTEM_PROMPT, buildUserContent, buildIntentContext, buildBrandContext } from './prompt.js';
@@ -67,14 +67,15 @@ export function classifyIntent(message: Message): Intent {
   return 'general_chat';
 }
 
-let anthropicClient: Anthropic | null = null;
+let geminiModel: import('@google/generative-ai').GenerativeModel | null = null;
 
-function getClient(): Anthropic {
-  if (!anthropicClient) {
+function getModel(): import('@google/generative-ai').GenerativeModel {
+  if (!geminiModel) {
     const env = loadEnv();
-    anthropicClient = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+    const genAI = new GoogleGenerativeAI(env.GEMINI_API_KEY);
+    geminiModel = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   }
-  return anthropicClient;
+  return geminiModel;
 }
 
 /**
@@ -140,37 +141,26 @@ export async function handleMessage(message: Message): Promise<string> {
   // Build user message with brand, intent and agent context injected
   const userParts = [brandContext, intentContext, agentContext, userContent].filter(Boolean).join('\n');
 
-  sessionManager.append(sessionId, 'user', userParts);
-
+  // Get history BEFORE appending the new user message (Gemini chat takes prior history separately)
   const history = sessionManager.getHistory(sessionId);
 
   try {
-    const client = getClient();
-
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 256,
-      system: SYSTEM_PROMPT,
-      messages: history,
+    const model = getModel();
+    const chat = model.startChat({
+      systemInstruction: SYSTEM_PROMPT,
+      history,
     });
+    const result = await chat.sendMessage(userParts);
+    const reply = result.response.text() || 'Opa, deu um erro aqui. Tenta de novo?';
 
-    const reply =
-      response.content[0]?.type === 'text'
-        ? response.content[0].text
-        : 'Opa, deu um erro aqui. Tenta de novo?';
-
+    sessionManager.append(sessionId, 'user', userParts);
     sessionManager.append(sessionId, 'assistant', reply);
 
-    logger.info({ intent, from: message.from, tokens: response.usage }, 'Diretor responded');
+    logger.info({ intent, from: message.from }, 'Diretor responded');
 
     return reply;
   } catch (error) {
-    logger.error({ error: String(error), from: message.from }, 'Claude API call failed');
-
-    // Remove the failed user message to avoid poisoning context
-    const currentHistory = sessionManager.getHistory(sessionId);
-    currentHistory.pop();
-
+    logger.error({ error: String(error), from: message.from }, 'Gemini API call failed');
     throw error;
   }
 }
