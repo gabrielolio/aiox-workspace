@@ -81,6 +81,7 @@ Este repositorio abriga **dois projetos independentes** com ciclos de vida difer
 - **Ciclo:** Entregas semanais (3 posts/semana)
 - **Roadmap:** `projects/fialho-motors/roadmap.md`
 - **Nao depende do KING** — funciona independente de qualquer automacao
+- **Audios/Conversas (Drive):** [Pasta compartilhada](https://drive.google.com/drive/folders/1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY) — audios de reunioes Gabriel + Vitor + Jucilene. Processados pelo squad `intel` → `knowledge-base/conversas/`
 
 ### KING System (BACKGROUND)
 - **O que e:** Sistema de automacao com 6 agentes IA (Diretor, Legendador, Briefer, Muse, Guardiao, Organizador)
@@ -100,6 +101,13 @@ Este repositorio abriga **dois projetos independentes** com ciclos de vida difer
 ---
 
 ## Infraestrutura AIOX Configurada
+
+### Squads (squads/)
+
+| Squad | Dominio | Comando |
+|-------|---------|---------|
+| `king-quality-guard` | QA do KING System | `*check [story-id]` |
+| `intel` | Coleta e transcricao de audios/conversas | `*intel` |
 
 ### Hooks (.claude/hooks/)
 

@@ -1,0 +1,76 @@
+name: intel
+version: "1.0.0"
+description: "Squad de inteligencia — coleta, transcreve e extrai insights de audios, reunioes e conversas do projeto"
+domain: intelligence-gathering
+project: cross-project
+author: gabriel-olio
+created: "2026-03-10"
+updated: "2026-03-10"
+
+philosophy: |
+  Nenhuma conversa importante se perde.
+  Audios viram texto. Texto vira insight. Insight vira acao.
+  A fonte da verdade esta no Drive — o squad busca, processa e entrega.
+
+# Fonte de dados principal
+sources:
+  google_drive:
+    folder_id: "1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY"
+    url: "https://drive.google.com/drive/folders/1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY"
+    description: "Pasta compartilhada com audios de conversas Gabriel, Vitor e Jucilene"
+    formats:
+      - ".m4a"
+      - ".mp3"
+      - ".ogg"
+      - ".wav"
+
+# Destino dos outputs
+output:
+  transcriptions: "knowledge-base/conversas/"
+  format: "markdown"
+  naming: "YYYY-MM-DD-{origem}-{resumo-curto}.md"
+
+lead_agent: collector
+
+agents:
+  - id: collector
+    file: agents/collector.md
+    role: "Orquestrador — varre o Drive, identifica novos audios, coordena o pipeline"
+
+tasks:
+  - id: sync-drive
+    file: tasks/sync-drive.md
+    trigger: "*sync"
+    description: "Baixa audios novos do Google Drive para processamento local"
+
+  - id: transcribe-audio
+    file: tasks/transcribe-audio.md
+    trigger: "*transcribe"
+    description: "Transcreve arquivo de audio usando Whisper e gera markdown"
+
+  - id: extract-insights
+    file: tasks/extract-insights.md
+    trigger: "*extract"
+    description: "Analisa transcricao e extrai decisoes, pendencias, insights do projeto"
+
+  - id: full-pipeline
+    file: tasks/full-pipeline.md
+    trigger: "*intel"
+    description: "Pipeline completo: sync → transcribe → extract (ponto de entrada principal)"
+
+config:
+  language: "pt-BR"
+  whisper_model: "medium"
+  transcription_language: "pt"
+  insight_categories:
+    - decisoes        # O que foi decidido
+    - pendencias      # O que ficou pendente
+    - prazos          # Prazos mencionados
+    - preferencias    # O que o cliente quer/nao quer
+    - oportunidades   # Ideias e oportunidades levantadas
+
+quick_commands:
+  - "*intel              → Pipeline completo (sync + transcribe + extract)"
+  - "*sync               → Apenas baixar audios novos do Drive"
+  - "*transcribe [file]  → Transcrever um audio especifico"
+  - "*extract [file]     → Extrair insights de uma transcricao"

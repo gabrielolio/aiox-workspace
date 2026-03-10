@@ -96,6 +96,18 @@
 ### MÉDIAS
 - Alias `brownfield-discovery`, calculadora de squads, agente noturno, task `review-de-tarefas`
 
+## Fontes de Dados Externas
+
+### Google Drive — Audios Fialho Motors
+- **URL:** https://drive.google.com/drive/folders/1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY
+- **Folder ID:** `1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY`
+- **Conteudo:** Audios .m4a de conversas Gabriel + Vitor + Jucilene
+- **Squad responsavel:** `intel` (`squads/intel/`)
+- **Output:** `knowledge-base/conversas/`
+- **Comando:** `*intel` (pipeline completo) ou `*sync` + `*transcribe`
+- **Pre-requisitos locais:** gdown, ffmpeg, openai (ou openai-whisper)
+- **Adicionado:** 2026-03-10
+
 ## Materiais de Referência
 - aitpl.com — repositório de agents/skills prontos
 - openrouter.ai — roteador de LLMs (70-80% redução custo)
@@ -106,3 +118,4 @@
 - `knowledge-base/brands/` — gwm-brasil-2026.yaml, porsche-brasil-2026.yaml, PDFs Porsche
 - `knowledge-base/clients/` — bamaq.yaml, fialho-motors.yaml
 - `knowledge-base/profiles/` — vitor-king.yaml
+- `knowledge-base/conversas/` — transcricoes de audios processados pelo squad intel
