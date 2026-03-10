@@ -128,7 +128,7 @@ Loja de **seminovos multimarcas** em Campo Grande/MS, com foco especial em veicu
 **Usar:**
 - "Seminovos selecionados" (nao "usados")
 - "Atendimento personalizado"
-- "Especialistas em GWM"
+- "Especialista em GWM" (singular — Jucilene corrigiu na reuniao: nao sugerir equipe grande)
 - "Procedencia garantida"
 - "Revisado e aprovado"
 - "Aceita troca"
@@ -143,6 +143,7 @@ Loja de **seminovos multimarcas** em Campo Grande/MS, com foco especial em veicu
 - Jargao mecanico que o cliente nao entende
 - Preco exposto em imagem (regra dos grupos WhatsApp)
 - Emojis em excesso
+- **Plural que sugira equipe grande** — NUNCA "nossos especialistas", "nossa equipe". A Fialho e loja boutique. Usar singular: "especialista em GWM"
 
 ### 3.3 Frases-Modelo Aprovadas
 
@@ -180,6 +181,7 @@ Loja de **seminovos multimarcas** em Campo Grande/MS, com foco especial em veicu
 2. **Institucional** — apresentacao da loja, equipe, valores (15%)
 3. **Bastidores** — dia a dia, chegada de carros, atendimento (15%)
 4. **Educativo** — dicas, comparativos, curiosidades GWM (10%)
+5. **Vendido** — post simples de carro vendido com selo "VENDIDO" (quando aplicavel)
 
 ### 4.2 Grupos WhatsApp
 
@@ -225,6 +227,7 @@ Loja de **seminovos multimarcas** em Campo Grande/MS, com foco especial em veicu
 - Fundo sujo, com outros carros cortados, lixo visivel
 - Flash direto (reflexo no vidro)
 - Foto torta ou mal enquadrada
+- Imagens renderizadas ou mockups — SEMPRE usar fotos reais (Vitor enfatizou na reuniao)
 
 ---
 
