@@ -332,3 +332,7 @@
 2026-03-10T16:30:52.903Z | 8d060bb0 | Bash     | sed -i 's/- Foto torta ou mal enquadrada$/- Foto torta ou mal enquadrada\n- Imagens renderizadas ou mockups — SEMPRE usar fotos reais (Vitor enfatizou na reunia
 2026-03-10T16:30:56.903Z | 8d060bb0 | Bash     | sed -i 's/4\. \*\*Educativo\*\* — dicas, comparativos, curiosidades GWM (10%)/4. **Educativo** — dicas, comparativos, curiosidades GWM (10%)\n5. **Vendido** — p
 2026-03-10T16:31:02.913Z | 8d060bb0 | TodoWrite | {"todos":[{"content":"Salvar transcricao formatada em knowledge-base/conversas/","status":"completed
+2026-03-10T16:31:14.210Z | 8d060bb0 | Bash     | git add knowledge-base/conversas/2026-03-reuniao-fechamento-vitor-jucilene.md docs/dossies/dossie-reuniao-fechamento-fialho-motors.md knowledge-base/clients/fia
+2026-03-10T16:31:26.072Z | 8d060bb0 | Bash     | git push -u origin claude/review-repo-overview-1ENm7
+2026-03-10T16:31:31.302Z | 8d060bb0 | TodoWrite | {"todos":[{"content":"Salvar transcricao formatada em knowledge-base/conversas/","status":"completed
+2026-03-10T16:31:50.274Z | 8d060bb0 | Bash     | git status --short
