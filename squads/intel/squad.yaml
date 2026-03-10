@@ -60,8 +60,10 @@ tasks:
 
 config:
   language: "pt-BR"
-  whisper_model: "medium"
+  transcription_engine: "groq"
+  whisper_model: "whisper-large-v3"
   transcription_language: "pt"
+  groq_api_key_env: "GROQ_API_KEY"
   insight_categories:
     - decisoes        # O que foi decidido
     - pendencias      # O que ficou pendente

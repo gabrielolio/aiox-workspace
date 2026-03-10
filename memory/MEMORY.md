@@ -105,7 +105,10 @@
 - **Squad responsavel:** `intel` (`squads/intel/`)
 - **Output:** `knowledge-base/conversas/`
 - **Comando:** `*intel` (pipeline completo) ou `*sync` + `*transcribe`
-- **Pre-requisitos locais:** gdown, ffmpeg, openai (ou openai-whisper)
+- **Engine de transcricao:** Groq Whisper (modelo: whisper-large-v3, gratis)
+- **Pre-requisitos locais:** gdown, groq SDK (`pip install groq`), ffmpeg opcional
+- **API Key:** GROQ_API_KEY configurada no .env
+- **Arquivo de teste:** `1PgGabx3m30BNeL4n2U_WCcoQHTXV7v6D` (pendente execucao local)
 - **Adicionado:** 2026-03-10
 
 ## Materiais de Referência

@@ -2,7 +2,7 @@
 
 ## O que faz
 
-Transforma audios de conversas em conhecimento estruturado. Pega os .m4a do Google Drive, transcreve, extrai o que importa (decisoes, pendencias, prazos, preferencias) e salva tudo organizado em `knowledge-base/conversas/`.
+Transforma audios de conversas em conhecimento estruturado. Pega os .m4a do Google Drive, transcreve via **Groq Whisper** (gratis e rapido), extrai o que importa (decisoes, pendencias, prazos, preferencias) e salva tudo organizado em `knowledge-base/conversas/`.
 
 Pensa nele como um estagiario que ouve todas as reunioes e anota os pontos-chave num caderno organizado.
 
@@ -14,6 +14,16 @@ Pensa nele como um estagiario que ouve todas as reunioes e anota os pontos-chave
 | **Folder ID** | `1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY` |
 | **Formatos** | .m4a, .mp3, .ogg, .wav |
 | **Participantes** | Gabriel, Vitor, Jucilene (Fialho Motors) |
+
+## Engine de Transcricao
+
+| Item | Valor |
+|------|-------|
+| **Engine** | Groq Whisper |
+| **Modelo** | `whisper-large-v3` |
+| **Custo** | Gratis (tier gratuito generoso) |
+| **Limite** | 20 requests/min, max 25MB por arquivo |
+| **API Key** | `GROQ_API_KEY` no `.env` |
 
 ## Comandos
 
@@ -27,31 +37,48 @@ Pensa nele como um estagiario que ouve todas as reunioes e anota os pontos-chave
 ## Pre-requisitos (instalar na maquina local)
 
 ```bash
-# 1. ffmpeg — converte formatos de audio
+# 1. gdown — baixa arquivos do Google Drive
+pip3 install gdown
+
+# 2. groq — SDK para transcricao via Groq Whisper (GRATIS)
+pip3 install groq
+
+# 3. ffmpeg — opcional, mas util para converter formatos
 # No Ubuntu/WSL:
 sudo apt-get install ffmpeg
 # No Mac:
 brew install ffmpeg
-
-# 2. gdown — baixa arquivos do Google Drive
-pip3 install gdown
-
-# 3. Transcricao (escolher UM):
-
-# Opcao A: Whisper API (recomendada — rapida, ~$0.006/min)
-pip3 install openai
-# Requer OPENAI_API_KEY no .env
-
-# Opcao B: Whisper local (gratis, mais lento)
-pip3 install openai-whisper
 ```
 
 ## Verificar se esta tudo pronto
 
 ```bash
-which ffmpeg && echo "OK" || echo "FALTA ffmpeg"
 which gdown && echo "OK" || echo "FALTA gdown"
-python3 -c "import openai; print('OK')" 2>/dev/null || echo "FALTA openai SDK"
+python3 -c "import groq; print('OK')" 2>/dev/null || echo "FALTA groq SDK"
+python3 -c "import os; assert os.getenv('GROQ_API_KEY') or open('.env').read().count('GROQ_API_KEY'); print('OK')" 2>/dev/null || echo "FALTA GROQ_API_KEY"
+```
+
+## Scripts Prontos
+
+| Script | O que faz | Uso |
+|--------|-----------|-----|
+| `scripts/transcribe.py` | Transcreve audio via Groq Whisper | `python3 scripts/transcribe.py audio.m4a` |
+| `scripts/download_drive.py` | Baixa arquivo ou pasta do Drive | `python3 scripts/download_drive.py <file-id>` |
+
+### Exemplos rapidos
+
+```bash
+# Transcrever um audio local
+python3 squads/intel/scripts/transcribe.py /caminho/do/audio.m4a
+
+# Transcrever e salvar em arquivo
+python3 squads/intel/scripts/transcribe.py audio.m4a --output transcricao.txt
+
+# Baixar um arquivo do Drive
+python3 squads/intel/scripts/download_drive.py 1PgGabx3m30BNeL4n2U_WCcoQHTXV7v6D --output audio.m4a
+
+# Baixar toda a pasta do Drive
+python3 squads/intel/scripts/download_drive.py 1wGiSvbMu_iV3P2-CRqBerCQvMsNIlDkY --folder
 ```
 
 ## Fluxo Completo
@@ -59,7 +86,7 @@ python3 -c "import openai; print('OK')" 2>/dev/null || echo "FALTA openai SDK"
 ```
 ┌─────────────┐     ┌──────────────┐     ┌─────────────────┐     ┌──────────────────────┐
 │ Google Drive │────▶│  sync-drive  │────▶│ transcribe-audio│────▶│  extract-insights    │
-│ (audios)    │     │ (gdown)      │     │ (Whisper)       │     │ (Claude AI)          │
+│ (audios)    │     │ (gdown)      │     │ (Groq Whisper)  │     │ (Claude AI)          │
 └─────────────┘     └──────────────┘     └─────────────────┘     └──────────┬───────────┘
                                                                             │
                                                                             ▼
@@ -73,7 +100,7 @@ python3 -c "import openai; print('OK')" 2>/dev/null || echo "FALTA openai SDK"
 
 1. **Sync** — `gdown` acessa a pasta do Drive, baixa tudo pra `/tmp/intel/download/`
 2. **Dedup** — Compara com `data/processed.json` pra nao reprocessar audios antigos
-3. **Transcribe** — Cada audio novo passa pelo Whisper (API ou local) e vira texto
+3. **Transcribe** — Cada audio novo passa pelo Groq Whisper (whisper-large-v3) e vira texto
 4. **Extract** — Claude analisa a transcricao e extrai 5 categorias de insights:
    - Decisoes (o que foi acordado)
    - Pendencias (o que alguem precisa fazer)
@@ -91,6 +118,9 @@ squads/intel/
 ├── squad.yaml             ← definicao do squad
 ├── agents/
 │   └── collector.md       ← agente principal (orquestra o pipeline)
+├── scripts/
+│   ├── transcribe.py      ← script Python para transcricao Groq
+│   └── download_drive.py  ← script Python para download do Drive
 ├── tasks/
 │   ├── full-pipeline.md   ← *intel (ponto de entrada)
 │   ├── sync-drive.md      ← *sync
@@ -143,12 +173,25 @@ Cada audio gera um arquivo assim:
 Se o acesso automatico ao Drive nao funcionar:
 
 1. Gabriel baixa os audios manualmente pra qualquer pasta
-2. Roda: `*transcribe /caminho/do/audio.m4a`
-3. O sistema transcreve e extrai insights normalmente
+2. Roda: `python3 squads/intel/scripts/transcribe.py /caminho/do/audio.m4a`
+3. O sistema transcreve e mostra o texto na tela
+
+## Primeiro Teste
+
+Para validar que tudo funciona, rode na maquina local:
+
+```bash
+# Baixar audio de teste do Drive
+python3 squads/intel/scripts/download_drive.py 1PgGabx3m30BNeL4n2U_WCcoQHTXV7v6D --output /tmp/intel/teste-audio.m4a
+
+# Transcrever
+python3 squads/intel/scripts/transcribe.py /tmp/intel/teste-audio.m4a
+
+# Se funcionou, o pipeline esta pronto!
+```
 
 ## Proximos Passos
 
-- [ ] Instalar ffmpeg na maquina local
-- [ ] Configurar OPENAI_API_KEY no .env
-- [ ] Testar `*intel` com o primeiro audio
+- [ ] Testar `*intel` com o primeiro audio na maquina local
 - [ ] Avaliar se vale configurar Google Drive MCP (`@devops *add-mcp google-drive`) pra acesso mais robusto
+- [ ] Implementar divisao automatica de audios > 25MB (pydub)

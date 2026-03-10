@@ -107,7 +107,7 @@ Este repositorio abriga **dois projetos independentes** com ciclos de vida difer
 | Squad | Dominio | Comando |
 |-------|---------|---------|
 | `king-quality-guard` | QA do KING System | `*check [story-id]` |
-| `intel` | Coleta e transcricao de audios/conversas | `*intel` |
+| `intel` | Coleta e transcricao de audios/conversas (Groq Whisper) | `*intel` |
 
 ### Hooks (.claude/hooks/)
 
