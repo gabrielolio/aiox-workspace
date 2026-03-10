@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Digital Automotivo — Especialistas em Concessionárias</title>
+  <meta name="description" content="Gestão de presença digital especializada em concessionárias e revendas. Qualidade visual de marcas premium como Porsche e GWM, aplicada na sua loja.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       Paleta premium automotiva: escuro + dourado
+       ============================================ */
+    :root {
+      /* Colors */
+      --color-bg-primary: #0A0A0A;
+      --color-bg-secondary: #111111;
+      --color-bg-tertiary: #1A1A1A;
+      --color-bg-card: #151515;
+      --color-bg-card-hover: #1C1C1C;
+      --color-accent-gold: #C9A84C;
+      --color-accent-gold-light: #D4B96A;
+      --color-accent-gold-dim: rgba(201, 168, 76, 0.15);
+      --color-accent-blue: #2A5F8F;
+      --color-text-primary: #F5F5F5;
+      --color-text-secondary: #A0A0A0;
+      --color-text-muted: #666666;
+      --color-border: #222222;
+      --color-border-light: #2A2A2A;
+      --color-danger: #C44040;
+      --color-success: #4A9E6A;
+      --color-whatsapp: #25D366;
+      --color-whatsapp-hover: #20BD5A;
+
+      /* Typography */
+      --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-heading: 'Raleway', 'Segoe UI', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Spacing */
+      --section-padding: clamp(4rem, 8vw, 7rem);
+      --container-max: 1100px;
+      --gap-sm: 0.75rem;
+      --gap-md: 1.5rem;
+      --gap-lg: 3rem;
+      --gap-xl: 4.5rem;
+
+      /* Borders */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+
+      /* Transitions */
+      --transition-fast: 0.2s ease;
+      --transition-normal: 0.35s ease;
+      --transition-slow: 0.6s ease;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg-primary);
+      color: var(--color-text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================
+       UTILITIES
+       ============================================ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .section {
+      padding: var(--section-padding) 0;
+      position: relative;
+    }
+
+    .section--alt {
+      background: var(--color-bg-secondary);
+    }
+
+    .section--dark {
+      background: var(--color-bg-tertiary);
+    }
+
+    .text-gold { color: var(--color-accent-gold); }
+    .text-muted { color: var(--color-text-secondary); }
+    .text-center { text-align: center; }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--color-accent-gold);
+      margin: var(--gap-md) auto;
+      border: none;
+    }
+
+    .divider--left {
+      margin-left: 0;
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    .headline-display {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--color-text-primary);
+    }
+
+    .headline-section {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: var(--gap-sm);
+    }
+
+    .label-section {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent-gold);
+      margin-bottom: var(--gap-sm);
+      display: block;
+    }
+
+    .subtitle {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      max-width: 620px;
+    }
+
+    .subtitle--centered {
+      margin: 0 auto;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ============================================
+       NAVIGATION (minimal sticky)
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      transition: var(--transition-normal);
+      background: transparent;
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.7rem 0;
+    }
+
+    .nav__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__brand {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+    }
+
+    .nav__brand span {
+      color: var(--color-accent-gold);
+    }
+
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-whatsapp);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      transition: var(--transition-fast);
+    }
+
+    .nav__cta:hover {
+      background: rgba(37, 211, 102, 0.1);
+      border-color: var(--color-whatsapp);
+    }
+
+    .nav__cta svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 5rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 80vw;
+      height: 80vw;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--color-bg-primary));
+      pointer-events: none;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+    }
+
+    .hero__tagline {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-accent-gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero__tagline::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--color-accent-gold);
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.2rem, 6vw, 3.75rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-primary);
+    }
+
+    .hero__title em {
+      font-style: normal;
+      color: var(--color-accent-gold);
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .btn--whatsapp {
+      background: var(--color-whatsapp);
+      color: #fff;
+    }
+
+    .btn--whatsapp:hover {
+      background: var(--color-whatsapp-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn--whatsapp svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--color-text-primary);
+      border: 1px solid var(--color-border-light);
+    }
+
+    .btn--outline:hover {
+      border-color: var(--color-accent-gold);
+      color: var(--color-accent-gold);
+    }
+
+    .btn--gold {
+      background: var(--color-accent-gold);
+      color: var(--color-bg-primary);
+    }
+
+    .btn--gold:hover {
+      background: var(--color-accent-gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(201, 168, 76, 0.25);
+    }
+
+    .btn--large {
+      padding: 1.1rem 2.8rem;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+       PAIN POINTS (Seção 2: O Problema)
+       ============================================ */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--gap-md);
+      margin-top: var(--gap-lg);
+    }
+
+    .pain-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pain-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--color-danger);
+      opacity: 0.6;
+      transition: var(--transition-fast);
+    }
+
+    .pain-card:hover {
+      background: var(--color-bg-card-hover);
+      border-color: var(--color-border-light);
+    }
+
+    .pain-card:hover::before {
+      opacity: 1;
+    }
+
+    .pain-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .pain-card__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .pain-card__text {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .pain-closing {
+      margin-top: var(--gap-lg);
+      padding: 2rem;
+      border-left: 3px solid var(--color-accent-gold);
+      background: var(--color-accent-gold-dim);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .pain-closing p {
+      color: var(--color-text-primary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ============================================
+       FLOW STEPS (Seção 3: A Solução)
+       ============================================ */
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap-md);
+      margin-top: var(--gap-lg);
+      position: relative;
+    }
+
+    .flow::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: linear-gradient(to right, var(--color-accent-gold), var(--color-accent-gold-dim));
+      z-index: 0;
+    }
+
+    .flow-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .flow-step__number {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--color-bg-tertiary);
+      border: 2px solid var(--color-accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--color-accent-gold);
+      transition: var(--transition-normal);
+    }
+
+    .flow-step:hover .flow-step__number {
+      background: var(--color-accent-gold);
+      color: var(--color-bg-primary);
+    }
+
+    .flow-step__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .flow-step__text {
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .flow-highlight {
+      margin-top: var(--gap-lg);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: var(--color-accent-gold-dim);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .flow-highlight p {
+      color: var(--color-accent-gold-light);
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ============================================
+       COMPARISON TABLE (Seção 4: Diferencial)
+       ============================================ */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: var(--gap-lg);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+
+    .comparison__col {
+      padding: 0;
+    }
+
+    .comparison__header {
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .comparison__col--them .comparison__header {
+      background: var(--color-bg-tertiary);
+      color: var(--color-text-muted);
+    }
+
+    .comparison__col--us .comparison__header {
+      background: var(--color-accent-gold);
+      color: var(--color-bg-primary);
+    }
+
+    .comparison__item {
+      padding: 1.1rem 1.5rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      min-height: 76px;
+    }
+
+    .comparison__col--them .comparison__item {
+      background: var(--color-bg-card);
+      color: var(--color-text-muted);
+    }
+
+    .comparison__col--us .comparison__item {
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+    }
+
+    .comparison__icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 0.85rem;
+    }
+
+    .comparison__col--them .comparison__icon { opacity: 0.5; }
+
+    .comparison-impact {
+      margin-top: var(--gap-lg);
+      text-align: center;
+    }
+
+    .comparison-impact__quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--color-text-primary);
+      font-style: italic;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .comparison-impact__source {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 0.75rem;
+    }
+
+    /* ============================================
+       PRICING CARDS (Seção 5: Pacotes)
+       ============================================ */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-md);
+      margin-top: var(--gap-lg);
+    }
+
+    .pricing-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: var(--transition-normal);
+    }
+
+    .pricing-card:hover {
+      border-color: var(--color-border-light);
+      transform: translateY(-2px);
+    }
+
+    .pricing-card--featured {
+      border-color: var(--color-accent-gold);
+      background: linear-gradient(to bottom, rgba(201, 168, 76, 0.06), var(--color-bg-card));
+    }
+
+    .pricing-card--featured:hover {
+      border-color: var(--color-accent-gold-light);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -1px;
+      right: 2rem;
+      background: var(--color-accent-gold);
+      color: var(--color-bg-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    }
+
+    .pricing-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-card__price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--color-text-primary);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-card__price span {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--color-text-muted);
+    }
+
+    .pricing-card__period {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .pricing-card__list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-card__list li {
+      padding: 0.5rem 0;
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .pricing-card__list li::before {
+      content: '✓';
+      color: var(--color-success);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pricing-card--featured .pricing-card__list li::before {
+      color: var(--color-accent-gold);
+    }
+
+    .pricing-extras {
+      margin-top: var(--gap-lg);
+    }
+
+    .pricing-extras__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--gap-md);
+      text-align: center;
+    }
+
+    .extras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .extra-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+
+    .extra-item__name {
+      color: var(--color-text-secondary);
+    }
+
+    .extra-item__price {
+      color: var(--color-accent-gold);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      white-space: nowrap;
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: var(--gap-md);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ============================================
+       CREDIBILITY (Seção 6)
+       ============================================ */
+    .credibility {
+      background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-primary) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .credibility::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.04), transparent 70%);
+      pointer-events: none;
+    }
+
+    .credibility__content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .credibility__quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+      color: var(--color-text-primary);
+      line-height: 1.5;
+      max-width: 750px;
+      margin-bottom: var(--gap-lg);
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .credibility__quote::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--color-accent-gold);
+    }
+
+    .credibility__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      margin-bottom: var(--gap-lg);
+    }
+
+    .stat {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .stat__number {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--color-accent-gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat__label {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .credibility__brands {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      padding-top: var(--gap-md);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .brand-item {
+      text-align: center;
+    }
+
+    .brand-item__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-text-primary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-item__detail {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .brand-separator {
+      width: 1px;
+      height: 50px;
+      background: var(--color-border-light);
+    }
+
+    .credibility__location {
+      text-align: center;
+      margin-top: var(--gap-md);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    /* ============================================
+       TECHNOLOGY (Seção 7 — Sutil)
+       ============================================ */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      margin-top: var(--gap-lg);
+    }
+
+    .tech-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
+    }
+
+    .tech-item:hover {
+      border-color: var(--color-border-light);
+      background: var(--color-bg-card-hover);
+    }
+
+    .tech-item__icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .tech-item__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-item__text {
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .tech-note {
+      text-align: center;
+      margin-top: var(--gap-md);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    /* ============================================
+       CTA FINAL (Seção 8)
+       ============================================ */
+    .cta-section {
+      background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-tertiary) 100%);
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.05), transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      margin: var(--gap-lg) 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      position: relative;
+    }
+
+    .cta-step__number {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-accent-gold);
+      color: var(--color-bg-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-step__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .cta-step__text {
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .cta-final {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-final__note {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-top: 1rem;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: 3rem 0;
+      border-top: 1px solid var(--color-border);
+      background: var(--color-bg-primary);
+    }
+
+    .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer__brand {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+
+    .footer__brand span {
+      color: var(--color-accent-gold);
+    }
+
+    .footer__tagline {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .footer__info {
+      text-align: right;
+    }
+
+    .footer__location {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .footer__copyright {
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ============================================
+       SCROLL ANIMATIONS
+       ============================================ */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+    .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+    .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+    .animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+      .flow {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+      }
+
+      .flow::before { display: none; }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison__col--them {
+        border-bottom: 2px solid var(--color-border);
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .credibility__stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .footer__info {
+        text-align: center;
+      }
+
+      .nav__cta span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn { width: 100%; justify-content: center; }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .extras-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <div class="nav__brand">[<span>Agência</span>]</div>
+        <a href="#contato" class="nav__cta">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.52-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.326-.72-6.022-1.94l-.42-.314-2.691.873.898-2.634-.346-.447A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       SEÇÃO 1: HERO — A Provocação
+       ======================================== -->
+  <section class="hero section" id="inicio">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__tagline">Marketing Digital Automotivo</div>
+
+        <h1 class="hero__title">
+          Seu concorrente parece mais profissional que você.<br>
+          <em>E não é porque o carro dele é melhor.</em>
+        </h1>
+
+        <p class="hero__subtitle">
+          Gestão de presença digital especializada em concessionárias e revendas.
+          O mesmo padrão visual usado por marcas como Porsche e GWM, aplicado na sua loja.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.52-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.326-.72-6.022-1.94l-.42-.314-2.691.873.898-2.634-.346-.447A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Conversar sem compromisso
+          </a>
+          <a href="#pacotes" class="btn btn--outline">Ver pacotes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 2: O PROBLEMA — Espelho do Prospect
+       ======================================== -->
+  <section class="section section--alt" id="problema">
+    <div class="container">
+      <span class="label-section animate-on-scroll">Você conhece esse cenário?</span>
+      <h2 class="headline-section animate-on-scroll">
+        O Instagram da sua loja não te <span class="text-gold">representa</span>.
+      </h2>
+      <p class="subtitle animate-on-scroll">
+        Você investe em estoque, equipe, ponto comercial — mas a vitrine digital ficou pra depois. Enquanto isso, o concorrente com a mesma qualidade de veículo aparece mais profissional.
+      </p>
+
+      <div class="pain-grid">
+        <div class="pain-card animate-on-scroll delay-1">
+          <div class="pain-card__icon">📅</div>
+          <div class="pain-card__title">Posts inconsistentes</div>
+          <p class="pain-card__text">O último post foi há semanas. Quando sai, não tem padrão visual. Cada arte parece de uma loja diferente.</p>
+        </div>
+
+        <div class="pain-card animate-on-scroll delay-2">
+          <div class="pain-card__icon">📱</div>
+          <div class="pain-card__title">Fotos sem preparação</div>
+          <p class="pain-card__text">Fotos tiradas com celular na correria, sem enquadramento, sem edição. O carro é bom, mas não parece.</p>
+        </div>
+
+        <div class="pain-card animate-on-scroll delay-3">
+          <div class="pain-card__icon">📝</div>
+          <div class="pain-card__title">Legendas genéricas</div>
+          <p class="pain-card__text">Textos que qualquer revenda do Brasil poderia usar. Sem personalidade, sem informação que faz diferença na hora da venda.</p>
+        </div>
+
+        <div class="pain-card animate-on-scroll delay-4">
+          <div class="pain-card__icon">🎨</div>
+          <div class="pain-card__title">Identidade visual inexistente</div>
+          <p class="pain-card__text">Sem paleta de cores definida, sem tipografia padrão. Cada post com um estilo diferente — o feed não comunica profissionalismo.</p>
+        </div>
+
+        <div class="pain-card animate-on-scroll delay-1">
+          <div class="pain-card__icon">⏰</div>
+          <div class="pain-card__title">Tempo desperdiçado</div>
+          <p class="pain-card__text">Horas tentando criar algo no Canva, procurando template, pensando em legenda. Tempo que deveria estar vendendo.</p>
+        </div>
+
+        <div class="pain-card animate-on-scroll delay-2">
+          <div class="pain-card__icon">🏪</div>
+          <div class="pain-card__title">Concorrente à frente</div>
+          <p class="pain-card__text">Outra revenda com o mesmo nível de veículos, mas com feed organizado, stories diários e presença constante. Quem o cliente segue?</p>
+        </div>
+      </div>
+
+      <div class="pain-closing animate-on-scroll">
+        <p>E se existisse alguém que cuida de tudo isso pra você — enquanto você foca em vender?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 3: A SOLUÇÃO — O Fluxo Simples
+       ======================================== -->
+  <section class="section" id="solucao">
+    <div class="container">
+      <div class="text-center">
+        <span class="label-section animate-on-scroll">Como funciona</span>
+        <h2 class="headline-section animate-on-scroll">
+          Simples como mandar uma <span class="text-gold">foto no WhatsApp</span>.
+        </h2>
+        <p class="subtitle subtitle--centered animate-on-scroll">
+          Sem reunião longa, sem planilha pra preencher, sem sistema novo pra aprender. Você já usa WhatsApp — é só isso que precisa.
+        </p>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step animate-on-scroll delay-1">
+          <div class="flow-step__number">1</div>
+          <div class="flow-step__title">Envie a foto</div>
+          <p class="flow-step__text">Tire a foto do veículo e mande pelo WhatsApp. Com ou sem informações — a gente resolve.</p>
+        </div>
+
+        <div class="flow-step animate-on-scroll delay-2">
+          <div class="flow-step__number">2</div>
+          <div class="flow-step__title">A gente cria a arte</div>
+          <p class="flow-step__text">Post pronto com sua identidade visual, legenda escrita, hashtags e formato ideal pro Instagram.</p>
+        </div>
+
+        <div class="flow-step animate-on-scroll delay-3">
+          <div class="flow-step__number">3</div>
+          <div class="flow-step__title">Você aprova</div>
+          <p class="flow-step__text">Recebe a prévia pelo WhatsApp mesmo. Aprovou? Publicamos. Quer ajuste? Fazemos em até 24 horas.</p>
+        </div>
+
+        <div class="flow-step animate-on-scroll delay-4">
+          <div class="flow-step__number">4</div>
+          <div class="flow-step__title">Foque em vender</div>
+          <p class="flow-step__text">Sua presença digital funciona no automático enquanto você cuida do que importa: atender cliente e fechar negócio.</p>
+        </div>
+      </div>
+
+      <div class="flow-highlight animate-on-scroll">
+        <p>Você cuida do showroom. A gente cuida da vitrine digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 4: O DIFERENCIAL — Não somos agência genérica
+       ======================================== -->
+  <section class="section section--alt" id="diferencial">
+    <div class="container">
+      <div class="text-center">
+        <span class="label-section animate-on-scroll">Por que somos diferentes</span>
+        <h2 class="headline-section animate-on-scroll">
+          Agência genérica vs. <span class="text-gold">Especialista automotivo</span>
+        </h2>
+        <p class="subtitle subtitle--centered animate-on-scroll">
+          A maioria das agências atende restaurante, academia e loja de roupa ao mesmo tempo. Nós só fazemos uma coisa — e fazemos bem.
+        </p>
+      </div>
+
+      <div class="comparison animate-on-scroll">
+        <div class="comparison__col comparison__col--them">
+          <div class="comparison__header">Agência genérica</div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✕</span>
+            <span>Template do Canva igual pra todo mundo. Sua loja parece qualquer outra.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✕</span>
+            <span>Não sabe a diferença entre Haval H6 e Tank 300. Erra informações básicas.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✕</span>
+            <span>Briefing de 1 hora por semana. Reunião que consome seu tempo sem resultado claro.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✕</span>
+            <span>Relatório automático cheio de número sem contexto. Você não sabe o que fazer com aquilo.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✕</span>
+            <span>Atende 50 clientes de nichos diferentes. Sua loja é só mais uma na fila.</span>
+          </div>
+        </div>
+        <div class="comparison__col comparison__col--us">
+          <div class="comparison__header">Nós</div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✓</span>
+            <span>Identidade visual exclusiva para a sua loja. Brandbook, paleta e templates só seus.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✓</span>
+            <span>Conhecemos modelos, diferenciais e público de cada marca. Trabalhamos com Porsche e GWM.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✓</span>
+            <span>Fluxo pelo WhatsApp. Você envia foto, recebe arte. Zero reuniões desnecessárias.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✓</span>
+            <span>Feedback direto do que está funcionando e o que ajustar. Conversa real, não PDF genérico.</span>
+          </div>
+          <div class="comparison__item">
+            <span class="comparison__icon">✓</span>
+            <span>Especialistas em concessionárias e revendas. É o único segmento que atendemos.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-impact animate-on-scroll">
+        <p class="comparison-impact__quote">
+          "Nós vivemos o mercado automotivo. Trabalhamos diariamente com concessionárias de marcas como Porsche e GWM."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 5: PACOTES — O que Você Recebe
+       ======================================== -->
+  <section class="section" id="pacotes">
+    <div class="container">
+      <div class="text-center">
+        <span class="label-section animate-on-scroll">Pacotes</span>
+        <h2 class="headline-section animate-on-scroll">
+          Exatamente o que você <span class="text-gold">recebe</span>.
+        </h2>
+        <p class="subtitle subtitle--centered animate-on-scroll">
+          Sem surpresas, sem letra miúda. Cada pacote foi desenhado pra resolver problemas reais de quem vende veículo.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Pacote Essencial -->
+        <div class="pricing-card animate-on-scroll delay-1">
+          <div class="pricing-card__name">Essencial</div>
+          <div class="pricing-card__price"><span>R$</span> 800</div>
+          <div class="pricing-card__period">por mês</div>
+          <ul class="pricing-card__list">
+            <li>12 posts para Instagram (3 por semana)</li>
+            <li>4 artes para grupos de WhatsApp (1 por semana)</li>
+            <li>Identidade visual padronizada (criada no mês 1)</li>
+            <li>4 templates exclusivos para seus veículos</li>
+            <li>Calendário mensal de conteúdo planejado</li>
+            <li>Fluxo de aprovação pelo WhatsApp</li>
+            <li>Entrega e publicação das artes</li>
+          </ul>
+          <a href="#contato" class="btn btn--outline" style="width:100%;">Quero esse</a>
+        </div>
+
+        <!-- Pacote Crescimento -->
+        <div class="pricing-card pricing-card--featured animate-on-scroll delay-2">
+          <div class="pricing-badge">Recomendado</div>
+          <div class="pricing-card__name">Crescimento</div>
+          <div class="pricing-card__price"><span>R$</span> 1.200</div>
+          <div class="pricing-card__period">por mês</div>
+          <ul class="pricing-card__list">
+            <li>Tudo do pacote Essencial, mais:</li>
+            <li>1 vídeo curto por mês (Reels, 15-30 segundos)</li>
+            <li>5 stories extras por semana</li>
+            <li>Gestão de 1 campanha paga por mês</li>
+            <li>Relatório mensal de performance</li>
+            <li>Sugestões de conteúdo baseadas em tendências</li>
+            <li>Prioridade no atendimento</li>
+          </ul>
+          <a href="#contato" class="btn btn--gold" style="width:100%;">Quero esse</a>
+        </div>
+      </div>
+
+      <!-- Serviços Avulsos -->
+      <div class="pricing-extras animate-on-scroll">
+        <div class="pricing-extras__title">Serviços Avulsos</div>
+        <div class="extras-grid">
+          <div class="extra-item">
+            <span class="extra-item__name">Identidade visual completa</span>
+            <span class="extra-item__price">R$ 1.500 – 2.500</span>
+          </div>
+          <div class="extra-item">
+            <span class="extra-item__name">Vídeo institucional (45-60s)</span>
+            <span class="extra-item__price">R$ 800 – 1.500</span>
+          </div>
+          <div class="extra-item">
+            <span class="extra-item__name">Pacote extra de templates</span>
+            <span class="extra-item__price">R$ 400 – 600</span>
+          </div>
+          <div class="extra-item">
+            <span class="extra-item__name">Arte urgente (entrega em 24h)</span>
+            <span class="extra-item__price">R$ 150</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="pricing-note animate-on-scroll">Contrato mínimo de 3 meses. Todos os valores em reais (BRL).</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 6: CREDIBILIDADE — Quem Confia na Gente
+       ======================================== -->
+  <section class="section credibility" id="credibilidade">
+    <div class="container">
+      <div class="credibility__content">
+        <div class="text-center">
+          <span class="label-section animate-on-scroll">Nosso repertório</span>
+          <h2 class="headline-section animate-on-scroll">
+            Se fazemos pra <span class="text-gold">Porsche</span>, imagine pra sua loja.
+          </h2>
+        </div>
+
+        <div class="credibility__quote animate-on-scroll">
+          Operamos diariamente com o Grupo Bamaq — uma das maiores operações de concessionária do Brasil. É com esse nível de exigência que trabalhamos. E é esse repertório que trazemos para a sua loja.
+        </div>
+
+        <div class="credibility__stats">
+          <div class="stat animate-on-scroll delay-1">
+            <div class="stat__number">R$ 3bi</div>
+            <div class="stat__label">Receita do Grupo Bamaq</div>
+          </div>
+          <div class="stat animate-on-scroll delay-2">
+            <div class="stat__number">18</div>
+            <div class="stat__label">Estados com presença</div>
+          </div>
+          <div class="stat animate-on-scroll delay-3">
+            <div class="stat__number">+60%</div>
+            <div class="stat__label">Crescimento em MG</div>
+          </div>
+        </div>
+
+        <div class="credibility__brands animate-on-scroll">
+          <div class="brand-item">
+            <div class="brand-item__name">Porsche</div>
+            <div class="brand-item__detail">Concessionária oficial — Belo Horizonte</div>
+          </div>
+          <div class="brand-separator"></div>
+          <div class="brand-item">
+            <div class="brand-item__name">GWM</div>
+            <div class="brand-item__detail">Haval H6 · Tank 300 · Ora 03</div>
+          </div>
+        </div>
+
+        <div class="credibility__location animate-on-scroll">
+          Campo Grande · Belo Horizonte · Brasil
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 7: TECNOLOGIA — O Motor por Trás (Sutil)
+       ======================================== -->
+  <section class="section section--alt" id="tecnologia">
+    <div class="container">
+      <div class="text-center">
+        <span class="label-section animate-on-scroll">Nos bastidores</span>
+        <h2 class="headline-section animate-on-scroll">
+          Tecnologia que acelera. <span class="text-gold">Você não precisa aprender nada.</span>
+        </h2>
+        <p class="subtitle subtitle--centered animate-on-scroll">
+          Nossa operação é acelerada por inteligência artificial desenvolvida para o mercado automotivo. O resultado? Mais velocidade, mais consistência — e pra você, continua sendo só o WhatsApp.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-item animate-on-scroll delay-1">
+          <div class="tech-item__icon">⚡</div>
+          <div class="tech-item__title">Legendas em segundos</div>
+          <p class="tech-item__text">Textos gerados com informações do veículo em segundos, não em 30 minutos. Com a linguagem certa pro seu público.</p>
+        </div>
+
+        <div class="tech-item animate-on-scroll delay-2">
+          <div class="tech-item__icon">🛡️</div>
+          <div class="tech-item__title">Conformidade automática</div>
+          <p class="tech-item__text">Cada arte segue automaticamente as guidelines da marca. Cores, tipografia e regras visuais sempre corretas.</p>
+        </div>
+
+        <div class="tech-item animate-on-scroll delay-3">
+          <div class="tech-item__icon">📂</div>
+          <div class="tech-item__title">Tudo organizado</div>
+          <p class="tech-item__text">Material produzido, calendário e histórico de artes — tudo catalogado e acessível. Nada se perde.</p>
+        </div>
+      </div>
+
+      <p class="tech-note animate-on-scroll">
+        Você não precisa interagir com nenhum sistema. O WhatsApp é tudo que você vai usar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SEÇÃO 8: CTA FINAL — Como Começar
+       ======================================== -->
+  <section class="section cta-section" id="contato">
+    <div class="container">
+      <div class="text-center">
+        <span class="label-section animate-on-scroll">Pronto pra começar?</span>
+        <h2 class="headline-section animate-on-scroll">
+          Três passos pra sua loja <span class="text-gold">parecer tão profissional</span> quanto ela já é.
+        </h2>
+      </div>
+
+      <div class="cta-steps">
+        <div class="cta-step animate-on-scroll delay-1">
+          <div class="cta-step__number">1</div>
+          <div class="cta-step__title">Conversa de 30 minutos</div>
+          <p class="cta-step__text">Entendemos sua loja, seus veículos, seu público e o que você espera. Sem compromisso.</p>
+        </div>
+
+        <div class="cta-step animate-on-scroll delay-2">
+          <div class="cta-step__number">2</div>
+          <div class="cta-step__title">Proposta personalizada</div>
+          <p class="cta-step__text">Apresentamos o pacote mais adequado pro seu momento e volume de veículos. Você decide com calma.</p>
+        </div>
+
+        <div class="cta-step animate-on-scroll delay-3">
+          <div class="cta-step__number">3</div>
+          <div class="cta-step__title">Primeiro mês de conteúdo</div>
+          <p class="cta-step__text">Criamos sua identidade visual e entregamos os primeiros conteúdos. Seu feed começa a mudar de cara.</p>
+        </div>
+      </div>
+
+      <div class="cta-final animate-on-scroll">
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20vi%20a%20apresenta%C3%A7%C3%A3o%20e%20quero%20saber%20mais%20sobre%20os%20pacotes." class="btn btn--whatsapp btn--large" id="cta-whatsapp">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path fill="#fff" d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.52-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.326-.72-6.022-1.94l-.42-.314-2.691.873.898-2.634-.346-.447A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar no WhatsApp — sem compromisso
+        </a>
+        <p class="cta-final__note">Resposta em até 2 horas no horário comercial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       RODAPÉ
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">[<span>Agência</span>]</div>
+          <p class="footer__tagline">Especialistas em marketing digital automotivo</p>
+        </div>
+        <div class="footer__info">
+          <p class="footer__location">Campo Grande · Belo Horizonte · Brasil</p>
+          <p class="footer__copyright">&copy; 2026. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // Scroll-triggered animations (IntersectionObserver)
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -60px 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
