@@ -1,0 +1,24 @@
+{
+  "language": "english",
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "echo \"✅ AIOX Task Complete: $(date '+%Y-%m-%d %H:%M:%S')\""
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "mkdir -p .claude/logs && echo \"$(date '+%Y-%m-%d %H:%M:%S') | tool: ${CLAUDE_TOOL_NAME:-unknown}\" >> .claude/logs/activity.log"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "type": "command",
+        "command": "bash .claude/hooks/brand-check.sh \"${CLAUDE_TOOL_INPUT_FILE_PATH:-}\" \"${CLAUDE_TOOL_INPUT_CONTENT:-}\""
+      }
+    ]
+  }
+}
